@@ -473,9 +473,13 @@ h1, h2, h3, .logo {
     pointer-events: none;
 }
 .cursor-dot {
-    width: 8px;
-    height: 8px;
-    background-color: var(--color-gold);
+    width: 32px;
+    height: 32px;
+    background-image: url('assets/cursor.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    transform: translate(-16px, -16px); /* offset for new size */
 }
 .cursor-outline {
     width: 40px;
@@ -567,7 +571,8 @@ h1, h2, h3, .logo {
     transition: all 0.3s ease;
     transform: translateY(100px);
     opacity: 0;
-    animation: fadeUp 1s ease forwards 2s; /* Delayed entrance */
+    animation: fadeUp 1s ease forwards 2s;
+    max-width: calc(100% - 4rem);
 }
 
 .weather-widget:hover {
@@ -583,6 +588,139 @@ h1, h2, h3, .logo {
 .weather-text {
     font-size: 0.9rem;
     font-weight: 500;
+    color: var(--color-matcha-dark);
+}
+
+/* --- Full Menu Section --- */
+.menu-section {
+    padding: 8rem 10%;
+    background-color: #fff;
+}
+
+.menu-header {
+    text-align: center;
+    margin-bottom: 5rem;
+}
+
+.menu-header h2 {
+    font-size: 3rem;
+    color: var(--color-matcha-dark);
+}
+
+.menu-header p {
+    color: #666;
+    margin-top: 0.5rem;
+}
+
+.signature-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 5rem;
+}
+
+.sig-item {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    aspect-ratio: 4/5;
+}
+
+.sig-item::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+    pointer-events: none;
+}
+
+.sig-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+.sig-item:hover .sig-img {
+    transform: scale(1.05);
+}
+
+.sig-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 2rem;
+    color: #fff;
+    z-index: 1;
+}
+
+.sig-info h3 {
+    font-size: 1.8rem;
+    font-family: var(--font-heading);
+    margin-bottom: 0.5rem;
+    color: #fff;
+    border-bottom: none;
+}
+
+.sig-info p {
+    font-size: 1rem;
+    opacity: 0.9;
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 4rem;
+}
+
+.menu-category h3 {
+    font-size: 1.8rem;
+    color: var(--color-gold);
+    margin-bottom: 2rem;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    padding-bottom: 0.5rem;
+}
+
+.menu-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 2rem;
+}
+
+.menu-item-details h4 {
+    font-size: 1.2rem;
+    color: var(--color-matcha-dark);
+    margin-bottom: 0.2rem;
+}
+
+.menu-item-details p {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.menu-item-price {
+    font-family: var(--font-heading);
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: var(--color-gold);
+}
+
+.menu-footer {
+    text-align: center;
+    margin-top: 4rem;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(0,0,0,0.1);
+    color: #666;
+    font-size: 0.95rem;
+}
+
+.menu-footer p {
+    margin-bottom: 0.5rem;
+}
+
+.menu-footer strong {
     color: var(--color-matcha-dark);
 }
 
@@ -848,10 +986,40 @@ h1, h2, h3, .logo {
     }
     .hero-content h1 {
         font-size: 3rem;
+        text-shadow: 0 4px 20px rgba(255, 255, 255, 0.9);
     }
     .hero-content p {
-        font-size: 1rem;
+        font-size: 1.1rem;
         padding: 0 1rem;
+        text-shadow: 0 2px 10px rgba(255, 255, 255, 0.9);
+        font-weight: 500;
+    }
+    
+    .weather-widget {
+        left: 1rem;
+        bottom: 1rem;
+        padding: 0.5rem 1rem;
+        max-width: calc(100% - 2rem);
+    }
+    .weather-text {
+        font-size: 0.8rem;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .editorial-container {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+    .editorial-images {
+        height: 400px;
+    }
+    .editorial-text-columns {
+        column-count: 1;
+    }
+    .editorial-title {
+        font-size: 3rem;
     }
     
     .ritual-container {
