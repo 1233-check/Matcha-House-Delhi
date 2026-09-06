@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matcha House Delhi | The Ultimate Matcha Experience</title>
+    <meta name="description" content="Visit Matcha House Delhi for premium, authentic matcha. Discover the secret Whisk Ritual to unlock exclusive in-store rewards.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script type="importmap">
+    {
+        "imports": {
+            "three": "https://cdn.jsdelivr.net/npm/three@0.164.1/build/three.module.js",
+            "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.164.1/examples/jsm/"
+        }
+    }
+    </script>
+</head>
+<body>
+    <!-- Custom Cursor -->
+    <div class="cursor-dot" id="cursorDot"></div>
+    <div class="cursor-outline" id="cursorOutline"></div>
+    
+    <!-- Scroll Progress -->
+    <div class="scroll-progress" id="scrollProgress"></div>
+    <!-- Live Weather Widget -->
+    <div class="weather-widget" id="weatherWidget" onclick="document.getElementById('menu').scrollIntoView({behavior: 'smooth'})">
+        <span class="weather-icon" id="weatherIcon">🍃</span>
+        <span class="weather-text" id="weatherText">Fetching local breeze...</span>
+    </div>
+
+    <nav class="navbar">
+        <div class="nav-left">
+            <a href="#about">Our Story</a>
+            <a href="#menu">Menu</a>
+        </div>
+        <div class="logo">Matcha House Delhi</div>
+        <div class="nav-right">
+            <a href="#visit" class="btn-primary">Visit Us</a>
+        </div>
+    </nav>
+
+    <header class="hero" id="home">
+        <canvas id="cupCanvas"></canvas>
+        <div class="hero-content">
+            <h1>Awaken Your<br>Senses.</h1>
+            <p>Experience the purest, ceremonial-grade matcha<br>right in the heart of Delhi.</p>
+            <a href="#secret-ritual" class="btn-secondary">Unlock the Secret</a>
+        </div>
+    </header>
+
+    <section id="secret-ritual" class="ritual-section">
+        <div class="ritual-container">
+            <div class="ritual-text">
+                <h2>The Secret Whisk Ritual</h2>
+                <p>True matcha requires patience, precision, and the perfect whisk (Chasen). Master the motion here to reveal an exclusive pass for your next visit.</p>
+                <div class="instructions">
+                    <span class="icon">✨</span>
+                    <p>Move your cursor in circles over the bowl to whisk the matcha.</p>
+                </div>
+            </div>
+            
+            <div class="interactive-whisk-area">
+                <div class="ritual-bowl-container">
+                    <img src="assets/hero-matcha.png" alt="Matcha Bowl" class="ritual-bowl" id="ritualBowl">
+                    
+                    <!-- Progress UI -->
+                    <div class="whisk-progress">
+                        <svg class="progress-ring" width="200" height="200">
+                            <circle class="progress-ring__circle" stroke="#D4AF37" stroke-width="8" fill="transparent" r="90" cx="100" cy="100"/>
+                        </svg>
+                    </div>
+
+                    <!-- Secret Reveal Overlay -->
+                    <div class="secret-reveal" id="secretReveal">
+                        <h3>Secret Unlocked!</h3>
+                        <div class="passcode">MATCHA-VIP-DELHI</div>
+                        <p>Show this code in-store for a complimentary pastry with any Matcha purchase.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="editorial-section">
+        <div class="editorial-container">
+            <div class="editorial-images perspective-container">
+                <img src="assets/fields.png" alt="Uji Tea Fields" class="editorial-img-main tilt-element">
+                <img src="assets/whisk.png" alt="Matcha Whisking" class="editorial-img-sub tilt-element">
+            </div>
+            <div class="editorial-content">
+                <h2 class="editorial-title">From Uji to<br>New Delhi.</h2>
+                <div class="editorial-text-columns">
+                    <p><span class="drop-cap">W</span>e source our tea leaves directly from the historic, mist-covered tea fields of Uji, Japan, a region renowned for producing the world's most vibrant and complex matcha for over 800 years. Our founders traveled to Kyoto to build direct relationships with multi-generational tea farmers, ensuring only the highest ceremonial grade leaves make it to our New Delhi flagship.</p>
+                    <p>Every bowl we serve is prepared with a deep, uncompromising respect for the traditional Japanese tea ceremony. From the precise temperature of the water to the rhythmic motion of the bamboo chasen, we believe that true luxury lies in the mastery of these subtle details.</p>
+                </div>
+                <blockquote class="editorial-quote">
+                    "True luxury lies in the mastery of subtle details."
+                </blockquote>
+                <a href="#menu" class="link-arrow">Discover the Menu <span>→</span></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Taste Profiler Section -->
+    <section id="menu" class="taste-section">
+        <div class="taste-container">
+            <div class="taste-header">
+                <h2>Find Your Perfect Match(a)</h2>
+                <p>Answer three quick questions to unlock your custom off-menu creation.</p>
+            </div>
+            
+            <div class="taste-quiz" id="tasteQuiz">
+                <!-- Slide 1 -->
+                <div class="quiz-slide active" id="quizSlide1">
+                    <h3>What's your mood today?</h3>
+                    <div class="quiz-options">
+                        <button class="quiz-btn" onclick="nextSlide(1, 'Sweet')">Sweet & Indulgent</button>
+                        <button class="quiz-btn" onclick="nextSlide(1, 'Earthy')">Earthy & Traditional</button>
+                    </div>
+                </div>
+                <!-- Slide 2 -->
+                <div class="quiz-slide" id="quizSlide2">
+                    <h3>Temperature?</h3>
+                    <div class="quiz-options">
+                        <button class="quiz-btn" onclick="nextSlide(2, 'Iced')">Ice Cold</button>
+                        <button class="quiz-btn" onclick="nextSlide(2, 'Hot')">Steaming Hot</button>
+                    </div>
+                </div>
+                <!-- Slide 3 -->
+                <div class="quiz-slide" id="quizSlide3">
+                    <h3>Base?</h3>
+                    <div class="quiz-options">
+                        <button class="quiz-btn" onclick="finishQuiz('Oat Milk')">Oat Milk</button>
+                        <button class="quiz-btn" onclick="finishQuiz('Pure Water')">Pure Water</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quiz Result -->
+            <div class="taste-result" id="tasteResult" style="display: none;">
+                <h3>Your Custom Profile</h3>
+                <div class="result-card">
+                    <h4 id="resultDrinkName">The Dirty Yuzu Matcha</h4>
+                    <p id="resultDrinkDesc">An iced, sweet blend with oat milk.</p>
+                    <div class="barcode-graphic">|| ||| | ||| || |</div>
+                    <p class="barcode-hint">Show this at the register.</p>
+                </div>
+                <button class="btn-primary" onclick="resetQuiz()">Retake Quiz</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Map Section -->
+    <section id="location" class="location-section">
+        <div class="location-header">
+            <h2>Your Oasis Awaits.</h2>
+            <p>123 Matcha Lane, Hauz Khas, New Delhi</p>
+        </div>
+        <div class="map-container">
+            <img src="assets/map.png" alt="Map of Hauz Khas" class="luxury-map">
+            <div class="map-overlay">
+                <a href="https://maps.app.goo.gl/P87DF1ftjVhMzjde6" target="_blank" class="btn-secondary map-btn">Get Directions</a>
+            </div>
+            <!-- Animated Radar Pin -->
+            <div class="map-pin">
+                <div class="pin-dot"></div>
+                <div class="pin-pulse"></div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="visit" class="footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h2>Matcha House Delhi</h2>
+                <p>Elevating your daily ritual.</p>
+            </div>
+            <div class="footer-location">
+                <h3>Visit Us</h3>
+                <p>123 Matcha Lane, Hauz Khas</p>
+                <p>New Delhi, 110016</p>
+                <p>Open Daily: 8AM - 9PM</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Matcha House Delhi. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script type="module" src="cup3d.js"></script>
+</body>
+</html>
