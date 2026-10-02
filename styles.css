@@ -119,8 +119,8 @@ h1, h2, h3, .logo {
 
 .spinning-whisk {
     margin: 0 auto 2rem;
-    width: 200px;
-    height: 200px;
+    width: 400px;
+    height: 300px;
     pointer-events: auto;
 }
 
