@@ -7,7 +7,7 @@
     <meta name="description" content="Visit Matcha House Delhi for premium, authentic matcha. Discover the secret Whisk Ritual to unlock exclusive in-store rewards.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Inter:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <script type="importmap">
     {
@@ -47,42 +47,19 @@
         <div class="hero-content">
             <h1>Awaken Your<br>Senses.</h1>
             <p>Experience the purest, ceremonial-grade matcha<br>right in the heart of Delhi.</p>
-            <a href="#secret-ritual" class="btn-secondary">Unlock the Secret</a>
+            <div class="hero-cta-group">
+                <a href="#taste-profile" class="btn-secondary">Unlock the Secret</a>
+                <a href="#menu" class="btn-ghost">View Menu</a>
+            </div>
+            <div class="scroll-hint">
+                <span>Drag to spin</span>
+                <div class="scroll-hint-icon">↓</div>
+            </div>
         </div>
     </header>
 
-    <section id="secret-ritual" class="ritual-section">
-        <div class="ritual-container">
-            <div class="ritual-text">
-                <h2>The Secret Whisk Ritual</h2>
-                <p>True matcha requires patience, precision, and the perfect whisk (Chasen). Master the motion here to reveal an exclusive pass for your next visit.</p>
-                <div class="instructions">
-                    <span class="icon">✨</span>
-                    <p>Move your cursor in circles over the bowl to whisk the matcha.</p>
-                </div>
-            </div>
-            
-            <div class="interactive-whisk-area">
-                <div class="ritual-bowl-container">
-                    <img src="assets/hero-matcha.png" alt="Matcha Bowl" class="ritual-bowl" id="ritualBowl">
-                    
-                    <!-- Progress UI -->
-                    <div class="whisk-progress">
-                        <svg class="progress-ring" width="200" height="200">
-                            <circle class="progress-ring__circle" stroke="#D4AF37" stroke-width="8" fill="transparent" r="90" cx="100" cy="100"/>
-                        </svg>
-                    </div>
 
-                    <!-- Secret Reveal Overlay -->
-                    <div class="secret-reveal" id="secretReveal">
-                        <h3>Secret Unlocked!</h3>
-                        <div class="passcode">MATCHA-VIP-DELHI</div>
-                        <p>Show this code in-store for a complimentary pastry with any Matcha purchase.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+
 
     <section id="about" class="editorial-section">
         <div class="editorial-container">
@@ -463,6 +440,7 @@
     </footer>
 
     <script src="script.js"></script>
+    <script type="module" src="whisk3d.js"></script>
     <script type="module" src="cup3d.js"></script>
 </body>
 </html>

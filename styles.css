@@ -148,15 +148,17 @@ h1, h2, h3, .logo {
     border: 2px solid var(--color-gold);
     color: var(--color-matcha-dark);
     text-decoration: none;
-    padding: 1rem 2rem;
+    padding: 1rem 2.5rem;
     font-family: var(--font-heading);
     font-weight: 600;
     letter-spacing: 1px;
     position: relative;
     overflow: hidden;
-    transition: all 0.3s ease;
-    opacity: 0;
-    animation: fadeUp 1s ease forwards 0.6s;
+    transition: color 0.3s ease;
+    background: rgba(249, 249, 244, 0.6);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border-radius: 2px;
 }
 
 .btn-secondary::after {
@@ -181,6 +183,70 @@ h1, h2, h3, .logo {
     transform: scaleX(1);
     transform-origin: left;
 }
+
+/* Ghost secondary button */
+.btn-ghost {
+    display: inline-block;
+    border: 1px solid rgba(58, 74, 28, 0.4);
+    color: var(--color-matcha-dark);
+    text-decoration: none;
+    padding: 1rem 2.5rem;
+    font-family: var(--font-heading);
+    font-weight: 500;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    background: transparent;
+    border-radius: 2px;
+}
+
+.btn-ghost:hover {
+    background: rgba(58, 74, 28, 0.08);
+    border-color: var(--color-matcha-dark);
+}
+
+/* CTA group */
+.hero-cta-group {
+    display: flex;
+    gap: 1.2rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    pointer-events: auto;
+    opacity: 0;
+    animation: fadeUp 1s ease forwards 0.7s;
+}
+
+/* Drag hint */
+.scroll-hint {
+    margin-top: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.4rem;
+    opacity: 0;
+    animation: fadeUp 1s ease forwards 1.2s;
+    pointer-events: none;
+}
+
+.scroll-hint span {
+    font-size: 0.75rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--color-matcha);
+    opacity: 0.7;
+    font-weight: 500;
+}
+
+.scroll-hint-icon {
+    font-size: 1.2rem;
+    color: var(--color-gold);
+    animation: bounce 2s ease infinite;
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(6px); }
+}
+
 
 /* 3D Tilt Elements */
 .perspective-container {
@@ -220,136 +286,79 @@ h1, h2, h3, .logo {
 }
 
 
-/* --- Secret Ritual Section (The Gimmick) --- */
-.ritual-section {
-    background-color: var(--color-matcha-dark);
-    color: var(--color-cream);
-    padding: 8rem 10%;
+/* --- Scroll Animation Section --- */
+.scroll-anim-section {
+    height: 300vh;
+    background-color: var(--color-cream);
     position: relative;
+    z-index: 10;
 }
 
-.ritual-container {
-    display: flex;
-    align-items: center;
-    gap: 4rem;
-}
-
-.ritual-text {
-    flex: 1;
-}
-
-.ritual-text h2 {
-    font-size: 3rem;
-    color: var(--color-gold);
-    margin-bottom: 1.5rem;
-}
-
-.ritual-text p {
-    font-size: 1.1rem;
-    opacity: 0.9;
-    margin-bottom: 2rem;
-}
-
-.instructions {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    background: rgba(255, 255, 255, 0.1);
-    padding: 1.5rem;
-    border-radius: 12px;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-}
-
-.instructions .icon {
-    font-size: 2rem;
-    animation: pulse 2s infinite;
-}
-
-.interactive-whisk-area {
-    flex: 1;
+.scroll-sticky-container {
+    position: sticky;
+    top: 0;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
 }
 
-.ritual-bowl-container {
+.scroll-anim-content {
     position: relative;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.whisk-wrapper {
+    position: absolute;
+    /* Resting on powder */
+    top: 150px; 
+    z-index: 10;
+    will-change: transform;
+}
+
+.anim-whisk {
+    width: 350px;
+    height: auto;
+    transform-origin: center bottom;
+    will-change: transform;
+}
+
+.base-wrapper {
+    position: absolute;
+    bottom: 50px;
     width: 350px;
     height: 350px;
-    border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
-    cursor: grab;
 }
 
-.ritual-bowl-container:active {
-    cursor: grabbing;
+.anim-img {
+    mix-blend-mode: multiply;
 }
 
-.ritual-bowl {
-    width: 80%;
-    height: 80%;
-    object-fit: cover;
-    border-radius: 50%;
-    box-shadow: 0 0 40px rgba(0,0,0,0.5);
-    transition: transform 0.2s ease, filter 0.3s ease;
-}
-
-/* Whisk Progress SVG */
-.whisk-progress {
+.anim-powder {
+    width: 300px;
+    height: 300px;
+    object-fit: contain;
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) rotate(-90deg);
-    pointer-events: none;
+    will-change: transform, opacity;
 }
 
-.progress-ring__circle {
-    transition: stroke-dashoffset 0.1s;
-    transform-origin: 50% 50%;
-    stroke-dasharray: 565.48; /* 2 * PI * 90 */
-    stroke-dashoffset: 565.48; 
-}
-
-/* Secret Reveal UI */
-.secret-reveal {
+.anim-bowl {
+    width: 450px;
+    height: 450px;
+    object-fit: contain;
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) scale(0.8);
-    background: rgba(249, 249, 244, 0.95);
-    color: var(--color-matcha-dark);
-    padding: 2rem;
-    border-radius: 20px;
-    text-align: center;
-    box-shadow: 0 20px 40px rgba(0,0,0,0.4);
     opacity: 0;
-    pointer-events: none;
-    transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    border: 2px solid var(--color-gold);
-}
-
-.secret-reveal.active {
-    opacity: 1;
-    transform: translate(-50%, -50%) scale(1);
-    pointer-events: auto;
-}
-
-.secret-reveal h3 {
-    margin-bottom: 1rem;
-}
-
-.passcode {
-    font-size: 1.5rem;
-    font-family: monospace;
-    font-weight: bold;
-    background: var(--color-gold);
-    color: #fff;
-    padding: 0.5rem 1rem;
-    border-radius: 8px;
-    margin-bottom: 1rem;
-    display: inline-block;
+    transform: scale(0.8);
+    will-change: transform, opacity;
 }
 
 /* --- Editorial Magazine Section --- */
@@ -459,7 +468,11 @@ h1, h2, h3, .logo {
     z-index: 1;
     cursor: grab;
     pointer-events: auto;
-    mix-blend-mode: multiply; /* Seamless blending into cream background */
+    transition: opacity 0.1s linear;
+}
+
+#cupCanvas:active {
+    cursor: grabbing;
 }
 
 /* --- Global UX Polish --- */
@@ -473,13 +486,14 @@ h1, h2, h3, .logo {
     pointer-events: none;
 }
 .cursor-dot {
-    width: 32px;
-    height: 32px;
+    width: 64px;
+    height: 64px;
     background-image: url('assets/cursor.png');
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-    transform: translate(-16px, -16px); /* offset for new size */
+    transform: translate(-50%, -50%);
+    filter: drop-shadow(0px 4px 8px rgba(0,0,0,0.4));
 }
 .cursor-outline {
     width: 40px;
@@ -1055,5 +1069,33 @@ h1, h2, h3, .logo {
     }
     .nav-left a {
         font-size: 0.85rem;
+    }
+    .hero-cta-group {
+        flex-direction: column;
+        align-items: center;
+    }
+    .hero-cta-group a {
+        width: 100%;
+        max-width: 260px;
+        text-align: center;
+    }
+    .menu-grid {
+        grid-template-columns: 1fr;
+    }
+    .signature-gallery {
+        grid-template-columns: 1fr;
+    }
+    .sig-item {
+        aspect-ratio: 3/4;
+    }
+}
+
+/* Hide custom cursor on touch devices */
+@media (hover: none) and (pointer: coarse) {
+    body {
+        cursor: auto;
+    }
+    .cursor-dot, .cursor-outline {
+        display: none !important;
     }
 }
