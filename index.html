@@ -45,9 +45,6 @@
     <header class="hero" id="home">
         <canvas id="cupCanvas"></canvas>
         <div class="hero-content">
-            <div class="spinning-whisk">
-                <iframe title="Matcha Tea with Bamboo Whisk" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share src="https://sketchfab.com/models/a1b560fb8dfb4195a1891dda5119c658/embed?autostart=1&transparent=1&ui_infos=0&ui_stop=0&ui_watermark=0&ui_theme=dark" style="width: 100%; height: 100%;"> </iframe>
-            </div>
             <h1>Awaken Your<br>Senses.</h1>
             <p>Experience the purest, ceremonial-grade matcha<br>right in the heart of Delhi.</p>
             <a href="#secret-ritual" class="btn-secondary">Unlock the Secret</a>
@@ -61,14 +58,14 @@
                 <p>True matcha requires patience, precision, and the perfect whisk (Chasen). Master the motion here to reveal an exclusive pass for your next visit.</p>
                 <div class="instructions">
                     <span class="icon">✨</span>
-                    <p>Move your cursor in circles over the bowl to whisk the matcha.</p>
+                    <p>Scroll down gently to whisk the matcha and reveal your reward.</p>
                 </div>
             </div>
             
             <div class="interactive-whisk-area">
                 <div class="ritual-bowl-container">
-                    <img src="assets/hero-matcha.png" alt="Matcha Bowl" class="ritual-bowl" id="ritualBowl">
-                    
+                    <iframe id="sketchfab-iframe" title="Matcha Tea with Bamboo Whisk" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share src="" style="width: 100%; height: 100%; border-radius: 50%; pointer-events: none;"> </iframe>
+                    <script type="text/javascript" src="https://static.sketchfab.com/api/sketchfab-viewer-1.12.1.js"></script>
                     <!-- Progress UI -->
                     <div class="whisk-progress">
                         <svg class="progress-ring" width="200" height="200">
@@ -467,5 +464,6 @@
 
     <script src="script.js"></script>
     <script type="module" src="cup3d.js"></script>
+    <script src="scroll-whisk.js"></script>
 </body>
 </html>
