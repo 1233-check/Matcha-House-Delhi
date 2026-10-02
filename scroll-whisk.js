@@ -1,49 +1,17 @@
+/*
+ * scroll-whisk.js — Zero-error native ceremonial whisk ritual
+ * Coordinates scroll-driven progress with SVG ring and VIP voucher reveal.
+ */
+
 document.addEventListener('DOMContentLoaded', () => {
-    const iframe = document.getElementById('sketchfab-iframe');
-    if (!iframe) return;
-
-    // We want the section to be tall so the user can scroll to "whisk"
     const section = document.getElementById('secret-ritual');
-    if (section) {
-        section.style.height = '200vh'; 
-    }
-
-    const container = document.querySelector('.ritual-container');
-    if (container) {
-        container.style.position = 'sticky';
-        container.style.top = '10vh';
-    }
-
-    const client = new Sketchfab('1.12.1', iframe);
-    let api;
-    let isReady = false;
-
-    // Load the model
-    client.init('a1b560fb8dfb4195a1891dda5119c658', {
-        success: function onSuccess(apiInstance) {
-            api = apiInstance;
-            api.start();
-            api.addEventListener('viewerready', function() {
-                isReady = true;
-                // Initial camera setup
-                api.setCameraLookAt([0, -5, 5], [0, 0, 0], 2);
-            });
-        },
-        error: function onError() {
-            console.error('Sketchfab API error');
-        },
-        autostart: 1,
-        ui_infos: 0,
-        ui_watermark: 0,
-        ui_controls: 0,
-        ui_stop: 0,
-        transparent: 1,
-        camera: 0
-    });
+    if (!section) return;
 
     const progressCircle = document.querySelector('.progress-ring__circle');
     const secretReveal = document.getElementById('secretReveal');
-    let circumference = 2 * Math.PI * 90;
+    const whiskGraphic = document.querySelector('.chasen-whisk-graphic') || document.querySelector('.ritual-bowl-graphic');
+
+    const circumference = 2 * Math.PI * 90;
     if (progressCircle) {
         progressCircle.style.strokeDasharray = `${circumference} ${circumference}`;
         progressCircle.style.strokeDashoffset = circumference;
@@ -52,44 +20,35 @@ document.addEventListener('DOMContentLoaded', () => {
     let isUnlocked = false;
 
     window.addEventListener('scroll', () => {
-        if (!section || !isReady) return;
+        if (!section || isUnlocked) return;
 
         const rect = section.getBoundingClientRect();
-        const start = window.innerHeight; // When section top enters bottom of screen
-        const end = -section.offsetHeight / 2; // When section is halfway scrolled out
-        
+        const windowHeight = window.innerHeight;
+        const start = windowHeight * 0.85;
+        const end = -section.offsetHeight * 0.2;
+
         let progress = 0;
         if (rect.top < start && rect.top > end) {
-            progress = (start - rect.top) / (start - end);
+            progress = Math.min(Math.max((start - rect.top) / (start - end), 0), 1);
         } else if (rect.top <= end) {
             progress = 1;
         }
 
-        // 1. Update UI Progress Ring
         if (progressCircle && !isUnlocked) {
             const offset = circumference - progress * circumference;
             progressCircle.style.strokeDashoffset = offset;
         }
 
-        // 2. Rotate Camera around the bowl (whisking motion)
-        if (api && !isUnlocked) {
-            // Orbit camera based on scroll progress
-            const angle = progress * Math.PI * 10; // 5 full rotations
-            const radius = 6;
-            const height = 4;
-            
-            const camX = Math.cos(angle) * radius;
-            const camY = Math.sin(angle) * radius;
-            
-            api.setCameraLookAt([camX, camY, height], [0, 0, 0], 1);
+        if (whiskGraphic) {
+            whiskGraphic.style.transform = `rotate(${progress * 540}deg) scale(${1 + progress * 0.08})`;
         }
 
-        // 3. Unlock the secret
-        if (progress >= 0.95 && !isUnlocked) {
+        if (progress >= 0.92 && !isUnlocked) {
             isUnlocked = true;
+            if (progressCircle) progressCircle.style.stroke = '#4A5D23';
             if (secretReveal) {
                 secretReveal.classList.add('active');
             }
         }
-    });
+    }, { passive: true });
 });

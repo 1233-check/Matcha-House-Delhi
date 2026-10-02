@@ -1073,3 +1073,970 @@ h1, h2, h3, .logo {
         font-size: 0.85rem;
     }
 }
+
+/* ========================================================
+   REBUILD EXPANSION STYLES (R1 – R8)
+   Corporate Luxury Aesthetic — Zero Hero Interference
+   ======================================================== */
+
+/* --- Custom Cursor Desktop Scoping (R8) --- */
+@media (hover: none) or (pointer: coarse) {
+    body {
+        cursor: auto !important;
+    }
+    .cursor-dot, .cursor-outline {
+        display: none !important;
+    }
+}
+
+@media (hover: hover) and (pointer: fine) {
+    body {
+        cursor: none;
+    }
+}
+
+/* --- Section Common Polish --- */
+.sub-heading {
+    display: inline-block;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--color-gold);
+    margin-bottom: 0.8rem;
+}
+
+/* --- Whisk Ritual Graphic Stability (M1) --- */
+.ritual-bowl-graphic {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    background: radial-gradient(circle, #56782E 0%, #2A3B14 100%);
+    box-shadow: 0 10px 30px rgba(42, 59, 20, 0.4), inset 0 4px 12px rgba(255, 255, 255, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    position: relative;
+    cursor: grab;
+    transition: transform 0.2s ease;
+}
+
+.ritual-bowl-graphic:active {
+    cursor: grabbing;
+}
+
+.chasen-whisk-graphic {
+    font-size: 3.5rem;
+    transition: transform 0.15s ease-out;
+    user-select: none;
+}
+
+/* --- Menu Controls: Category Tabs & Oat Milk Toggle (R1) --- */
+.menu-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin: 3rem 0 3.5rem 0;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+}
+
+.menu-tabs {
+    display: flex;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+}
+
+.menu-tab-btn {
+    background: transparent;
+    border: 1px solid rgba(58, 74, 28, 0.25);
+    color: var(--color-matcha-dark);
+    padding: 0.65rem 1.4rem;
+    border-radius: 30px;
+    font-family: var(--font-heading);
+    font-size: 0.88rem;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.menu-tab-btn:hover {
+    border-color: var(--color-gold);
+    color: var(--color-matcha);
+    transform: translateY(-1px);
+}
+
+.menu-tab-btn.active {
+    background: var(--color-matcha);
+    color: white;
+    border-color: var(--color-matcha);
+    box-shadow: 0 4px 15px rgba(74, 93, 35, 0.25);
+}
+
+/* Oat Milk Toggle Switch */
+.oat-toggle-wrapper {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.85rem;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 0.5rem 1.2rem;
+    border-radius: 35px;
+    border: 1px solid rgba(212, 175, 55, 0.35);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+}
+
+.oat-switch {
+    position: relative;
+    display: inline-block;
+    width: 46px;
+    height: 24px;
+    margin: 0;
+}
+
+.oat-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.oat-slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #D1D5DB;
+    transition: .3s cubic-bezier(0.16, 1, 0.3, 1);
+    border-radius: 24px;
+}
+
+.oat-slider:before {
+    position: absolute;
+    content: "";
+    height: 18px;
+    width: 18px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    transition: .3s cubic-bezier(0.16, 1, 0.3, 1);
+    border-radius: 50%;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.oat-switch input:checked + .oat-slider {
+    background-color: var(--color-matcha);
+}
+
+.oat-switch input:checked + .oat-slider:before {
+    transform: translateX(22px);
+}
+
+.oat-label {
+    font-size: 0.92rem;
+    font-weight: 500;
+    color: var(--color-matcha-dark);
+}
+
+.oat-badge {
+    background: var(--color-gold);
+    color: white;
+    padding: 0.15rem 0.45rem;
+    border-radius: 12px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    margin-left: 0.25rem;
+}
+
+/* --- Upgraded Menu Cards & Layout --- */
+.menu-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: rgba(255, 255, 255, 0.65);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(212, 175, 55, 0.22);
+    border-radius: 14px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    position: relative;
+}
+
+.menu-item:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 14px 35px rgba(58, 74, 28, 0.08);
+    border-color: var(--color-gold);
+    background: rgba(255, 255, 255, 0.95);
+}
+
+.menu-item-title-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.4rem;
+}
+
+.menu-item-title-row h4 {
+    font-size: 1.15rem;
+    color: var(--color-matcha-dark);
+    margin: 0;
+}
+
+.menu-item-price {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 1.25rem;
+    color: var(--color-gold);
+    margin: 0.8rem 0 0.5rem 0;
+}
+
+/* Badges */
+.badge {
+    display: inline-flex;
+    align-items: center;
+    font-size: 0.72rem;
+    font-weight: 700;
+    padding: 0.22rem 0.6rem;
+    border-radius: 14px;
+    letter-spacing: 0.3px;
+    white-space: nowrap;
+}
+
+.badge-popular {
+    background: linear-gradient(135deg, #FFF3E0 0%, #FFE0B2 100%);
+    color: #D84315;
+    border: 1px solid #FFCC80;
+}
+
+.badge-new {
+    background: linear-gradient(135deg, #E8F5E9 0%, #C8E6C9 100%);
+    color: #2E7D32;
+    border: 1px solid #A5D6A7;
+}
+
+/* Ingredient Tags */
+.ingredient-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin-top: 0.6rem;
+}
+
+.tag {
+    font-size: 0.72rem;
+    background: rgba(74, 93, 35, 0.08);
+    color: var(--color-matcha);
+    padding: 0.2rem 0.55rem;
+    border-radius: 12px;
+    font-weight: 500;
+}
+
+/* Menu Actions & WhatsApp Order Button */
+.menu-item-actions {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.btn-wa-order {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    background: #25D366;
+    color: white !important;
+    text-decoration: none;
+    font-size: 0.82rem;
+    font-weight: 600;
+    padding: 0.45rem 1rem;
+    border-radius: 25px;
+    transition: all 0.2s ease;
+    box-shadow: 0 2px 8px rgba(37, 211, 102, 0.2);
+}
+
+.btn-wa-order:hover {
+    background: #20BA59;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(37, 211, 102, 0.35);
+}
+
+.wa-icon {
+    font-size: 0.95rem;
+}
+
+/* Hidden category filtering */
+.menu-category.hidden {
+    display: none !important;
+}
+
+.menu-item.hidden {
+    display: none !important;
+}
+
+/* --- Events & Workshops Section (R3) --- */
+.events-section {
+    padding: 8rem 10%;
+    background: linear-gradient(180deg, var(--color-cream) 0%, #F0F4E8 100%);
+    position: relative;
+}
+
+.events-header {
+    text-align: center;
+    max-width: 820px;
+    margin: 0 auto 3.5rem auto;
+}
+
+.events-header h2 {
+    font-size: 3rem;
+    color: var(--color-matcha-dark);
+    margin-bottom: 1rem;
+    line-height: 1.2;
+}
+
+.events-header p {
+    font-size: 1.1rem;
+    color: #4A4A4A;
+    margin-bottom: 1.8rem;
+}
+
+.events-meta-bar {
+    display: flex;
+    justify-content: center;
+    gap: 1.2rem;
+    flex-wrap: wrap;
+}
+
+.date-badge, .seats-counter {
+    background: white;
+    border: 1px solid rgba(212, 175, 55, 0.35);
+    padding: 0.55rem 1.2rem;
+    border-radius: 25px;
+    font-size: 0.88rem;
+    font-weight: 500;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+}
+
+.seats-counter {
+    color: #C0392B;
+    background: #FFF5F4;
+    border-color: #F5B7B1;
+    font-weight: 600;
+}
+
+.events-tiers-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2.5rem;
+    max-width: 980px;
+    margin: 0 auto;
+}
+
+.workshop-card {
+    background: white;
+    border-radius: 18px;
+    padding: 2.8rem 2.2rem;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+}
+
+.workshop-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 45px rgba(58, 74, 28, 0.12);
+}
+
+.workshop-card.featured {
+    border: 2px solid var(--color-gold);
+    box-shadow: 0 12px 35px rgba(212, 175, 55, 0.18);
+}
+
+.tier-badge {
+    align-self: flex-start;
+    background: rgba(74, 93, 35, 0.1);
+    color: var(--color-matcha);
+    padding: 0.3rem 0.85rem;
+    border-radius: 20px;
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    margin-bottom: 1.2rem;
+}
+
+.tier-badge.gold {
+    background: rgba(212, 175, 55, 0.2);
+    color: #8A6D1C;
+}
+
+.workshop-card h3 {
+    font-size: 1.8rem;
+    color: var(--color-matcha-dark);
+    margin-bottom: 0.8rem;
+}
+
+.tier-price {
+    font-family: var(--font-heading);
+    font-size: 2.4rem;
+    font-weight: 700;
+    color: var(--color-matcha-dark);
+    margin-bottom: 1.6rem;
+}
+
+.per-person {
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    font-weight: 400;
+    color: #777;
+}
+
+.tier-perks {
+    list-style: none;
+    margin-bottom: 2.5rem;
+    flex-grow: 1;
+}
+
+.tier-perks li {
+    padding: 0.55rem 0;
+    font-size: 0.95rem;
+    color: #444;
+    border-bottom: 1px dashed rgba(0,0,0,0.06);
+}
+
+.btn-whatsapp {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: #25D366;
+    color: white !important;
+    padding: 0.9rem 1.8rem;
+    border-radius: 35px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(37, 211, 102, 0.25);
+}
+
+.btn-whatsapp:hover {
+    background: #20BA59;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(37, 211, 102, 0.35);
+}
+
+.btn-tier {
+    width: 100%;
+    text-align: center;
+}
+
+/* --- Social Proof Section (R4) --- */
+.reviews-section {
+    padding: 8rem 10%;
+    background: var(--color-cream);
+}
+
+.reviews-header {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 3.5rem auto;
+}
+
+.reviews-header h2 {
+    font-size: 3rem;
+    color: var(--color-matcha-dark);
+    margin-bottom: 1rem;
+}
+
+.reviews-header p {
+    font-size: 1.1rem;
+    color: #555;
+}
+
+.reviews-carousel {
+    max-width: 820px;
+    margin: 0 auto 5rem auto;
+    position: relative;
+    overflow: hidden;
+    padding: 1rem 0;
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.5s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.review-card {
+    min-width: 100%;
+    box-sizing: border-box;
+    background: white;
+    padding: 3.5rem 3rem;
+    border-radius: 18px;
+    border: 1px solid rgba(212, 175, 55, 0.25);
+    text-align: center;
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.04);
+}
+
+.review-stars {
+    color: var(--color-gold);
+    font-size: 1.4rem;
+    margin-bottom: 1.2rem;
+    letter-spacing: 4px;
+}
+
+.review-text {
+    font-size: 1.25rem;
+    font-style: italic;
+    line-height: 1.8;
+    color: #333;
+    margin-bottom: 1.8rem;
+}
+
+.review-author strong {
+    display: block;
+    font-size: 1.05rem;
+    color: var(--color-matcha-dark);
+}
+
+.review-author span {
+    font-size: 0.88rem;
+    color: #888;
+}
+
+.carousel-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    margin-top: 1.8rem;
+}
+
+.carousel-btn {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    border: 1px solid var(--color-gold);
+    background: white;
+    color: var(--color-matcha-dark);
+    font-size: 1.2rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+}
+
+.carousel-btn:hover {
+    background: var(--color-gold);
+    color: white;
+}
+
+.carousel-dots {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.carousel-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #D1D5DB;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.carousel-dot.active {
+    background: var(--color-matcha-dark);
+    width: 24px;
+    border-radius: 10px;
+}
+
+/* Instagram Feed Grid */
+.instagram-section {
+    max-width: 1100px;
+    margin: 4rem auto 0 auto;
+}
+
+.instagram-header {
+    text-align: center;
+    margin-bottom: 2.2rem;
+}
+
+.instagram-header h3 a {
+    color: var(--color-matcha-dark);
+    text-decoration: none;
+    font-size: 1.6rem;
+    font-family: var(--font-heading);
+    transition: color 0.3s ease;
+}
+
+.instagram-header h3 a:hover {
+    color: var(--color-gold);
+}
+
+.instagram-header p {
+    font-size: 0.95rem;
+    color: #777;
+    margin-top: 0.3rem;
+}
+
+.instagram-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+}
+
+.insta-tile {
+    position: relative;
+    aspect-ratio: 1;
+    border-radius: 14px;
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+}
+
+.insta-tile img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.insta-tile:hover img {
+    transform: scale(1.08);
+}
+
+.insta-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(42, 59, 20, 0.65);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: 600;
+    font-size: 0.95rem;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    backdrop-filter: blur(2px);
+}
+
+.insta-tile:hover .insta-overlay {
+    opacity: 1;
+}
+
+/* --- Loyalty Program Section (R5) --- */
+.loyalty-section {
+    padding: 8rem 10%;
+    background: linear-gradient(135deg, #1B2E1C 0%, #294022 100%);
+    color: var(--color-cream);
+}
+
+.loyalty-card {
+    max-width: 780px;
+    margin: 0 auto;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(212, 175, 55, 0.45);
+    border-radius: 22px;
+    padding: 4rem 3rem;
+    backdrop-filter: blur(12px);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+}
+
+.loyalty-badge {
+    display: inline-block;
+    background: var(--color-gold);
+    color: #1B2E1C;
+    padding: 0.35rem 1rem;
+    border-radius: 20px;
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 1.2rem;
+}
+
+.loyalty-card h2 {
+    font-size: 2.8rem;
+    color: var(--color-cream);
+    margin-bottom: 0.8rem;
+}
+
+.loyalty-hook {
+    font-size: 1.35rem;
+    color: var(--color-gold);
+    font-weight: 600;
+    margin-bottom: 1.2rem;
+}
+
+.loyalty-desc {
+    font-size: 1rem;
+    color: rgba(249, 249, 244, 0.82);
+    margin-bottom: 2.5rem;
+    line-height: 1.7;
+    max-width: 620px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.loyalty-form .input-group {
+    display: flex;
+    gap: 0.8rem;
+    justify-content: center;
+    max-width: 580px;
+    margin: 0 auto;
+}
+
+.insider-input {
+    flex: 1;
+    padding: 0.95rem 1.5rem;
+    border-radius: 35px;
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    background: rgba(255, 255, 255, 0.12);
+    color: white;
+    font-size: 1rem;
+    outline: none;
+    transition: all 0.25s ease;
+}
+
+.insider-input::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.insider-input:focus {
+    border-color: var(--color-gold);
+    background: rgba(255, 255, 255, 0.18);
+    box-shadow: 0 0 15px rgba(212, 175, 55, 0.3);
+}
+
+.btn-claim {
+    white-space: nowrap;
+    border: none;
+    cursor: pointer;
+    font-family: var(--font-body);
+}
+
+.loyalty-success {
+    margin-top: 1.5rem;
+    color: #8CE09A;
+    font-weight: 500;
+    font-size: 0.95rem;
+}
+
+/* --- Location Section Upgrades (R6) --- */
+.location-section {
+    padding: 8rem 10%;
+    background: var(--color-cream);
+}
+
+.live-status-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.5rem 1.4rem;
+    border-radius: 30px;
+    font-size: 0.92rem;
+    font-weight: 600;
+    margin-top: 1.2rem;
+    transition: all 0.3s ease;
+}
+
+.live-status-pill.open {
+    background: #EAF7EE;
+    color: #1E7E34;
+    border: 1px solid #C3E6CB;
+}
+
+.live-status-pill.closed {
+    background: #FFF3CD;
+    color: #856404;
+    border: 1px solid #FFEEBA;
+}
+
+.pulse-indicator {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #28A745;
+    animation: pillPulse 1.8s infinite;
+}
+
+.live-status-pill.closed .pulse-indicator {
+    background: #E0A800;
+    animation: none;
+}
+
+@keyframes pillPulse {
+    0% { transform: scale(0.95); opacity: 0.8; }
+    50% { transform: scale(1.35); opacity: 1; }
+    100% { transform: scale(0.95); opacity: 0.8; }
+}
+
+.location-grid {
+    display: grid;
+    grid-template-columns: 1.25fr 1fr;
+    gap: 3rem;
+    margin-top: 3.5rem;
+    align-items: stretch;
+}
+
+.map-embed-wrapper {
+    border-radius: 18px;
+    overflow: hidden;
+    border: 1px solid rgba(212, 175, 55, 0.35);
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.05);
+    height: 100%;
+    min-height: 420px;
+}
+
+.map-embed-wrapper iframe {
+    width: 100%;
+    height: 100%;
+    min-height: 420px;
+    border: 0;
+}
+
+.location-info-card {
+    background: white;
+    border-radius: 18px;
+    padding: 2.8rem 2.2rem;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+}
+
+.info-block {
+    margin-bottom: 1.8rem;
+}
+
+.info-block h4 {
+    font-size: 1.15rem;
+    color: var(--color-matcha-dark);
+    margin-bottom: 0.4rem;
+}
+
+.info-block p {
+    color: #555;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.btn-directions {
+    display: inline-block;
+    color: var(--color-gold);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+    transition: color 0.2s ease;
+}
+
+.btn-directions:hover {
+    color: var(--color-matcha);
+}
+
+.btn-book-table {
+    width: 100%;
+    text-align: center;
+    margin-top: 0.5rem;
+}
+
+/* --- Footer Enhancements (R8) --- */
+.footer-socials {
+    display: flex;
+    gap: 1.2rem;
+    margin-top: 1rem;
+}
+
+.footer-socials a {
+    color: var(--color-gold);
+    text-decoration: none;
+    font-size: 0.92rem;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+.footer-socials a:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+.footer-inquiries h3 {
+    font-size: 1.3rem;
+    margin-bottom: 0.8rem;
+}
+
+.footer-inquiries p {
+    font-size: 0.95rem;
+    color: #CCC;
+    margin-bottom: 0.8rem;
+}
+
+.footer-mail-link {
+    display: inline-block;
+    color: var(--color-gold);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: color 0.2s ease;
+}
+
+.footer-mail-link:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+/* --- Responsive Polish across 320px to 4K (R8) --- */
+@media (max-width: 992px) {
+    .location-grid {
+        grid-template-columns: 1fr;
+    }
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .menu-grid {
+        grid-template-columns: 1fr !important;
+        gap: 1.5rem;
+    }
+    .menu-section, .events-section, .reviews-section, .loyalty-section, .location-section {
+        padding: 4rem 1.2rem !important;
+    }
+    .menu-controls {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.2rem;
+    }
+    .loyalty-form .input-group {
+        flex-direction: column;
+    }
+    .btn-claim {
+        width: 100%;
+    }
+    .events-header h2, .reviews-header h2, .location-header h2 {
+        font-size: 2.2rem;
+    }
+    .loyalty-card {
+        padding: 2.5rem 1.5rem;
+    }
+    .loyalty-card h2 {
+        font-size: 2.1rem;
+    }
+    .review-card {
+        padding: 2rem 1.2rem;
+    }
+    .review-text {
+        font-size: 1.05rem;
+    }
+}

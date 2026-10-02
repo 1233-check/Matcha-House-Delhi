@@ -56,3 +56,88 @@ Total page load (excluding 3D textures) under 3 seconds on a 4G connection. No c
 ## Verification Resources
 
 The project can be served locally with `python3 server.py` on port 8080. Three.js is loaded via CDN importmap (no build step needed). Test by opening http://localhost:8080 in a browser.
+
+## 2026-10-02T22:33:45Z
+
+Rebuild the Matcha House Delhi website to production-quality, corporate-level standard that drives real revenue for a small premium matcha café in Delhi, India. This is an existing HTML/CSS/JS project.
+
+Use all agents. Assign roles that agents are best at for maximum optimization and utilization of resources.
+
+Working directory: /Users/iyumriba/Documents/antigravity/Matcha House Delhi
+Integrity mode: development
+
+The project uses Three.js r164 via CDN importmap, pure static HTML/CSS/JS served by a Python HTTP server (server.py on port 8080). No build step.
+
+## CRITICAL CONSTRAINT
+
+> **DO NOT MODIFY THE HERO SECTION.** Lines 45-52 of index.html (the `<header class="hero" id="home">` block containing the cupCanvas, hero-content div, h1, p, and btn-secondary link) must remain EXACTLY as they are. Do not change any CSS that affects the hero section's appearance. The hero section is final and approved.
+
+Everything else on the page can be rebuilt, enhanced, or replaced.
+
+## Context
+
+This website will be pitched to the café owner tomorrow. The goal is a website that brings REAL MONEY and REAL PEOPLE to the café. Every feature must have a clear revenue or customer-acquisition purpose.
+
+The café has 32 real menu items across 3 categories (Pure & Refreshing, Signature Lattes, Clouds/Fusions/Treats) with prices ranging from ₹200-₹395. They offer dairy and oat milk (₹80 extra). Sweeteners: sugar syrup, honey, stevia. Google Maps link: https://maps.app.goo.gl/P87DF1ftjVhMzjde6
+
+## Requirements
+
+### R1. Revenue-Driving Menu Section
+Rebuild the menu with category tabs/filters, hover cards showing ingredient tags, "🔥 Popular" and "✨ New" badges on select items, and a WhatsApp ordering button per item that opens a pre-filled WhatsApp message (use wa.me link format). Add an oat milk toggle that shows +₹80 pricing in real-time. All 32 existing menu items with correct prices must be preserved.
+
+### R2. WhatsApp-First Customer Funnel
+Every call-to-action should funnel through WhatsApp (India's dominant messaging platform). This includes: "Order on WhatsApp" buttons on menu items, "Book a Table" button in the location section, "Join Matcha Insider" loyalty club sign-up that collects name via a simple form and opens a WhatsApp message to join, and event booking buttons. Use wa.me/919999999999 as the placeholder phone number.
+
+### R3. Events & Workshops Section (NEW)
+Add a "Matcha Masterclass" section with tiered pricing (Basic ₹1,500 / Premium ₹2,500), a visual date display, limited-seats counter for urgency, and a WhatsApp booking button. This is a high-margin revenue stream (₹22,500/event).
+
+### R4. Social Proof Section (NEW)
+Add a reviews/testimonials carousel with 5-6 realistic curated reviews (make them feel authentic — mention specific drinks, the ambiance, staff). Include star ratings. Add an Instagram feed placeholder section. This builds trust and justifies premium ₹350-400 pricing.
+
+### R5. Loyalty Program Section (NEW)
+"Matcha Insider" WhatsApp club — a sign-up form (name field + WhatsApp button) with the hook: "Join for a free matcha cookie on your next visit." This builds the first-party customer database for remarketing at zero cost.
+
+### R6. Enhanced Location Section
+Replace the static map image with an embedded Google Maps iframe (use the provided Google Maps link). Add live "Open Now" / "Closed" indicator based on operating hours (8AM-9PM daily, IST). Add nearest metro station info. Add a "Book a Table" WhatsApp button.
+
+### R7. Local SEO & Technical Quality
+Add Schema.org LocalBusiness JSON-LD structured data in the head. Add proper OpenGraph meta tags for social sharing. Add Google Analytics 4 placeholder (gtag.js with a placeholder measurement ID). Ensure all images lazy-load. Zero console errors. All internal/external links valid. Page must pass basic HTML validation.
+
+### R8. Production-Level Polish
+The entire page must feel like it was built by a top agency. Smooth scroll-triggered animations for section entries. Consistent typography hierarchy. Professional spacing and whitespace. Mobile-first responsive design (320px to 4K). Touch-optimized interactions. The custom bamboo cursor (64px, drop-shadow) stays on desktop, hidden on touch devices. Footer with social links, operating hours, and a "Franchise Enquiries" mailto link.
+
+## Acceptance Criteria
+
+### Hero Section Integrity
+- [ ] The hero section (lines 45-52 of the original index.html) is byte-for-byte identical to the original
+- [ ] No CSS changes affect the hero section's visual appearance
+
+### Menu Completeness
+- [ ] All 32 menu items are present with correct names and prices
+- [ ] Category filtering works (Pure & Refreshing | Signature Lattes | Clouds & Treats)
+- [ ] WhatsApp order buttons generate correct pre-filled messages including the drink name
+- [ ] Oat milk toggle adds ₹80 to displayed prices
+
+### Revenue Features
+- [ ] Events section displays with pricing, date, seats counter, and WhatsApp booking
+- [ ] Loyalty sign-up form collects name and generates WhatsApp join link
+- [ ] Social proof section shows reviews with star ratings
+- [ ] Location section has embedded Google Maps iframe and "Book a Table" button
+
+### Technical Quality
+- [ ] Zero JavaScript console errors on page load and during interaction
+- [ ] Schema.org JSON-LD validates as LocalBusiness type
+- [ ] No horizontal scrollbar on any viewport from 320px to 2560px
+- [ ] All anchor links resolve to valid targets
+- [ ] Page loads without visible layout shift
+- [ ] All text legible without zooming on 375px screen
+
+### Production Polish
+- [ ] Scroll-triggered entrance animations on all sections
+- [ ] Consistent hover states on all interactive elements
+- [ ] Footer has social links, hours, and franchise enquiry link
+- [ ] Custom cursor visible on desktop, hidden on mobile/touch
+
+## Verification Resources
+
+The project can be served with `python3 server.py` on port 8080. Three.js is loaded via CDN importmap (no build step). Test by opening http://localhost:8080 in a browser. The hero section in the current codebase (lines 45-52 of index.html) is the canonical reference that must not change.

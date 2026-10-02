@@ -1,36 +1,38 @@
-# BRIEFING — 2026-10-02T17:25:30Z
+# BRIEFING — 2026-10-02T23:16:00Z
 
 ## Mission
-Oversee the elevation of the Matcha House Delhi landing page to a production-ready luxury website featuring a photorealistic procedural 3D Three.js matcha cup, mobile-first polish, and smooth transitions.
+Oversee the production-quality rebuild of Matcha House Delhi website to drive real café revenue with full WhatsApp funnel, events, reviews, loyalty club, and menu enhancements while strictly preserving the hero section byte-for-byte.
 
 ## 🔒 My Identity
 - Archetype: sentinel
 - Working directory: /Users/iyumriba/Documents/antigravity/Matcha House Delhi/.agents/teamwork/sentinel
-- Orchestrator: 7aee3dd2-f8df-4089-ae07-1e7bb1693e1e
-- Victory Auditor: to be spawned on victory claim
+- Orchestrator: 279b5f99-1cae-4d02-b131-3741de12e9ca (completed & retired)
+- Victory Auditor: 18e7ee02-c405-44d0-9341-0bdb51fb01a8 (completed: VICTORY CONFIRMED)
 
 ## 🔒 Key Constraints
 - No technical decisions — relay only
 - Victory Audit is MANDATORY before reporting completion
-- Do not write code or analyze problems directly
-- Pre-flight audit not required for general path
-- Monitor via crons and kill all subagents upon project completion
+- Critical constraint: DO NOT MODIFY THE HERO SECTION (lines 45-52 of original index.html byte-for-byte identical, no CSS affecting hero appearance)
+- General execution path routed to teamwork_preview_orchestrator
+- Monitor via crons (progress reporting and liveness check)
+- Cancel crons and kill all subagents upon project completion
 
 ## User Context
-- **Last user request**: Elevate Matcha House Delhi landing page with procedural 3D Three.js cup, UX polish, mobile responsiveness, and production performance.
+- **Last user request**: Rebuild Matcha House Delhi website to corporate standard driving revenue (32 items, WhatsApp funnels, Matcha Masterclass events, testimonials, Matcha Insider loyalty, Google Maps iframe + open/close indicator, SEO/OG/GA4, agency polish, hero untouched).
 - **Pending clarifications**: none
-- **Delivered results**: none
+- **Delivered results**: Full rebuild verified across all tiers; Hero section preserved byte-for-byte; VICTORY CONFIRMED by independent Victory Auditor.
 
 ## Project Status
-- **Phase**: Phase 0 (Survey & Codebase Exploration)
-- **Active Subagents**: 3 parallel Explorers dispatched by Orchestrator (3D Graphics, UI/UX Transitions, Features & QA)
+- **Phase**: complete
 
 ## Victory Audit Status
-- **Triggered**: no
-- **Verdict**: pending
+- **Triggered**: yes
+- **Verdict**: VICTORY CONFIRMED
+- **Auditor Conv ID**: 18e7ee02-c405-44d0-9341-0bdb51fb01a8
 - **Retry count**: 0
 
 ## Artifact Index
-- /Users/iyumriba/Documents/antigravity/Matcha House Delhi/.agents/teamwork/ORIGINAL_REQUEST.md — Authoritative record of user requirements
-- Task 2e6b50a8-ef39-41de-b795-3b55390151a4/task-10 — Cron 1: Progress reporting (*/8 * * * *)
-- Task 2e6b50a8-ef39-41de-b795-3b55390151a4/task-12 — Cron 2: Liveness check (*/10 * * * *)
+- /Users/iyumriba/Documents/antigravity/Matcha House Delhi/.agents/teamwork/ORIGINAL_REQUEST.md — Authoritative user requirements
+- /Users/iyumriba/Documents/antigravity/Matcha House Delhi/.agents/teamwork/sentinel/BRIEFING.md — Sentinel memory and state
+- /Users/iyumriba/Documents/antigravity/Matcha House Delhi/.agents/teamwork/sentinel/handoff.md — Sentinel completion handoff
+- /Users/iyumriba/Documents/antigravity/Matcha House Delhi/.agents/teamwork/victory_auditor/handoff.md — Victory Auditor report
