@@ -32,7 +32,88 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Scroll Animation is handled by whisk3d.js
+    // --- The Whisk Ritual Mini-Game ---
+    const bowlContainer = document.querySelector('.ritual-bowl-container');
+    const circle = document.querySelector('.progress-ring__circle');
+    const secretReveal = document.getElementById('secretReveal');
+    
+    if (bowlContainer && circle) {
+        const radius = circle.r.baseVal.value;
+        const circumference = radius * 2 * Math.PI;
+        
+        circle.style.strokeDasharray = `${circumference} ${circumference}`;
+        circle.style.strokeDashoffset = circumference;
+
+        function setProgress(percent) {
+            const offset = circumference - percent / 100 * circumference;
+            circle.style.strokeDashoffset = offset;
+        }
+
+        let progress = 0;
+        let lastMousePos = null;
+        let isWhisking = false;
+        let gameCompleted = false;
+
+        // Decrease progress over time if not whisking (adds challenge)
+        setInterval(() => {
+            if (!isWhisking && progress > 0 && !gameCompleted) {
+                progress = Math.max(0, progress - 1);
+                setProgress(progress);
+            }
+        }, 100);
+
+        bowlContainer.addEventListener('mousemove', (e) => {
+            if (gameCompleted) return;
+            
+            isWhisking = true;
+            
+            if (lastMousePos) {
+                // Calculate distance moved
+                const dx = e.clientX - lastMousePos.x;
+                const dy = e.clientY - lastMousePos.y;
+                const distance = Math.sqrt(dx*dx + dy*dy);
+                
+                // If they moved enough, increase progress
+                if (distance > 5) {
+                    progress += 0.5; // tweak for speed
+                    setProgress(progress);
+                    
+                    if (progress >= 100) {
+                        gameCompleted = true;
+                        circle.style.stroke = '#4A5D23'; // Turn green
+                        secretReveal.classList.add('active');
+                    }
+                }
+            }
+            
+            lastMousePos = { x: e.clientX, y: e.clientY };
+            
+            // Reset isWhisking after a short delay
+            clearTimeout(bowlContainer.whiskTimeout);
+            bowlContainer.whiskTimeout = setTimeout(() => {
+                isWhisking = false;
+                lastMousePos = null;
+            }, 150);
+        });
+        
+        // Touch support for mobile
+        bowlContainer.addEventListener('touchmove', (e) => {
+            if(gameCompleted) return;
+            e.preventDefault(); // prevent scrolling while whisking
+            isWhisking = true;
+            progress += 1;
+            setProgress(progress);
+            if(progress >= 100) {
+                gameCompleted = true;
+                circle.style.stroke = '#4A5D23';
+                secretReveal.classList.add('active');
+            }
+            clearTimeout(bowlContainer.whiskTimeout);
+            bowlContainer.whiskTimeout = setTimeout(() => {
+                isWhisking = false;
+            }, 150);
+        }, {passive: false});
+    }
 
     // --- Scroll Animations (Intersection Observer) ---
     const observer = new IntersectionObserver((entries) => {
