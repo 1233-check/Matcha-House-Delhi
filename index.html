@@ -58,31 +58,72 @@
         </div>
     </header>
 
-    <!-- Secret Ritual Section (Anchor target for hero CTA) -->
-    <section id="secret-ritual" class="ritual-section">
-        <div class="ritual-container">
-            <div class="ritual-text">
-                <h2>The Secret Whisk Ritual</h2>
-                <p>True matcha requires patience, precision, and the perfect whisk (Chasen). Master the motion here to reveal an exclusive pass for your next visit.</p>
-                <div class="instructions">
-                    <span class="icon">✨</span>
-                    <p>Scroll down or drag gently across the chawan bowl to whisk the matcha and reveal your reward.</p>
+    <!-- Live Ceremonial Video Feed with Parallax Scroll (Anchor target: #secret-ritual) -->
+    <section id="secret-ritual" class="live-feed-section" aria-label="Live Ceremonial Tea Bar Feed">
+        <div class="live-feed-backdrop" aria-hidden="true"></div>
+
+        <div class="live-feed-container">
+            <div class="live-feed-header">
+                <div class="live-pill">
+                    <span class="live-pulsing-dot"></span>
+                    <span class="live-pill-text">LIVE BAR STREAM</span>
+                    <span class="live-pill-sep">•</span>
+                    <span class="live-pill-loc">HAUZ KHAS FLAGSHIP</span>
                 </div>
+                <h2 class="live-feed-title">Artistry in <span class="title-highlight">Real Time</span><span class="title-kanji">茶道</span></h2>
+                <p class="live-feed-description">Witness the disciplined craftsmanship of authentic Japanese tea ceremony — broadcast live from our New Delhi tea bar as our artisans whisk and pour every ceremonial creation.</p>
             </div>
-            <div class="interactive-whisk-area">
-                <div class="ritual-bowl-container">
-                    <div class="ritual-bowl-graphic">
-                        <div class="chasen-whisk-graphic">🍵</div>
+
+            <div class="live-feed-stage" id="liveFeedStage">
+                <!-- Primary Video Feed Container (Extraction / Whisking) -->
+                <div class="feed-card feed-card-primary parallax-card" data-parallax-speed="0.10">
+                    <div class="feed-card-inner">
+                        <div class="feed-card-header">
+                            <div class="feed-card-meta">
+                                <span class="feed-channel">FEED 01 // EXTRACTION</span>
+                                <span class="feed-quality">4K • 60 FPS</span>
+                            </div>
+                            <span class="live-badge-mini">REC ●</span>
+                        </div>
+                        <div class="feed-video-wrapper">
+                            <video class="feed-video" autoplay loop muted playsinline webkit-playsinline preload="auto">
+                                <source src="assets/igexport-DcqnJUgM27f.mp4" type="video/mp4">
+                                Your browser does not support HTML5 video.
+                            </video>
+                            <div class="video-overlay-tint"></div>
+                        </div>
+                        <div class="feed-card-footer">
+                            <div class="feed-card-info">
+                                <span class="feed-item-title">Single-Estate Whisking</span>
+                                <span class="feed-item-sub">100-Prong Bamboo Chasen • 80°C Infusion</span>
+                            </div>
+                        </div>
                     </div>
-                    <div class="whisk-progress">
-                        <svg class="progress-ring" width="200" height="200">
-                            <circle class="progress-ring__circle" stroke="#D4AF37" stroke-width="8" fill="transparent" r="90" cx="100" cy="100"/>
-                        </svg>
-                    </div>
-                    <div class="secret-reveal" id="secretReveal">
-                        <h3>Secret Unlocked!</h3>
-                        <div class="passcode">MATCHA-VIP-DELHI</div>
-                        <p>Show this code in-store for a complimentary pastry with any Matcha purchase.</p>
+                </div>
+
+                <!-- Secondary Video Feed Container (Velvet Pour) -->
+                <div class="feed-card feed-card-secondary parallax-card" data-parallax-speed="0.18">
+                    <div class="feed-card-inner">
+                        <div class="feed-card-header">
+                            <div class="feed-card-meta">
+                                <span class="feed-channel">FEED 02 // VELVET CLOUD</span>
+                                <span class="feed-quality">STREAM ACTIVE</span>
+                            </div>
+                            <span class="live-badge-mini">LIVE ●</span>
+                        </div>
+                        <div class="feed-video-wrapper">
+                            <video class="feed-video" autoplay loop muted playsinline webkit-playsinline preload="auto">
+                                <source src="assets/igexport-DTxVGL-D-BI.mp4" type="video/mp4">
+                                Your browser does not support HTML5 video.
+                            </video>
+                            <div class="video-overlay-tint"></div>
+                        </div>
+                        <div class="feed-card-footer">
+                            <div class="feed-card-info">
+                                <span class="feed-item-title">Signature Cloud Pour</span>
+                                <span class="feed-item-sub">Organic Oat Cloud • Aerated Microfoam</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

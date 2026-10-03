@@ -1,13 +1,13 @@
-# BRIEFING — 2026-10-02T23:16:00Z
+# BRIEFING — 2026-10-03T14:53:00Z
 
 ## Mission
-Oversee the production-quality rebuild of Matcha House Delhi website to drive real café revenue with full WhatsApp funnel, events, reviews, loyalty club, and menu enhancements while strictly preserving the hero section byte-for-byte.
+Oversee the implementation of the live dual-video feed with updated design direction: 3Motional Elegance Portrait style (dark cinematic textured background, floating 3D isometric video cards, geometric framing, typography overlays, side-by-side depth, premium visual effects) with parallax scroll and silent autoplay intact.
 
 ## 🔒 My Identity
 - Archetype: sentinel
 - Working directory: /Users/iyumriba/Documents/antigravity/Matcha House Delhi/.agents/teamwork/sentinel
-- Orchestrator: 279b5f99-1cae-4d02-b131-3741de12e9ca (completed & retired)
-- Victory Auditor: 18e7ee02-c405-44d0-9341-0bdb51fb01a8 (completed: VICTORY CONFIRMED)
+- Orchestrator: 18c4f081-15d2-4aa0-b62c-da45c0b24d1a
+- Victory Auditor: [to be spawned on victory claim]
 
 ## 🔒 Key Constraints
 - No technical decisions — relay only
@@ -16,23 +16,25 @@ Oversee the production-quality rebuild of Matcha House Delhi website to drive re
 - General execution path routed to teamwork_preview_orchestrator
 - Monitor via crons (progress reporting and liveness check)
 - Cancel crons and kill all subagents upon project completion
+- SWE Light execution path: single self-contained code change requested small and focused
 
 ## User Context
-- **Last user request**: Rebuild Matcha House Delhi website to corporate standard driving revenue (32 items, WhatsApp funnels, Matcha Masterclass events, testimonials, Matcha Insider loyalty, Google Maps iframe + open/close indicator, SEO/OG/GA4, agency polish, hero untouched).
+- **Last user request**: Urgent design direction update — 3Motional Elegance Portrait style (dark textured cinematic background, floating 3D isometric video cards, geometric framing, dramatic typography overlays, side-by-side depth, subtle glitch text / glass overlays). Maintain parallax scroll and video autoplay.
 - **Pending clarifications**: none
-- **Delivered results**: Full rebuild verified across all tiers; Hero section preserved byte-for-byte; VICTORY CONFIRMED by independent Victory Auditor.
+- **Delivered results**: Initial implementation completed & tested; design revision dispatched to active orchestrator.
 
 ## Project Status
-- **Phase**: complete
+- **Phase**: in progress (design revision relayed to swe_1: 18c4f081-15d2-4aa0-b62c-da45c0b24d1a)
+- **Crons**:
+  - Cron 1 (Progress Report `*/8 * * * *`): task-24
+  - Cron 2 (Liveness Check `*/10 * * * *`): task-26
 
 ## Victory Audit Status
-- **Triggered**: yes
-- **Verdict**: VICTORY CONFIRMED
-- **Auditor Conv ID**: 18e7ee02-c405-44d0-9341-0bdb51fb01a8
+- **Triggered**: no
+- **Verdict**: pending
+- **Auditor Conv ID**: [TBD]
 - **Retry count**: 0
 
 ## Artifact Index
 - /Users/iyumriba/Documents/antigravity/Matcha House Delhi/.agents/teamwork/ORIGINAL_REQUEST.md — Authoritative user requirements
 - /Users/iyumriba/Documents/antigravity/Matcha House Delhi/.agents/teamwork/sentinel/BRIEFING.md — Sentinel memory and state
-- /Users/iyumriba/Documents/antigravity/Matcha House Delhi/.agents/teamwork/sentinel/handoff.md — Sentinel completion handoff
-- /Users/iyumriba/Documents/antigravity/Matcha House Delhi/.agents/teamwork/victory_auditor/handoff.md — Victory Auditor report

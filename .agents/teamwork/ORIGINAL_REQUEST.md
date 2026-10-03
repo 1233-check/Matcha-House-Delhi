@@ -140,4 +140,47 @@ The entire page must feel like it was built by a top agency. Smooth scroll-trigg
 
 ## Verification Resources
 
-The project can be served with `python3 server.py` on port 8080. Three.js is loaded via CDN importmap (no build step). Test by opening http://localhost:8080 in a browser. The hero section in the current codebase (lines 45-52 of index.html) is the canonical reference that must not change.
+
+## 2026-10-03T14:32:47Z
+
+This is a single self-contained fix; keep it small and focused. 
+Replace the "Secret Whisk Ritual" section with a creative live video feed that features a parallax scroll effect, utilizing two distinct video assets.
+
+Working directory: /Users/iyumriba/Documents/antigravity/Matcha House Delhi
+
+## Requirements
+
+### R1. Remove the Whisk Ritual
+Remove the Sketchfab 3D embed, the ritual text, and the secret code reveal logic from `index.html` and `scroll-whisk.js`. Ensure no dead JavaScript or CSS remains from this section.
+
+### R2. Implement a Creative Dual-Video Live Feed
+Replace the section with a creative layout using two HTML5 `<video>` elements (`assets/igexport-DcqnJUgM27f.mp4` and `assets/igexport-DTxVGL-D-BI.mp4`). Both must be set to autoplay, loop, and muted. The layout should look high-end and corporate (e.g., side-by-side, overlapping, or picture-in-picture).
+
+### R3. Parallax Scroll Effect
+Implement a parallax scroll animation so that as the user scrolls down, the video feed container(s) slide up at a different speed relative to the rest of the page, smoothly moving out of view.
+
+## Acceptance Criteria
+
+### Implementation Quality
+- [ ] The Sketchfab iframe and associated ritual DOM elements are completely removed.
+- [ ] Both video elements play automatically on load without sound.
+- [ ] The video layout is visually sophisticated and doesn't break responsive design on mobile.
+- [ ] The video containers exhibit a visible parallax translation relative to the document scroll position.
+- [ ] No JavaScript console errors occur during scrolling.
+
+## 2026-10-03T14:52:38Z
+
+URGENT DESIGN DIRECTION UPDATE FROM USER:
+
+The user has provided a reference design (3Motional Elegance Portrait After Effects Template style). They want the dual-video live feed section redesigned with the following aesthetic:
+
+1. **Dark, textured cinematic background** — starry/grainy dark backdrop behind the video section (NOT the current cream/green)
+2. **Floating 3D isometric video cards** — the two video feeds should appear to float in 3D space at slight angles/rotations, like product showcase mockups
+3. **Geometric framing** — use geometric cutout shapes (circles, arches, clean lines) as decorative frames or overlays around the videos
+4. **Typography overlays** — elegant, large serif or display typography layered over/around the videos (the current "Artistry in Real Time" heading should be more dramatic)
+5. **Side-by-side with depth** — videos presented like the portrait template showcase style, with slight 3D perspective transforms creating depth
+6. **Premium visual effects** — subtle glitch text animations, floating elements, glass/frosted overlays
+
+This is the user's creative vision. The implementation should maintain corporate-level professionalism while being visually dramatic and "cool". Think luxury fashion brand video showcase, not a simple grid.
+
+Apply these design changes to the live-feed-section CSS and HTML as needed. Keep the parallax scroll behavior and video autoplay functionality intact.

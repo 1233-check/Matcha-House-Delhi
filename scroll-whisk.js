@@ -1,54 +1,131 @@
 /*
- * scroll-whisk.js — Zero-error native ceremonial whisk ritual
- * Coordinates scroll-driven progress with SVG ring and VIP voucher reveal.
+ * scroll-whisk.js — Ceremonial Dual-Video Live Feed & Parallax Scroll Controller
+ * Matcha House Delhi
+ *
+ * Responsibilities:
+ * 1. Guarantees silent HTML5 video autoplay, loop, and muted state across all devices.
+ * 2. Implements GPU-accelerated differential parallax scroll animations for the video feed containers.
+ * 3. Enforces zero console errors during rapid scrolling and resizing.
+ * 4. Prevents mobile vertical card collisions and respects prefers-reduced-motion.
+ * 5. Handles page visibility changes to maintain continuous playback.
  */
 
-document.addEventListener('DOMContentLoaded', () => {
-    const section = document.getElementById('secret-ritual');
-    if (!section) return;
+(function () {
+    'use strict';
 
-    const progressCircle = document.querySelector('.progress-ring__circle');
-    const secretReveal = document.getElementById('secretReveal');
-    const whiskGraphic = document.querySelector('.chasen-whisk-graphic') || document.querySelector('.ritual-bowl-graphic');
+    function initLiveVideoFeed() {
+        var section = document.getElementById('secret-ritual');
+        if (!section) return;
 
-    const circumference = 2 * Math.PI * 90;
-    if (progressCircle) {
-        progressCircle.style.strokeDasharray = `${circumference} ${circumference}`;
-        progressCircle.style.strokeDashoffset = circumference;
-    }
+        var videoCards = section.querySelectorAll('.parallax-card');
+        var videos = section.querySelectorAll('video');
 
-    let isUnlocked = false;
-
-    window.addEventListener('scroll', () => {
-        if (!section || isUnlocked) return;
-
-        const rect = section.getBoundingClientRect();
-        const windowHeight = window.innerHeight;
-        const start = windowHeight * 0.85;
-        const end = -section.offsetHeight * 0.2;
-
-        let progress = 0;
-        if (rect.top < start && rect.top > end) {
-            progress = Math.min(Math.max((start - rect.top) / (start - end), 0), 1);
-        } else if (rect.top <= end) {
-            progress = 1;
+        // 1. Silent inline autoplay initialization & interaction fallback
+        var hasUserInteracted = false;
+        function onUserInteraction() {
+            if (hasUserInteracted) return;
+            hasUserInteracted = true;
+            videos.forEach(function (video) {
+                if (video.paused) {
+                    video.muted = true;
+                    video.play().catch(function () {});
+                }
+            });
+            window.removeEventListener('scroll', onUserInteraction);
+            window.removeEventListener('touchstart', onUserInteraction);
+            window.removeEventListener('click', onUserInteraction);
         }
 
-        if (progressCircle && !isUnlocked) {
-            const offset = circumference - progress * circumference;
-            progressCircle.style.strokeDashoffset = offset;
+        videos.forEach(function (video) {
+            video.muted = true;
+            video.defaultMuted = true;
+            video.playsInline = true;
+
+            var playPromise = video.play();
+            if (playPromise !== undefined) {
+                playPromise.catch(function () {
+                    window.addEventListener('scroll', onUserInteraction, { passive: true });
+                    window.addEventListener('touchstart', onUserInteraction, { passive: true });
+                    window.addEventListener('click', onUserInteraction, { passive: true });
+                });
+            }
+        });
+
+        // 2. Visibility change handling (resume on tab focus and bfcache navigation)
+        document.addEventListener('visibilitychange', function () {
+            if (!document.hidden) {
+                videos.forEach(function (video) {
+                    if (video.paused) {
+                        video.play().catch(function () {});
+                    }
+                });
+            }
+        });
+
+        window.addEventListener('pageshow', function () {
+            videos.forEach(function (video) {
+                if (video.paused) {
+                    video.play().catch(function () {});
+                }
+            });
+        });
+
+        // 3. Parallax scroll effect
+        if (!videoCards.length) return;
+
+        var isTicking = false;
+
+        function updateParallaxPositions() {
+            var prefersReducedMotion = typeof window.matchMedia === 'function' && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+            if (prefersReducedMotion) {
+                videoCards.forEach(function (card) {
+                    card.style.transform = 'translate3d(0, 0px, 0)';
+                });
+                isTicking = false;
+                return;
+            }
+
+            var rect = section.getBoundingClientRect();
+            var windowHeight = window.innerHeight || (document.documentElement && document.documentElement.clientHeight) || 800;
+
+            // Only perform translations when section is within or near the viewport
+            if (rect.bottom > -200 && rect.top < windowHeight + 200) {
+                var scrollDistance = Math.max(0, windowHeight - rect.top);
+                // On mobile stacked viewports, synchronize speeds to eliminate vertical collision
+                var isMobile = (typeof window.innerWidth === 'number') && window.innerWidth <= 768;
+
+                videoCards.forEach(function (card) {
+                    var speed = isMobile ? 0.2 : (parseFloat(card.getAttribute('data-parallax-speed')) || 0.2);
+                    var translateY = -Math.round(scrollDistance * speed);
+                    card.style.transform = 'translate3d(0, ' + translateY + 'px, 0)';
+                });
+            } else if (rect.top >= windowHeight) {
+                // Section is completely below viewport; reset translation to 0
+                videoCards.forEach(function (card) {
+                    card.style.transform = 'translate3d(0, 0px, 0)';
+                });
+            }
+
+            isTicking = false;
         }
 
-        if (whiskGraphic) {
-            whiskGraphic.style.transform = `rotate(${progress * 540}deg) scale(${1 + progress * 0.08})`;
-        }
-
-        if (progress >= 0.92 && !isUnlocked) {
-            isUnlocked = true;
-            if (progressCircle) progressCircle.style.stroke = '#4A5D23';
-            if (secretReveal) {
-                secretReveal.classList.add('active');
+        function onScroll() {
+            if (!isTicking) {
+                window.requestAnimationFrame(updateParallaxPositions);
+                isTicking = true;
             }
         }
-    }, { passive: true });
-});
+
+        window.addEventListener('scroll', onScroll, { passive: true });
+        window.addEventListener('resize', onScroll, { passive: true });
+
+        // Initial paint calculation
+        updateParallaxPositions();
+    }
+
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initLiveVideoFeed);
+    } else {
+        initLiveVideoFeed();
+    }
+})();
