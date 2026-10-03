@@ -19,7 +19,6 @@
 }
 
 html {
-    scroll-behavior: smooth;
 }
 
 body {
@@ -125,6 +124,9 @@ h1, h2, h3, .logo {
 
 /* --- Hero Section --- */
 .hero {
+    background-color: var(--color-cream);
+    z-index: 10;
+
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -137,7 +139,7 @@ h1, h2, h3, .logo {
 }
 
 .hero-content {
-    z-index: 2;
+    z-index: 10;
     position: relative;
     pointer-events: none; /* Let mouse interact with the 3D canvas behind */
 }
@@ -254,17 +256,21 @@ h1, h2, h3, .logo {
 /* --- Live Ceremonial Video Feed Section --- */
 .live-feed-wrapper {
     position: relative;
-    height: 250vh; /* Scroll distance to cover the section */
-    z-index: 1;
+    height: 100vh; /* Exactly the height of the viewport */
+    z-index: 1; /* Keep it normal so it scrolls */
+    background: transparent; /* Allows the fixed section behind it to show through */
 }
 
 .live-feed-section {
     background: linear-gradient(180deg, #131B0D 0%, #1D2813 50%, #151E0E 100%);
     color: var(--color-cream);
     padding: 0 10%;
-    position: sticky;
+    position: fixed;
     top: 0;
+    left: 0;
+    width: 100%;
     height: 100vh;
+    z-index: -10; /* Locked in the very back */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -408,7 +414,7 @@ h1, h2, h3, .logo {
     background: rgba(10, 15, 7, 0.92);
     border-bottom: 1px solid rgba(255, 255, 255, 0.08);
     position: relative;
-    z-index: 2;
+    z-index: 10;
 }
 
 .feed-card-meta {
@@ -453,6 +459,7 @@ h1, h2, h3, .logo {
     height: 100%;
     object-fit: cover;
     display: block;
+        z-index: 1;
 }
 
 .video-overlay-tint {
@@ -467,11 +474,12 @@ h1, h2, h3, .logo {
     background: rgba(10, 15, 7, 0.92);
     border-top: 1px solid rgba(255, 255, 255, 0.08);
     position: relative;
-    z-index: 2;
+    z-index: 10;
 }
 
 .feed-item-title {
     display: block;
+        z-index: 1;
     font-family: var(--font-serif);
     font-size: 1.2rem;
     color: var(--color-cream);
@@ -480,6 +488,7 @@ h1, h2, h3, .logo {
 
 .feed-item-sub {
     display: block;
+        z-index: 1;
     font-size: 0.78rem;
     color: var(--color-gold);
     letter-spacing: 0.6px;
@@ -578,7 +587,7 @@ h1, h2, h3, .logo {
     right: 0;
     border-radius: 2px;
     box-shadow: 0 20px 40px rgba(0,0,0,0.2);
-    z-index: 2;
+    z-index: 10;
     border: 10px solid #fff;
 }
 
@@ -1047,6 +1056,7 @@ h1, h2, h3, .logo {
     width: 100%;
     height: auto;
     display: block;
+        z-index: 1;
     filter: brightness(0.9) contrast(1.1);
     transition: filter 0.5s ease;
 }
@@ -1100,7 +1110,7 @@ h1, h2, h3, .logo {
     background: var(--color-gold);
     border-radius: 50%;
     position: relative;
-    z-index: 2;
+    z-index: 10;
     box-shadow: 0 0 10px rgba(0,0,0,0.5);
 }
 
@@ -1188,6 +1198,9 @@ h1, h2, h3, .logo {
     }
     
     .hero {
+    background-color: var(--color-cream);
+    z-index: 10;
+
         padding-top: 140px;
     }
     .hero-content h1 {
@@ -1237,6 +1250,7 @@ h1, h2, h3, .logo {
         position: relative;
         overflow: visible;
         display: block;
+        z-index: 1;
     }
 
     .live-feed-stage {
@@ -1287,6 +1301,7 @@ h1, h2, h3, .logo {
     }
     .title-kanji {
         display: block;
+        z-index: 1;
         font-size: 1rem;
         margin: 0.35rem 0 0;
     }
@@ -1809,6 +1824,7 @@ h1, h2, h3, .logo {
 
 .review-author strong {
     display: block;
+        z-index: 1;
     font-size: 1.05rem;
     color: var(--color-matcha-dark);
 }
