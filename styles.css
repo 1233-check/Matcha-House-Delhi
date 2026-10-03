@@ -255,7 +255,7 @@ h1, h2, h3, .logo {
 /* --- Live Ceremonial Video Feed Section --- */
 .live-feed-wrapper {
     position: relative;
-    height: 180vh; /* Scroll distance to cover the section */
+    height: 250vh; /* Scroll distance to cover the section */
     z-index: 1;
 }
 
