@@ -509,3 +509,23 @@ window.resetQuiz = function() {
         if (index === 0) slide.classList.add('active');
     });
 };
+
+// Mobile Menu Toggle
+document.addEventListener('DOMContentLoaded', () => {
+    const mobileToggle = document.getElementById('mobileToggle');
+    const navbar = document.querySelector('.navbar');
+    const navLinks = document.querySelectorAll('.nav-links a');
+
+    if (mobileToggle) {
+        mobileToggle.addEventListener('click', () => {
+            navbar.classList.toggle('mobile-open');
+        });
+
+        // Close menu when a link is clicked
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                navbar.classList.remove('mobile-open');
+            });
+        });
+    }
+});
