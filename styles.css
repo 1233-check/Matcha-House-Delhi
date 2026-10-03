@@ -27,7 +27,7 @@ body {
     color: var(--color-matcha-dark);
     font-family: var(--font-body);
     line-height: 1.6;
-    overflow-x: hidden;
+    clip-path: inset(0);
     cursor: none;
 }
 
@@ -256,9 +256,15 @@ h1, h2, h3, .logo {
 .live-feed-section {
     background: linear-gradient(180deg, #131B0D 0%, #1D2813 50%, #151E0E 100%);
     color: var(--color-cream);
-    padding: 7rem 10% 65vh;
+    padding: 7rem 10% 100vh;
     position: relative;
     clip-path: inset(0);
+}
+
+.live-feed-container {
+    position: sticky;
+    top: 10vh;
+    z-index: 1;
 }
 
 .live-feed-backdrop {
@@ -349,15 +355,18 @@ h1, h2, h3, .logo {
     max-width: 680px;
 }
 
-/* Dual-Video Stage with 3D Perspective & Isometric Presentation */
+/* Dual-Video Stage */
+    .live-feed-container {
+        position: relative;
+    }
+
 .live-feed-stage {
     display: flex;
     justify-content: center;
     align-items: flex-start;
     gap: 4.5rem;
     margin: 4rem 0 0;
-    position: sticky;
-    top: 15vh;
+    position: relative;
     z-index: 1;
 }
 
@@ -1218,6 +1227,10 @@ h1, h2, h3, .logo {
     .live-feed-section {
         padding: 5rem 5% 6rem;
     }
+    .live-feed-container {
+        position: relative;
+    }
+
     .live-feed-stage {
         flex-direction: column;
         align-items: center;
@@ -2229,4 +2242,10 @@ h1, h2, h3, .logo {
         font-size: 1.05rem;
     }
 }
+}
+
+.live-feed-container {
+    position: sticky;
+    top: 10vh;
+    z-index: 1;
 }
