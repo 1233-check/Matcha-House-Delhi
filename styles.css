@@ -27,7 +27,6 @@ body {
     color: var(--color-matcha-dark);
     font-family: var(--font-body);
     line-height: 1.6;
-    clip-path: inset(0);
     cursor: none;
 }
 
@@ -266,11 +265,9 @@ h1, h2, h3, .logo {
     position: sticky;
     top: 0;
     height: 100vh;
-    overflow: hidden;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    clip-path: inset(0);
 }
 .live-feed-container {
     width: 100%;
