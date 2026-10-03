@@ -253,19 +253,29 @@ h1, h2, h3, .logo {
 
 
 /* --- Live Ceremonial Video Feed Section --- */
+.live-feed-wrapper {
+    position: relative;
+    height: 180vh; /* Scroll distance to cover the section */
+    z-index: 1;
+}
+
 .live-feed-section {
     background: linear-gradient(180deg, #131B0D 0%, #1D2813 50%, #151E0E 100%);
     color: var(--color-cream);
-    padding: 7rem 10% 100vh;
-    position: relative;
+    padding: 0 10%;
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     clip-path: inset(0);
 }
-
 .live-feed-container {
-    position: sticky;
-    top: 10vh;
-    z-index: 1;
+    width: 100%;
 }
+
 
 .live-feed-backdrop {
     position: absolute;
@@ -356,9 +366,6 @@ h1, h2, h3, .logo {
 }
 
 /* Dual-Video Stage */
-    .live-feed-container {
-        position: relative;
-    }
 
 .live-feed-stage {
     display: flex;
@@ -1224,11 +1231,15 @@ h1, h2, h3, .logo {
         font-size: 3rem;
     }
     
+    .live-feed-wrapper {
+        height: auto;
+    }
     .live-feed-section {
         padding: 5rem 5% 6rem;
-    }
-    .live-feed-container {
+        height: auto;
         position: relative;
+        overflow: visible;
+        display: block;
     }
 
     .live-feed-stage {
@@ -2244,8 +2255,3 @@ h1, h2, h3, .logo {
 }
 }
 
-.live-feed-container {
-    position: sticky;
-    top: 10vh;
-    z-index: 1;
-}
