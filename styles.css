@@ -268,10 +268,10 @@ section, footer {
     background: transparent; /* Allows the fixed section behind it to show through */
 }
 
-.live-feed-section {
+.live-feed-section { padding: 0 !important; 
     background: linear-gradient(180deg, #131B0D 0%, #1D2813 50%, #151E0E 100%);
     color: var(--color-cream);
-    padding: 0 10%;
+    padding: 0;
     position: fixed;
     top: 0;
     left: 0;
@@ -1147,7 +1147,7 @@ section, footer {
     .hero-content p {
         font-size: 1.1rem;
     }
-    .live-feed-section, .about-section {
+    .about-section {
         padding: 6rem 5%;
     }
 }
@@ -1248,18 +1248,6 @@ section, footer {
         font-size: 3rem;
     }
     
-    .live-feed-wrapper {
-        height: auto;
-    }
-    .live-feed-section {
-        padding: 5rem 5% 6rem;
-        height: auto;
-        position: relative;
-        overflow: visible;
-        display: block;
-        z-index: 1;
-    }
-
     .live-feed-stage {
         flex-direction: column;
         align-items: center;
@@ -1284,7 +1272,7 @@ section, footer {
         text-align: center;
         gap: 2rem;
     }
-    .live-feed-section, .about-section, .footer {
+    .about-section, .footer {
         padding: 4rem 5%;
     }
     
