@@ -97,7 +97,7 @@
                 videoCards.forEach(function (card) {
                     var speed = isMobile ? 0.2 : (parseFloat(card.getAttribute('data-parallax-speed')) || 0.2);
                     var translateY = -Math.round(scrollDistance * speed);
-                    card.style.transform = 'translate3d(0, ' + translateY + 'px, 0)';
+                    // card.style.transform = "translate3d(0, " + translateY + "px, 0)";
                 });
             } else if (rect.top >= windowHeight) {
                 // Section is completely below viewport; reset translation to 0
@@ -116,7 +116,7 @@
             }
         }
 
-        window.addEventListener('scroll', onScroll, { passive: true });
+        // window.addEventListener("scroll", onScroll, { passive: true });
         window.addEventListener('resize', onScroll, { passive: true });
 
         // Initial paint calculation
