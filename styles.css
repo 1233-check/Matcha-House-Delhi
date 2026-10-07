@@ -64,7 +64,9 @@ h1, h2, h3, .logo {
 }
 
 .logo-img {
-    height: 60px;
+    height: 80px;
+    mix-blend-mode: multiply;
+    transform: scale(1.4);
     width: auto;
 }
 
@@ -690,7 +692,9 @@ section, footer {
 }
 .cursor-outline {
     width: 40px;
-    height: 60px;
+    height: 80px;
+    mix-blend-mode: multiply;
+    transform: scale(1.4);
     border: 1px solid rgba(212, 175, 55, 0.5); /* Gold outline */
     background-color: rgba(74, 93, 35, 0.05); /* Very subtle matcha tint */
     transition: width 0.2s, height 0.2s, background-color 0.2s;
@@ -2272,3 +2276,9 @@ section, footer {
 }
 }
 
+@media (max-width: 768px) {
+    .logo-img {
+        height: 60px;
+        transform: scale(1.3);
+    }
+}
