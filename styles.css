@@ -28,6 +28,7 @@ body {
     font-family: var(--font-body);
     line-height: 1.6;
     cursor: none;
+    overflow-x: hidden;
 }
 
 h1, h2, h3, .logo {
@@ -121,16 +122,17 @@ h1, h2, h3, .logo {
 }
 
 .btn-primary {
-    background-color: var(--color-matcha);
+    background-color: var(--color-matcha-dark);
     color: white !important;
     padding: 0.6rem 1.5rem;
     border-radius: 30px;
-    transition: background 0.3s ease, transform 0.2s ease;
+    transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .btn-primary:hover {
-    background-color: var(--color-matcha-dark);
+    background-color: #24331d;
     transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(49, 69, 40, 0.3);
 }
 
 /* --- Hero Section --- */
@@ -619,21 +621,41 @@ section, footer {
 
 .editorial-text-columns {
     column-count: 2;
-    column-gap: 3rem;
-    font-size: 1rem;
-    color: #444;
-    text-align: justify;
-    margin-bottom: 3rem;
+    column-gap: 3.5rem;
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: #3d3d3d;
+    text-align: left;
+    text-wrap: pretty;
+    margin-bottom: 2.5rem;
+}
+
+.editorial-text-columns p {
+    margin-bottom: 1.5rem;
+    break-inside: avoid;
 }
 
 .drop-cap {
     float: left;
-    font-size: 5rem;
-    line-height: 0.8;
-    padding-top: 0.5rem;
-    padding-right: 0.5rem;
     font-family: var(--font-heading);
-    color: var(--color-gold);
+    font-size: 3.8rem;
+    line-height: 0.78;
+    margin: 0.18rem 0.3rem -0.1rem 0;
+    padding: 0;
+    color: var(--color-matcha-dark);
+    font-weight: 600;
+}
+
+@supports (initial-letter: 2) or (-webkit-initial-letter: 2) {
+    .drop-cap {
+        -webkit-initial-letter: 2 2;
+        initial-letter: 2 2;
+        float: none;
+        margin: 0 0.25rem 0 0;
+        padding: 0;
+        font-size: inherit;
+        line-height: inherit;
+    }
 }
 
 .editorial-quote {
@@ -673,6 +695,7 @@ section, footer {
     z-index: 1;
     cursor: grab;
     pointer-events: auto;
+    filter: saturate(0.55) contrast(1.08) brightness(0.96) hue-rotate(-8deg);
 }
 
 /* --- Global UX Polish --- */
@@ -1404,22 +1427,76 @@ section, footer {
 }
 
 .menu-tab-btn.active {
-    background: var(--color-matcha);
+    background: var(--color-matcha-dark);
     color: white;
-    border-color: var(--color-matcha);
-    box-shadow: 0 4px 15px rgba(74, 93, 35, 0.25);
+    border-color: var(--color-matcha-dark);
+    box-shadow: 0 4px 15px rgba(49, 69, 40, 0.35);
 }
 
-/* Oat Milk Toggle Switch */
-.oat-toggle-wrapper {
+/* --- Milk Preference Segmented Control & Oat Toggle Switch --- */
+.milk-preference-wrapper, .oat-toggle-wrapper {
     display: inline-flex;
     align-items: center;
     gap: 0.85rem;
-    background: rgba(255, 255, 255, 0.8);
-    padding: 0.5rem 1.2rem;
+    background: rgba(255, 255, 255, 0.85);
+    padding: 0.45rem 1rem;
     border-radius: 35px;
     border: 1px solid rgba(212, 175, 55, 0.35);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+}
+
+.milk-preference-label {
+    font-size: 0.85rem;
+    font-family: var(--font-heading);
+    font-weight: 600;
+    color: var(--color-matcha-dark);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.milk-segmented-control {
+    display: inline-flex;
+    gap: 0.35rem;
+    background: rgba(0, 0, 0, 0.05);
+    padding: 0.25rem;
+    border-radius: 25px;
+}
+
+.milk-option-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    background: transparent;
+    border: none;
+    padding: 0.42rem 0.9rem;
+    border-radius: 20px;
+    font-family: var(--font-heading);
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: #444;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.milk-option-btn:hover {
+    color: var(--color-matcha-dark);
+}
+
+.milk-option-btn.active {
+    background: var(--color-matcha-dark);
+    color: #FFFFFF;
+    box-shadow: 0 2px 8px rgba(49, 69, 40, 0.25);
+}
+
+.milk-surcharge {
+    font-size: 0.72rem;
+    opacity: 0.85;
+    font-weight: 600;
+}
+
+.milk-option-btn.active .milk-surcharge {
+    opacity: 1;
+    color: #E8E7E3;
 }
 
 .oat-switch {
@@ -1565,19 +1642,75 @@ section, footer {
 
 .tag {
     font-size: 0.72rem;
-    background: rgba(74, 93, 35, 0.08);
-    color: var(--color-matcha);
+    background: rgba(49, 69, 40, 0.08);
+    color: var(--color-matcha-dark);
     padding: 0.2rem 0.55rem;
     border-radius: 12px;
     font-family: var(--font-heading);
     font-weight: 500;
 }
 
-/* Menu Actions & WhatsApp Order Button */
+/* --- Menu Item Image Container & Product Photo Styling --- */
+.menu-item-image {
+    width: 100%;
+    height: 190px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: radial-gradient(circle at center, rgba(255, 255, 255, 0.95) 0%, rgba(209, 208, 203, 0.35) 100%);
+    border-radius: 12px;
+    margin-bottom: 1.1rem;
+    overflow: hidden;
+    padding: 0.6rem;
+    border: 1px solid rgba(255, 255, 255, 0.6);
+}
+
+.menu-item-image img {
+    max-height: 100%;
+    max-width: 100%;
+    object-fit: contain;
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), filter 0.3s ease;
+    filter: drop-shadow(0 6px 14px rgba(0, 0, 0, 0.1));
+}
+
+.menu-item:hover .menu-item-image img {
+    transform: scale(1.06) translateY(-4px);
+    filter: drop-shadow(0 10px 20px rgba(49, 69, 40, 0.2));
+}
+
+/* Menu Actions & Zomato / WhatsApp Order Button */
 .menu-item-actions {
     margin-top: 1rem;
     display: flex;
     justify-content: flex-end;
+}
+
+.btn-zomato-order {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    background: #E23744;
+    color: #FFFFFF !important;
+    text-decoration: none;
+    font-size: 0.82rem;
+    font-family: var(--font-heading);
+    font-weight: 600;
+    padding: 0.45rem 1.1rem;
+    border-radius: 25px;
+    transition: all 0.25s ease;
+    box-shadow: 0 3px 10px rgba(226, 55, 68, 0.25);
+    letter-spacing: 0.3px;
+}
+
+.btn-zomato-order:hover {
+    background: #CB202D;
+    color: #FFFFFF !important;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(226, 55, 68, 0.35);
+}
+
+.zomato-icon {
+    font-size: 0.95rem;
 }
 
 .btn-wa-order {
@@ -2279,7 +2412,6 @@ section, footer {
     .review-text {
         font-size: 1.05rem;
     }
-}
 }
 
 @media (max-width: 768px) {

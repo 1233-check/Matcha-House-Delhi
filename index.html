@@ -4,15 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Matcha House Delhi | The Ultimate Matcha Experience</title>
-    <meta name="description" content="Visit Matcha House Delhi in Hauz Khas for ceremonial-grade Kagoshima matcha, artisan signature lattes, and masterclasses.">
+    <meta name="description" content="Visit Matcha House Delhi in Hauz Khas for ceremonial-grade Kagushima matcha, artisan signature lattes, and masterclasses.">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Matcha House Delhi">
     <meta property="og:title" content="Matcha House Delhi | Premium Ceremonial Matcha Experience">
-    <meta property="og:description" content="Ceremonial Kagoshima matcha, signature lattes, and masterclasses in Hauz Khas, New Delhi.">
+    <meta property="og:description" content="Ceremonial Kagushima matcha, signature lattes, and masterclasses in Hauz Khas, New Delhi.">
     <meta property="og:image" content="https://matchahousedelhi.com/assets/sig_classic.png">
     <meta property="og:url" content="https://matchahousedelhi.com">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Matcha House Delhi | Premium Ceremonial Matcha"><meta name="twitter:description" content="Ceremonial Kagoshima matcha, signature lattes, and masterclasses in Hauz Khas, New Delhi."><meta name="twitter:image" content="https://matchahousedelhi.com/assets/sig_classic.png">
+    <meta name="twitter:title" content="Matcha House Delhi | Premium Ceremonial Matcha"><meta name="twitter:description" content="Ceremonial Kagushima matcha, signature lattes, and masterclasses in Hauz Khas, New Delhi."><meta name="twitter:image" content="https://matchahousedelhi.com/assets/sig_classic.png">
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-PLACEHOLDER"></script>
     <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-PLACEHOLDER');</script>
     <script type="application/ld+json">{"@context":"https://schema.org","@type":"CafeOrCoffeeShop","name":"Matcha House Delhi","image":"https://matchahousedelhi.com/assets/sig_classic.png","@id":"https://matchahousedelhi.com","url":"https://matchahousedelhi.com","telephone":"+919999999999","priceRange":"₹200 - ₹395","menu":"https://matchahousedelhi.com/#menu","servesCuisine":["Japanese Tea","Matcha","Coffee","Desserts"],"address":{"@type":"PostalAddress","streetAddress":"123 Matcha Lane, Hauz Khas","addressLocality":"New Delhi","addressRegion":"Delhi","postalCode":"110016","addressCountry":"IN"},"geo":{"@type":"GeoCoordinates","latitude":28.5494,"longitude":77.2001},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],"opens":"08:00","closes":"21:00"}],"hasMap":"https://maps.app.goo.gl/P87DF1ftjVhMzjde6"}</script>
@@ -75,13 +75,13 @@
     <section id="about" class="editorial-section">
         <div class="editorial-container">
             <div class="editorial-images perspective-container">
-                <img src="assets/fields.png" alt="Kagoshima Tea Fields" class="editorial-img-main tilt-element" loading="lazy">
+                <img src="assets/fields.png" alt="Kagushima Tea Fields" class="editorial-img-main tilt-element" loading="lazy">
                 <img src="assets/whisk.png" alt="Matcha Whisking" class="editorial-img-sub tilt-element" loading="lazy">
             </div>
             <div class="editorial-content">
-                <h2 class="editorial-title">From Kagoshima to<br>New Delhi.</h2>
+                <h2 class="editorial-title">From Kagushima to<br>New Delhi.</h2>
                 <div class="editorial-text-columns">
-                    <p><span class="drop-cap">W</span>e source our tea leaves directly from the historic, mist-covered tea fields of Kagoshima, Japan, a region renowned for producing the world's most vibrant and complex matcha for over 800 years. Our founders traveled to Kyushu to build direct relationships with multi-generational tea farmers, ensuring only the highest ceremonial grade leaves make it to our New Delhi flagship.</p>
+                    <p><span class="drop-cap">W</span>e source our tea leaves directly from the historic, mist-covered tea fields of Kagushima, Japan, a region renowned for producing the world's most vibrant and complex matcha for over 800 years. Our founders traveled to Kyushu to build direct relationships with multi-generational tea farmers, ensuring only the highest ceremonial grade leaves make it to our New Delhi flagship.</p>
                     <p>Every bowl we serve is prepared with a deep, uncompromising respect for the traditional Japanese tea ceremony. From the precise temperature of the water to the rhythmic motion of the bamboo chasen, we believe that true luxury lies in the mastery of these subtle details.</p>
                 </div>
                 <blockquote class="editorial-quote">
@@ -139,318 +139,361 @@
                     <button class="menu-tab-btn" data-category="latte">Signature Lattes</button>
                     <button class="menu-tab-btn" data-category="cloud">Clouds &amp; Treats</button>
                 </div>
-                <div class="oat-toggle-wrapper">
-                    <label class="oat-switch" for="oatMilkToggle">
-                        <input type="checkbox" id="oatMilkToggle">
-                        <span class="oat-slider"></span>
-                    </label>
-                    <span class="oat-label">Oat Milk <span class="oat-badge">+₹80</span></span>
+                <div class="milk-preference-wrapper oat-toggle-wrapper" role="radiogroup" aria-label="Milk preference selection toggle">
+                    <span class="milk-preference-label">Milk Preference:</span>
+                    <div class="milk-segmented-control">
+                        <button type="button" class="milk-option-btn active" data-milk="dairy" aria-checked="true">
+                            <span class="milk-name">Dairy Milk</span>
+                            <span class="milk-surcharge">Included (+₹0)</span>
+                        </button>
+                        <button type="button" class="milk-option-btn" data-milk="oat" aria-checked="false">
+                            <span class="milk-name">Oat Milk</span>
+                            <span class="milk-surcharge">+₹80</span>
+                        </button>
+                        <button type="button" class="milk-option-btn" data-milk="lactose-free" aria-checked="false">
+                            <span class="milk-name">Lactose-Free</span>
+                            <span class="milk-surcharge">+₹60</span>
+                        </button>
+                    </div>
+                    <input type="checkbox" id="oatMilkToggle" style="display:none;" aria-hidden="true">
                 </div>
             </div>
 
             <div class="menu-grid">
                 <div class="menu-category" data-category="pure">
                     <h3>Pure & Refreshing</h3>
-                    <div class="menu-item" data-category="pure" data-base-price="380" data-name="Matcha Iced Tea">
+                    <div class="menu-item" data-category="pure" data-base-price="380" data-oat-price="460" data-lactose-free-price="440" data-name="Matcha Iced Tea">
+                        <div class="menu-item-image"><img src="assets/menu/matcha-iced-tea.png" alt="Matcha Iced Tea" loading="lazy"></div>
                         <div class="menu-item-details">
                             <div class="menu-item-title-row"><h4>Matcha Iced Tea</h4></div>
                             <p>Pure ice matcha brewed clean and refreshing.</p>
-                            <div class="ingredient-tags"><span class="tag">Ceremonial Kagoshima</span><span class="tag">Cold Brew</span><span class="tag">Unsweetened</span></div>
+                            <div class="ingredient-tags"><span class="tag">Ceremonial Kagushima</span><span class="tag">Cold Brew</span><span class="tag">Unsweetened</span></div>
                         </div>
-                        <div class="menu-item-price" data-base="380">₹380</div>
-                        <div class="menu-item-actions"><a href="https://wa.me/919999999999?text=Hi%20Matcha%20House%20Delhi%21%20I%20would%20like%20to%20order%3A%20Matcha%20Iced%20Tea%20%28Dairy%20Milk%20/%20Standard%29%20for%20%E2%82%B9380.%20Please%20confirm%20order%21" target="_blank" rel="noopener noreferrer" class="btn-wa-order"><span class="wa-icon">💬</span> Order on WhatsApp</a></div>
+                        <div class="menu-item-price item-price" data-base="380">₹380</div>
+                        <div class="menu-item-actions"><a href="https://www.zomato.com/ncr/matcha-house-delhi/order" target="_blank" rel="noopener noreferrer" class="btn-zomato-order"><span class="zomato-icon">🍽️</span> Order on Zomato ↗</a></div>
                     </div>
-                    <div class="menu-item" data-category="pure" data-base-price="370" data-name="Kaffir Lime Matcha">
+                    <div class="menu-item" data-category="pure" data-base-price="370" data-oat-price="450" data-lactose-free-price="430" data-name="Kaffir Lime Matcha">
+                        <div class="menu-item-image"><img src="assets/menu/kaffir-lime-matcha.png" alt="Kaffir Lime Matcha" loading="lazy"></div>
                         <div class="menu-item-details">
                             <div class="menu-item-title-row"><h4>Kaffir Lime Matcha</h4></div>
                             <p>Citrusy kaffir lime balanced with earthy matcha.</p>
                             <div class="ingredient-tags"><span class="tag">Kaffir Lime Leaf</span><span class="tag">Citrus Bitters</span><span class="tag">Chilled</span></div>
                         </div>
-                        <div class="menu-item-price" data-base="370">₹370</div>
-                        <div class="menu-item-actions"><a href="https://wa.me/919999999999?text=Hi%20Matcha%20House%20Delhi%21%20I%20would%20like%20to%20order%3A%20Kaffir%20Lime%20Matcha%20%28Dairy%20Milk%20/%20Standard%29%20for%20%E2%82%B9370.%20Please%20confirm%20order%21" target="_blank" rel="noopener noreferrer" class="btn-wa-order"><span class="wa-icon">💬</span> Order on WhatsApp</a></div>
+                        <div class="menu-item-price item-price" data-base="370">₹370</div>
+                        <div class="menu-item-actions"><a href="https://www.zomato.com/ncr/matcha-house-delhi/order" target="_blank" rel="noopener noreferrer" class="btn-zomato-order"><span class="zomato-icon">🍽️</span> Order on Zomato ↗</a></div>
                     </div>
-                    <div class="menu-item" data-category="pure" data-base-price="370" data-name="Watermelon Matcha Refresher">
+                    <div class="menu-item" data-category="pure" data-base-price="370" data-oat-price="450" data-lactose-free-price="430" data-name="Watermelon Matcha Refresher">
+                        <div class="menu-item-image"><img src="assets/menu/watermelon-matcha-refresher.png" alt="Watermelon Matcha Refresher" loading="lazy"></div>
                         <div class="menu-item-details">
                             <div class="menu-item-title-row"><h4>Watermelon Matcha Refresher</h4><span class="badge badge-new">✨ New</span></div>
                             <p>Juicy watermelon lifted by a crisp matcha.</p>
                             <div class="ingredient-tags"><span class="tag">Cold-Pressed Melon</span><span class="tag">Fresh Mint</span><span class="tag">Summer Sip</span></div>
                         </div>
-                        <div class="menu-item-price" data-base="370">₹370</div>
-                        <div class="menu-item-actions"><a href="https://wa.me/919999999999?text=Hi%20Matcha%20House%20Delhi%21%20I%20would%20like%20to%20order%3A%20Watermelon%20Matcha%20Refresher%20%28Dairy%20Milk%20/%20Standard%29%20for%20%E2%82%B9370.%20Please%20confirm%20order%21" target="_blank" rel="noopener noreferrer" class="btn-wa-order"><span class="wa-icon">💬</span> Order on WhatsApp</a></div>
+                        <div class="menu-item-price item-price" data-base="370">₹370</div>
+                        <div class="menu-item-actions"><a href="https://www.zomato.com/ncr/matcha-house-delhi/order" target="_blank" rel="noopener noreferrer" class="btn-zomato-order"><span class="zomato-icon">🍽️</span> Order on Zomato ↗</a></div>
                     </div>
-                    <div class="menu-item" data-category="pure" data-base-price="350" data-name="Forestberry Matcha">
+                    <div class="menu-item" data-category="pure" data-base-price="350" data-oat-price="430" data-lactose-free-price="410" data-name="Forestberry Matcha">
+                        <div class="menu-item-image"><img src="assets/menu/forestberry-matcha.png" alt="Forestberry Matcha" loading="lazy"></div>
                         <div class="menu-item-details">
                             <div class="menu-item-title-row"><h4>Forestberry Matcha</h4></div>
                             <p>Sweet and tangy, featuring triple berry puree, soda, and matcha.</p>
                             <div class="ingredient-tags"><span class="tag">Wild Berries</span><span class="tag">Sparkling Soda</span><span class="tag">Antioxidants</span></div>
                         </div>
-                        <div class="menu-item-price" data-base="350">₹350</div>
-                        <div class="menu-item-actions"><a href="https://wa.me/919999999999?text=Hi%20Matcha%20House%20Delhi%21%20I%20would%20like%20to%20order%3A%20Forestberry%20Matcha%20%28Dairy%20Milk%20/%20Standard%29%20for%20%E2%82%B9350.%20Please%20confirm%20order%21" target="_blank" rel="noopener noreferrer" class="btn-wa-order"><span class="wa-icon">💬</span> Order on WhatsApp</a></div>
+                        <div class="menu-item-price item-price" data-base="350">₹350</div>
+                        <div class="menu-item-actions"><a href="https://www.zomato.com/ncr/matcha-house-delhi/order" target="_blank" rel="noopener noreferrer" class="btn-zomato-order"><span class="zomato-icon">🍽️</span> Order on Zomato ↗</a></div>
                     </div>
-                    <div class="menu-item" data-category="pure" data-base-price="380" data-name="Orange Matcha">
+                    <div class="menu-item" data-category="pure" data-base-price="380" data-oat-price="460" data-lactose-free-price="440" data-name="Orange Matcha">
+                        <div class="menu-item-image"><img src="assets/menu/orange-matcha.png" alt="Orange Matcha" loading="lazy"></div>
                         <div class="menu-item-details">
                             <div class="menu-item-title-row"><h4>Orange Matcha</h4></div>
                             <p>Zesty orange brightens smooth matcha with a citrusy kick.</p>
                             <div class="ingredient-tags"><span class="tag">Valencia Orange</span><span class="tag">Citrus Float</span><span class="tag">Vitamin C</span></div>
                         </div>
-                        <div class="menu-item-price" data-base="380">₹380</div>
-                        <div class="menu-item-actions"><a href="https://wa.me/919999999999?text=Hi%20Matcha%20House%20Delhi%21%20I%20would%20like%20to%20order%3A%20Orange%20Matcha%20%28Dairy%20Milk%20/%20Standard%29%20for%20%E2%82%B9380.%20Please%20confirm%20order%21" target="_blank" rel="noopener noreferrer" class="btn-wa-order"><span class="wa-icon">💬</span> Order on WhatsApp</a></div>
+                        <div class="menu-item-price item-price" data-base="380">₹380</div>
+                        <div class="menu-item-actions"><a href="https://www.zomato.com/ncr/matcha-house-delhi/order" target="_blank" rel="noopener noreferrer" class="btn-zomato-order"><span class="zomato-icon">🍽️</span> Order on Zomato ↗</a></div>
                     </div>
-                    <div class="menu-item" data-category="pure" data-base-price="350" data-name="Yuzu Matcha">
+                    <div class="menu-item" data-category="pure" data-base-price="350" data-oat-price="430" data-lactose-free-price="410" data-name="Yuzu Matcha">
+                        <div class="menu-item-image"><img src="assets/menu/yuzu-matcha.png" alt="Yuzu Matcha" loading="lazy"></div>
                         <div class="menu-item-details">
                             <div class="menu-item-title-row"><h4>Yuzu Matcha</h4><span class="badge badge-popular">🔥 Popular</span></div>
                             <p>Zesty yuzu paired with mellow matcha.</p>
                             <div class="ingredient-tags"><span class="tag">Japanese Yuzu</span><span class="tag">Citrus Aroma</span><span class="tag">Crisp</span></div>
                         </div>
-                        <div class="menu-item-price" data-base="350">₹350</div>
-                        <div class="menu-item-actions"><a href="https://wa.me/919999999999?text=Hi%20Matcha%20House%20Delhi%21%20I%20would%20like%20to%20order%3A%20Yuzu%20Matcha%20%28Dairy%20Milk%20/%20Standard%29%20for%20%E2%82%B9350.%20Please%20confirm%20order%21" target="_blank" rel="noopener noreferrer" class="btn-wa-order"><span class="wa-icon">💬</span> Order on WhatsApp</a></div>
+                        <div class="menu-item-price item-price" data-base="350">₹350</div>
+                        <div class="menu-item-actions"><a href="https://www.zomato.com/ncr/matcha-house-delhi/order" target="_blank" rel="noopener noreferrer" class="btn-zomato-order"><span class="zomato-icon">🍽️</span> Order on Zomato ↗</a></div>
                     </div>
-                    <div class="menu-item" data-category="pure" data-base-price="330" data-name="Peachy Matcha">
+                    <div class="menu-item" data-category="pure" data-base-price="330" data-oat-price="410" data-lactose-free-price="390" data-name="Peachy Matcha">
+                        <div class="menu-item-image"><img src="assets/menu/peachy-matcha.png" alt="Peachy Matcha" loading="lazy"></div>
                         <div class="menu-item-details">
                             <div class="menu-item-title-row"><h4>Peachy Matcha</h4></div>
                             <p>Juicy flavour balanced with smooth matcha.</p>
                             <div class="ingredient-tags"><span class="tag">White Peach</span><span class="tag">Subtle Sweet</span><span class="tag">Chilled</span></div>
                         </div>
-                        <div class="menu-item-price" data-base="330">₹330</div>
-                        <div class="menu-item-actions"><a href="https://wa.me/919999999999?text=Hi%20Matcha%20House%20Delhi%21%20I%20would%20like%20to%20order%3A%20Peachy%20Matcha%20%28Dairy%20Milk%20/%20Standard%29%20for%20%E2%82%B9330.%20Please%20confirm%20order%21" target="_blank" rel="noopener noreferrer" class="btn-wa-order"><span class="wa-icon">💬</span> Order on WhatsApp</a></div>
+                        <div class="menu-item-price item-price" data-base="330">₹330</div>
+                        <div class="menu-item-actions"><a href="https://www.zomato.com/ncr/matcha-house-delhi/order" target="_blank" rel="noopener noreferrer" class="btn-zomato-order"><span class="zomato-icon">🍽️</span> Order on Zomato ↗</a></div>
                     </div>
-                    <div class="menu-item" data-category="pure" data-base-price="330" data-name="Passionfruit Matcha">
+                    <div class="menu-item" data-category="pure" data-base-price="330" data-oat-price="410" data-lactose-free-price="390" data-name="Passionfruit Matcha">
+                        <div class="menu-item-image"><img src="assets/menu/passionfruit-matcha.png" alt="Passionfruit Matcha" loading="lazy"></div>
                         <div class="menu-item-details">
                             <div class="menu-item-title-row"><h4>Passionfruit Matcha</h4></div>
                             <p>Tangy passion fruit blended with earthy matcha.</p>
-                            <div class="ingredient-tags"><span class="tag">Fresh Passionfruit</span><span class="tag">Tropical Tart</span><span class="tag">Earthy Kagoshima</span></div>
+                            <div class="ingredient-tags"><span class="tag">Fresh Passionfruit</span><span class="tag">Tropical Tart</span><span class="tag">Earthy Kagushima</span></div>
                         </div>
-                        <div class="menu-item-price" data-base="330">₹330</div>
-                        <div class="menu-item-actions"><a href="https://wa.me/919999999999?text=Hi%20Matcha%20House%20Delhi%21%20I%20would%20like%20to%20order%3A%20Passionfruit%20Matcha%20%28Dairy%20Milk%20/%20Standard%29%20for%20%E2%82%B9330.%20Please%20confirm%20order%21" target="_blank" rel="noopener noreferrer" class="btn-wa-order"><span class="wa-icon">💬</span> Order on WhatsApp</a></div>
+                        <div class="menu-item-price item-price" data-base="330">₹330</div>
+                        <div class="menu-item-actions"><a href="https://www.zomato.com/ncr/matcha-house-delhi/order" target="_blank" rel="noopener noreferrer" class="btn-zomato-order"><span class="zomato-icon">🍽️</span> Order on Zomato ↗</a></div>
                     </div>
-                    <div class="menu-item" data-category="pure" data-base-price="350" data-name="Litchi Jelly Matcha">
+                    <div class="menu-item" data-category="pure" data-base-price="350" data-oat-price="430" data-lactose-free-price="410" data-name="Litchi Jelly Matcha">
+                        <div class="menu-item-image"><img src="assets/menu/litchi-jelly-matcha.png" alt="Litchi Jelly Matcha" loading="lazy"></div>
                         <div class="menu-item-details">
                             <div class="menu-item-title-row"><h4>Litchi Jelly Matcha</h4><span class="badge badge-new">✨ New</span></div>
                             <p>Smooth matcha with litchi jelly and gentle sweetness.</p>
                             <div class="ingredient-tags"><span class="tag">House Litchi Jelly</span><span class="tag">Cane Sugar</span><span class="tag">Chewy Texture</span></div>
                         </div>
-                        <div class="menu-item-price" data-base="350">₹350</div>
-                        <div class="menu-item-actions"><a href="https://wa.me/919999999999?text=Hi%20Matcha%20House%20Delhi%21%20I%20would%20like%20to%20order%3A%20Litchi%20Jelly%20Matcha%20%28Dairy%20Milk%20/%20Standard%29%20for%20%E2%82%B9350.%20Please%20confirm%20order%21" target="_blank" rel="noopener noreferrer" class="btn-wa-order"><span class="wa-icon">💬</span> Order on WhatsApp</a></div>
+                        <div class="menu-item-price item-price" data-base="350">₹350</div>
+                        <div class="menu-item-actions"><a href="https://www.zomato.com/ncr/matcha-house-delhi/order" target="_blank" rel="noopener noreferrer" class="btn-zomato-order"><span class="zomato-icon">🍽️</span> Order on Zomato ↗</a></div>
                     </div>
-                    <div class="menu-item" data-category="pure" data-base-price="370" data-name="Strawberry Matcha Soda">
+                    <div class="menu-item" data-category="pure" data-base-price="370" data-oat-price="450" data-lactose-free-price="430" data-name="Strawberry Matcha Soda">
+                        <div class="menu-item-image"><img src="assets/menu/strawberry-matcha-soda.png" alt="Strawberry Matcha Soda" loading="lazy"></div>
                         <div class="menu-item-details">
                             <div class="menu-item-title-row"><h4>Strawberry Matcha Soda</h4></div>
                             <p>Strawberry, soda & sparkling soda.</p>
                             <div class="ingredient-tags"><span class="tag">Muddled Strawberry</span><span class="tag">Sparkling Soda</span><span class="tag">Layered</span></div>
                         </div>
-                        <div class="menu-item-price" data-base="370">₹370</div>
-                        <div class="menu-item-actions"><a href="https://wa.me/919999999999?text=Hi%20Matcha%20House%20Delhi%21%20I%20would%20like%20to%20order%3A%20Strawberry%20Matcha%20Soda%20%28Dairy%20Milk%20/%20Standard%29%20for%20%E2%82%B9370.%20Please%20confirm%20order%21" target="_blank" rel="noopener noreferrer" class="btn-wa-order"><span class="wa-icon">💬</span> Order on WhatsApp</a></div>
+                        <div class="menu-item-price item-price" data-base="370">₹370</div>
+                        <div class="menu-item-actions"><a href="https://www.zomato.com/ncr/matcha-house-delhi/order" target="_blank" rel="noopener noreferrer" class="btn-zomato-order"><span class="zomato-icon">🍽️</span> Order on Zomato ↗</a></div>
                     </div>
-                    <div class="menu-item" data-category="pure" data-base-price="250" data-name="Raspberry Matcha">
+                    <div class="menu-item" data-category="pure" data-base-price="250" data-oat-price="330" data-lactose-free-price="310" data-name="Raspberry Matcha">
+                        <div class="menu-item-image"><img src="assets/menu/raspberry-matcha.png" alt="Raspberry Matcha" loading="lazy"></div>
                         <div class="menu-item-details">
                             <div class="menu-item-title-row"><h4>Raspberry Matcha</h4></div>
                             <p>Fruity, tangy and vibrant with a burst of raspberry syrup.</p>
                             <div class="ingredient-tags"><span class="tag">Wild Raspberry</span><span class="tag">Tangy Kick</span><span class="tag">Vibrant</span></div>
                         </div>
-                        <div class="menu-item-price" data-base="250">₹250</div>
-                        <div class="menu-item-actions"><a href="https://wa.me/919999999999?text=Hi%20Matcha%20House%20Delhi%21%20I%20would%20like%20to%20order%3A%20Raspberry%20Matcha%20%28Dairy%20Milk%20/%20Standard%29%20for%20%E2%82%B9250.%20Please%20confirm%20order%21" target="_blank" rel="noopener noreferrer" class="btn-wa-order"><span class="wa-icon">💬</span> Order on WhatsApp</a></div>
+                        <div class="menu-item-price item-price" data-base="250">₹250</div>
+                        <div class="menu-item-actions"><a href="https://www.zomato.com/ncr/matcha-house-delhi/order" target="_blank" rel="noopener noreferrer" class="btn-zomato-order"><span class="zomato-icon">🍽️</span> Order on Zomato ↗</a></div>
                     </div>
                 </div>
                 <div class="menu-category" data-category="latte">
                     <h3>Signature Lattes</h3>
-                    <div class="menu-item" data-category="latte" data-base-price="310" data-name="Classic Matcha Latte">
+                    <div class="menu-item" data-category="latte" data-base-price="310" data-oat-price="390" data-lactose-free-price="370" data-name="Classic Matcha Latte">
+                        <div class="menu-item-image"><img src="assets/menu/classic-matcha-latte.png" alt="Classic Matcha Latte" loading="lazy"></div>
                         <div class="menu-item-details">
                             <div class="menu-item-title-row"><h4>Classic Matcha Latte</h4><span class="badge badge-popular">🔥 Popular</span></div>
                             <p>Ceremonial matcha blended with creamy milk. (Hot / Cold)</p>
-                            <div class="ingredient-tags"><span class="tag">First Harvest Kagoshima</span><span class="tag">Creamy Milk</span><span class="tag">Hot / Cold</span></div>
+                            <div class="ingredient-tags"><span class="tag">First Harvest Kagushima</span><span class="tag">Creamy Milk</span><span class="tag">Hot / Cold</span></div>
                         </div>
-                        <div class="menu-item-price" data-base="310">₹310</div>
-                        <div class="menu-item-actions"><a href="https://wa.me/919999999999?text=Hi%20Matcha%20House%20Delhi%21%20I%20would%20like%20to%20order%3A%20Classic%20Matcha%20Latte%20%28Dairy%20Milk%20/%20Standard%29%20for%20%E2%82%B9310.%20Please%20confirm%20order%21" target="_blank" rel="noopener noreferrer" class="btn-wa-order"><span class="wa-icon">💬</span> Order on WhatsApp</a></div>
+                        <div class="menu-item-price item-price" data-base="310">₹310</div>
+                        <div class="menu-item-actions"><a href="https://www.zomato.com/ncr/matcha-house-delhi/order" target="_blank" rel="noopener noreferrer" class="btn-zomato-order"><span class="zomato-icon">🍽️</span> Order on Zomato ↗</a></div>
                     </div>
-                    <div class="menu-item" data-category="latte" data-base-price="310" data-name="Hojicha Matcha Latte">
+                    <div class="menu-item" data-category="latte" data-base-price="310" data-oat-price="390" data-lactose-free-price="370" data-name="Hojicha Matcha Latte">
+                        <div class="menu-item-image"><img src="assets/menu/hojicha-matcha-latte.png" alt="Hojicha Matcha Latte" loading="lazy"></div>
                         <div class="menu-item-details">
                             <div class="menu-item-title-row"><h4>Hojicha Matcha Latte</h4></div>
                             <p>Roasted hojicha with a smooth, nutty and comforting finish. (Hot / Cold)</p>
                             <div class="ingredient-tags"><span class="tag">Charcoal Roasted Tea</span><span class="tag">Nutty Finish</span><span class="tag">Hot / Cold</span></div>
                         </div>
-                        <div class="menu-item-price" data-base="310">₹310</div>
-                        <div class="menu-item-actions"><a href="https://wa.me/919999999999?text=Hi%20Matcha%20House%20Delhi%21%20I%20would%20like%20to%20order%3A%20Hojicha%20Matcha%20Latte%20%28Dairy%20Milk%20/%20Standard%29%20for%20%E2%82%B9310.%20Please%20confirm%20order%21" target="_blank" rel="noopener noreferrer" class="btn-wa-order"><span class="wa-icon">💬</span> Order on WhatsApp</a></div>
+                        <div class="menu-item-price item-price" data-base="310">₹310</div>
+                        <div class="menu-item-actions"><a href="https://www.zomato.com/ncr/matcha-house-delhi/order" target="_blank" rel="noopener noreferrer" class="btn-zomato-order"><span class="zomato-icon">🍽️</span> Order on Zomato ↗</a></div>
                     </div>
-                    <div class="menu-item" data-category="latte" data-base-price="350" data-name="Blueberry Matcha Latte">
+                    <div class="menu-item" data-category="latte" data-base-price="350" data-oat-price="430" data-lactose-free-price="410" data-name="Blueberry Matcha Latte">
+                        <div class="menu-item-image"><img src="assets/menu/blueberry-matcha-latte.png" alt="Blueberry Matcha Latte" loading="lazy"></div>
                         <div class="menu-item-details">
                             <div class="menu-item-title-row"><h4>Blueberry Matcha Latte</h4></div>
                             <p>Creamy matcha with blueberry puree and fresh berries.</p>
                             <div class="ingredient-tags"><span class="tag">Blueberry Compote</span><span class="tag">Fresh Berries</span><span class="tag">Velvety Milk</span></div>
                         </div>
-                        <div class="menu-item-price" data-base="350">₹350</div>
-                        <div class="menu-item-actions"><a href="https://wa.me/919999999999?text=Hi%20Matcha%20House%20Delhi%21%20I%20would%20like%20to%20order%3A%20Blueberry%20Matcha%20Latte%20%28Dairy%20Milk%20/%20Standard%29%20for%20%E2%82%B9350.%20Please%20confirm%20order%21" target="_blank" rel="noopener noreferrer" class="btn-wa-order"><span class="wa-icon">💬</span> Order on WhatsApp</a></div>
+                        <div class="menu-item-price item-price" data-base="350">₹350</div>
+                        <div class="menu-item-actions"><a href="https://www.zomato.com/ncr/matcha-house-delhi/order" target="_blank" rel="noopener noreferrer" class="btn-zomato-order"><span class="zomato-icon">🍽️</span> Order on Zomato ↗</a></div>
                     </div>
-                    <div class="menu-item" data-category="latte" data-base-price="395" data-name="Triple Berry Matcha Latte">
+                    <div class="menu-item" data-category="latte" data-base-price="395" data-oat-price="475" data-lactose-free-price="455" data-name="Triple Berry Matcha Latte">
+                        <div class="menu-item-image"><img src="assets/menu/triple-berry-matcha-latte.png" alt="Triple Berry Matcha Latte" loading="lazy"></div>
                         <div class="menu-item-details">
                             <div class="menu-item-title-row"><h4>Triple Berry Matcha Latte</h4></div>
                             <p>Matcha with a bold blend of mixed berries and milk.</p>
                             <div class="ingredient-tags"><span class="tag">Blackberry & Raspberry</span><span class="tag">Bold Berries</span><span class="tag">Creamy</span></div>
                         </div>
-                        <div class="menu-item-price" data-base="395">₹395</div>
-                        <div class="menu-item-actions"><a href="https://wa.me/919999999999?text=Hi%20Matcha%20House%20Delhi%21%20I%20would%20like%20to%20order%3A%20Triple%20Berry%20Matcha%20Latte%20%28Dairy%20Milk%20/%20Standard%29%20for%20%E2%82%B9395.%20Please%20confirm%20order%21" target="_blank" rel="noopener noreferrer" class="btn-wa-order"><span class="wa-icon">💬</span> Order on WhatsApp</a></div>
+                        <div class="menu-item-price item-price" data-base="395">₹395</div>
+                        <div class="menu-item-actions"><a href="https://www.zomato.com/ncr/matcha-house-delhi/order" target="_blank" rel="noopener noreferrer" class="btn-zomato-order"><span class="zomato-icon">🍽️</span> Order on Zomato ↗</a></div>
                     </div>
-                    <div class="menu-item" data-category="latte" data-base-price="350" data-name="Raspberry Matcha Latte">
+                    <div class="menu-item" data-category="latte" data-base-price="350" data-oat-price="430" data-lactose-free-price="410" data-name="Raspberry Matcha Latte">
+                        <div class="menu-item-image"><img src="assets/menu/raspberry-matcha-latte.png" alt="Raspberry Matcha Latte" loading="lazy"></div>
                         <div class="menu-item-details">
                             <div class="menu-item-title-row"><h4>Raspberry Matcha Latte</h4></div>
                             <p>Smooth matcha with sweet-tart raspberry and milk.</p>
                             <div class="ingredient-tags"><span class="tag">Sweet-Tart Raspberry</span><span class="tag">Velvet Layer</span><span class="tag">Chilled</span></div>
                         </div>
-                        <div class="menu-item-price" data-base="350">₹350</div>
-                        <div class="menu-item-actions"><a href="https://wa.me/919999999999?text=Hi%20Matcha%20House%20Delhi%21%20I%20would%20like%20to%20order%3A%20Raspberry%20Matcha%20Latte%20%28Dairy%20Milk%20/%20Standard%29%20for%20%E2%82%B9350.%20Please%20confirm%20order%21" target="_blank" rel="noopener noreferrer" class="btn-wa-order"><span class="wa-icon">💬</span> Order on WhatsApp</a></div>
+                        <div class="menu-item-price item-price" data-base="350">₹350</div>
+                        <div class="menu-item-actions"><a href="https://www.zomato.com/ncr/matcha-house-delhi/order" target="_blank" rel="noopener noreferrer" class="btn-zomato-order"><span class="zomato-icon">🍽️</span> Order on Zomato ↗</a></div>
                     </div>
-                    <div class="menu-item" data-category="latte" data-base-price="380" data-name="Strawberry Matcha Latte">
+                    <div class="menu-item" data-category="latte" data-base-price="380" data-oat-price="460" data-lactose-free-price="440" data-name="Strawberry Matcha Latte">
+                        <div class="menu-item-image"><img src="assets/menu/strawberry-matcha-latte.png" alt="Strawberry Matcha Latte" loading="lazy"></div>
                         <div class="menu-item-details">
                             <div class="menu-item-title-row"><h4>Strawberry Matcha Latte</h4><span class="badge badge-popular">🔥 Popular</span></div>
                             <p>Creamy milk, sweet strawberry, and smooth matcha.</p>
                             <div class="ingredient-tags"><span class="tag">House Strawberry Puree</span><span class="tag">Fresh Whole Milk</span><span class="tag">Best Seller</span></div>
                         </div>
-                        <div class="menu-item-price" data-base="380">₹380</div>
-                        <div class="menu-item-actions"><a href="https://wa.me/919999999999?text=Hi%20Matcha%20House%20Delhi%21%20I%20would%20like%20to%20order%3A%20Strawberry%20Matcha%20Latte%20%28Dairy%20Milk%20/%20Standard%29%20for%20%E2%82%B9380.%20Please%20confirm%20order%21" target="_blank" rel="noopener noreferrer" class="btn-wa-order"><span class="wa-icon">💬</span> Order on WhatsApp</a></div>
+                        <div class="menu-item-price item-price" data-base="380">₹380</div>
+                        <div class="menu-item-actions"><a href="https://www.zomato.com/ncr/matcha-house-delhi/order" target="_blank" rel="noopener noreferrer" class="btn-zomato-order"><span class="zomato-icon">🍽️</span> Order on Zomato ↗</a></div>
                     </div>
-                    <div class="menu-item" data-category="latte" data-base-price="395" data-name="Mango Matcha Latte">
+                    <div class="menu-item" data-category="latte" data-base-price="395" data-oat-price="475" data-lactose-free-price="455" data-name="Mango Matcha Latte">
+                        <div class="menu-item-image"><img src="assets/menu/mango-matcha-latte.png" alt="Mango Matcha Latte" loading="lazy"></div>
                         <div class="menu-item-details">
                             <div class="menu-item-title-row"><h4>Mango Matcha Latte</h4><span class="badge badge-popular">🔥 Popular</span></div>
                             <p>Bright mango sweetness swirled with bold matcha for a vibrant, refreshing sip.</p>
                             <div class="ingredient-tags"><span class="tag">Ratnagiri Alphonso Mango</span><span class="tag">Velvet Milk</span><span class="tag">Dual Swirl</span></div>
                         </div>
-                        <div class="menu-item-price" data-base="395">₹395</div>
-                        <div class="menu-item-actions"><a href="https://wa.me/919999999999?text=Hi%20Matcha%20House%20Delhi%21%20I%20would%20like%20to%20order%3A%20Mango%20Matcha%20Latte%20%28Dairy%20Milk%20/%20Standard%29%20for%20%E2%82%B9395.%20Please%20confirm%20order%21" target="_blank" rel="noopener noreferrer" class="btn-wa-order"><span class="wa-icon">💬</span> Order on WhatsApp</a></div>
+                        <div class="menu-item-price item-price" data-base="395">₹395</div>
+                        <div class="menu-item-actions"><a href="https://www.zomato.com/ncr/matcha-house-delhi/order" target="_blank" rel="noopener noreferrer" class="btn-zomato-order"><span class="zomato-icon">🍽️</span> Order on Zomato ↗</a></div>
                     </div>
-                    <div class="menu-item" data-category="latte" data-base-price="395" data-name="Watermelon Matcha Latte">
+                    <div class="menu-item" data-category="latte" data-base-price="395" data-oat-price="475" data-lactose-free-price="455" data-name="Watermelon Matcha Latte">
+                        <div class="menu-item-image"><img src="assets/menu/watermelon-matcha-latte.png" alt="Watermelon Matcha Latte" loading="lazy"></div>
                         <div class="menu-item-details">
                             <div class="menu-item-title-row"><h4>Watermelon Matcha Latte</h4></div>
                             <p>Juicy watermelon, creamy milk, and smooth matcha in a refreshing layered latte.</p>
                             <div class="ingredient-tags"><span class="tag">Cold Pressed Watermelon</span><span class="tag">Rich Milk</span><span class="tag">Layered Latte</span></div>
                         </div>
-                        <div class="menu-item-price" data-base="395">₹395</div>
-                        <div class="menu-item-actions"><a href="https://wa.me/919999999999?text=Hi%20Matcha%20House%20Delhi%21%20I%20would%20like%20to%20order%3A%20Watermelon%20Matcha%20Latte%20%28Dairy%20Milk%20/%20Standard%29%20for%20%E2%82%B9395.%20Please%20confirm%20order%21" target="_blank" rel="noopener noreferrer" class="btn-wa-order"><span class="wa-icon">💬</span> Order on WhatsApp</a></div>
+                        <div class="menu-item-price item-price" data-base="395">₹395</div>
+                        <div class="menu-item-actions"><a href="https://www.zomato.com/ncr/matcha-house-delhi/order" target="_blank" rel="noopener noreferrer" class="btn-zomato-order"><span class="zomato-icon">🍽️</span> Order on Zomato ↗</a></div>
                     </div>
-                    <div class="menu-item" data-category="latte" data-base-price="395" data-name="Banana Matcha Latte">
+                    <div class="menu-item" data-category="latte" data-base-price="395" data-oat-price="475" data-lactose-free-price="455" data-name="Banana Matcha Latte">
+                        <div class="menu-item-image"><img src="assets/menu/banana-matcha-latte.png" alt="Banana Matcha Latte" loading="lazy"></div>
                         <div class="menu-item-details">
                             <div class="menu-item-title-row"><h4>Banana Matcha Latte</h4><span class="badge badge-new">✨ New</span></div>
                             <p>Naturally sweet banana milk paired with smooth, velvety matcha.</p>
                             <div class="ingredient-tags"><span class="tag">Fresh Banana Puree</span><span class="tag">Vanilla Milk</span><span class="tag">Naturally Sweet</span></div>
                         </div>
-                        <div class="menu-item-price" data-base="395">₹395</div>
-                        <div class="menu-item-actions"><a href="https://wa.me/919999999999?text=Hi%20Matcha%20House%20Delhi%21%20I%20would%20like%20to%20order%3A%20Banana%20Matcha%20Latte%20%28Dairy%20Milk%20/%20Standard%29%20for%20%E2%82%B9395.%20Please%20confirm%20order%21" target="_blank" rel="noopener noreferrer" class="btn-wa-order"><span class="wa-icon">💬</span> Order on WhatsApp</a></div>
+                        <div class="menu-item-price item-price" data-base="395">₹395</div>
+                        <div class="menu-item-actions"><a href="https://www.zomato.com/ncr/matcha-house-delhi/order" target="_blank" rel="noopener noreferrer" class="btn-zomato-order"><span class="zomato-icon">🍽️</span> Order on Zomato ↗</a></div>
                     </div>
-                    <div class="menu-item" data-category="latte" data-base-price="380" data-name="Pandan Matcha Latte">
+                    <div class="menu-item" data-category="latte" data-base-price="380" data-oat-price="460" data-lactose-free-price="440" data-name="Pandan Matcha Latte">
+                        <div class="menu-item-image"><img src="assets/menu/pandan-matcha-latte.png" alt="Pandan Matcha Latte" loading="lazy"></div>
                         <div class="menu-item-details">
                             <div class="menu-item-title-row"><h4>Pandan Matcha Latte</h4><span class="badge badge-new">✨ New</span></div>
                             <p>Creamy matcha infused with fragrant pandan and a hint of tropical sweetness.</p>
                             <div class="ingredient-tags"><span class="tag">Pandan Leaf Infusion</span><span class="tag">Coconut Milk</span><span class="tag">Tropical Note</span></div>
                         </div>
-                        <div class="menu-item-price" data-base="380">₹380</div>
-                        <div class="menu-item-actions"><a href="https://wa.me/919999999999?text=Hi%20Matcha%20House%20Delhi%21%20I%20would%20like%20to%20order%3A%20Pandan%20Matcha%20Latte%20%28Dairy%20Milk%20/%20Standard%29%20for%20%E2%82%B9380.%20Please%20confirm%20order%21" target="_blank" rel="noopener noreferrer" class="btn-wa-order"><span class="wa-icon">💬</span> Order on WhatsApp</a></div>
+                        <div class="menu-item-price item-price" data-base="380">₹380</div>
+                        <div class="menu-item-actions"><a href="https://www.zomato.com/ncr/matcha-house-delhi/order" target="_blank" rel="noopener noreferrer" class="btn-zomato-order"><span class="zomato-icon">🍽️</span> Order on Zomato ↗</a></div>
                     </div>
-                    <div class="menu-item" data-category="latte" data-base-price="395" data-name="Strawberry Hojicha Latte">
+                    <div class="menu-item" data-category="latte" data-base-price="395" data-oat-price="475" data-lactose-free-price="455" data-name="Strawberry Hojicha Latte">
+                        <div class="menu-item-image"><img src="assets/menu/strawberry-hojicha-latte.png" alt="Strawberry Hojicha Latte" loading="lazy"></div>
                         <div class="menu-item-details">
                             <div class="menu-item-title-row"><h4>Strawberry Hojicha Latte</h4></div>
                             <p>Toasty hojicha meets sweet strawberry in a smooth, cozy latte.</p>
                             <div class="ingredient-tags"><span class="tag">Roasted Hojicha</span><span class="tag">Strawberry Compote</span><span class="tag">Cozy Blend</span></div>
                         </div>
-                        <div class="menu-item-price" data-base="395">₹395</div>
-                        <div class="menu-item-actions"><a href="https://wa.me/919999999999?text=Hi%20Matcha%20House%20Delhi%21%20I%20would%20like%20to%20order%3A%20Strawberry%20Hojicha%20Latte%20%28Dairy%20Milk%20/%20Standard%29%20for%20%E2%82%B9395.%20Please%20confirm%20order%21" target="_blank" rel="noopener noreferrer" class="btn-wa-order"><span class="wa-icon">💬</span> Order on WhatsApp</a></div>
+                        <div class="menu-item-price item-price" data-base="395">₹395</div>
+                        <div class="menu-item-actions"><a href="https://www.zomato.com/ncr/matcha-house-delhi/order" target="_blank" rel="noopener noreferrer" class="btn-zomato-order"><span class="zomato-icon">🍽️</span> Order on Zomato ↗</a></div>
                     </div>
                 </div>
                 <div class="menu-category" data-category="cloud">
                     <h3>Clouds, Fusions & Treats</h3>
-                    <div class="menu-item" data-category="cloud" data-base-price="395" data-name="Coconut Cream Matcha">
+                    <div class="menu-item" data-category="cloud" data-base-price="395" data-oat-price="475" data-lactose-free-price="455" data-name="Coconut Cream Matcha">
+                        <div class="menu-item-image"><img src="assets/menu/coconut-cream-matcha.png" alt="Coconut Cream Matcha" loading="lazy"></div>
                         <div class="menu-item-details">
                             <div class="menu-item-title-row"><h4>Coconut Cream Matcha</h4><span class="badge badge-popular">🔥 Popular</span></div>
                             <p>Matcha blended with coconut water and rich coconut cream.</p>
                             <div class="ingredient-tags"><span class="tag">Tender Coconut Water</span><span class="tag">Rich Coconut Cream</span><span class="tag">Tropical</span></div>
                         </div>
-                        <div class="menu-item-price" data-base="395">₹395</div>
-                        <div class="menu-item-actions"><a href="https://wa.me/919999999999?text=Hi%20Matcha%20House%20Delhi%21%20I%20would%20like%20to%20order%3A%20Coconut%20Cream%20Matcha%20%28Dairy%20Milk%20/%20Standard%29%20for%20%E2%82%B9395.%20Please%20confirm%20order%21" target="_blank" rel="noopener noreferrer" class="btn-wa-order"><span class="wa-icon">💬</span> Order on WhatsApp</a></div>
+                        <div class="menu-item-price item-price" data-base="395">₹395</div>
+                        <div class="menu-item-actions"><a href="https://www.zomato.com/ncr/matcha-house-delhi/order" target="_blank" rel="noopener noreferrer" class="btn-zomato-order"><span class="zomato-icon">🍽️</span> Order on Zomato ↗</a></div>
                     </div>
-                    <div class="menu-item" data-category="cloud" data-base-price="395" data-name="Mango Coconut Cloud">
+                    <div class="menu-item" data-category="cloud" data-base-price="395" data-oat-price="475" data-lactose-free-price="455" data-name="Mango Coconut Cloud">
+                        <div class="menu-item-image"><img src="assets/menu/mango-coconut-cloud.png" alt="Mango Coconut Cloud" loading="lazy"></div>
                         <div class="menu-item-details">
                             <div class="menu-item-title-row"><h4>Mango Coconut Cloud</h4><span class="badge badge-popular">🔥 Popular</span></div>
                             <p>Lush mango blended with creamy coconut, topped with a soft cloud finish.</p>
                             <div class="ingredient-tags"><span class="tag">Ripe Alphonso Mango</span><span class="tag">Coconut Milk</span><span class="tag">Velvet Cold Foam</span></div>
                         </div>
-                        <div class="menu-item-price" data-base="395">₹395</div>
-                        <div class="menu-item-actions"><a href="https://wa.me/919999999999?text=Hi%20Matcha%20House%20Delhi%21%20I%20would%20like%20to%20order%3A%20Mango%20Coconut%20Cloud%20%28Dairy%20Milk%20/%20Standard%29%20for%20%E2%82%B9395.%20Please%20confirm%20order%21" target="_blank" rel="noopener noreferrer" class="btn-wa-order"><span class="wa-icon">💬</span> Order on WhatsApp</a></div>
+                        <div class="menu-item-price item-price" data-base="395">₹395</div>
+                        <div class="menu-item-actions"><a href="https://www.zomato.com/ncr/matcha-house-delhi/order" target="_blank" rel="noopener noreferrer" class="btn-zomato-order"><span class="zomato-icon">🍽️</span> Order on Zomato ↗</a></div>
                     </div>
-                    <div class="menu-item" data-category="cloud" data-base-price="390" data-name="Coconut Cloud Matcha">
+                    <div class="menu-item" data-category="cloud" data-base-price="390" data-oat-price="470" data-lactose-free-price="450" data-name="Coconut Cloud Matcha">
+                        <div class="menu-item-image"><img src="assets/menu/coconut-cloud-matcha.png" alt="Coconut Cloud Matcha" loading="lazy"></div>
                         <div class="menu-item-details">
                             <div class="menu-item-title-row"><h4>Coconut Cloud Matcha</h4><span class="badge badge-popular">🔥 Popular</span></div>
                             <p>Thick coconut blend with velvety matcha.</p>
                             <div class="ingredient-tags"><span class="tag">Whipped Coconut Cloud</span><span class="tag">Iced Coconut Water</span><span class="tag">Silky</span></div>
                         </div>
-                        <div class="menu-item-price" data-base="390">₹390</div>
-                        <div class="menu-item-actions"><a href="https://wa.me/919999999999?text=Hi%20Matcha%20House%20Delhi%21%20I%20would%20like%20to%20order%3A%20Coconut%20Cloud%20Matcha%20%28Dairy%20Milk%20/%20Standard%29%20for%20%E2%82%B9390.%20Please%20confirm%20order%21" target="_blank" rel="noopener noreferrer" class="btn-wa-order"><span class="wa-icon">💬</span> Order on WhatsApp</a></div>
+                        <div class="menu-item-price item-price" data-base="390">₹390</div>
+                        <div class="menu-item-actions"><a href="https://www.zomato.com/ncr/matcha-house-delhi/order" target="_blank" rel="noopener noreferrer" class="btn-zomato-order"><span class="zomato-icon">🍽️</span> Order on Zomato ↗</a></div>
                     </div>
-                    <div class="menu-item" data-category="cloud" data-base-price="395" data-name="Matcha Espresso Fusion">
+                    <div class="menu-item" data-category="cloud" data-base-price="395" data-oat-price="475" data-lactose-free-price="455" data-name="Matcha Espresso Fusion">
+                        <div class="menu-item-image"><img src="assets/menu/matcha-espresso-fusion.png" alt="Matcha Espresso Fusion" loading="lazy"></div>
                         <div class="menu-item-details">
                             <div class="menu-item-title-row"><h4>Matcha Espresso Fusion</h4><span class="badge badge-popular">🔥 Popular</span></div>
                             <p>Bold espresso meets smooth matcha in a rich energising fusion.</p>
-                            <div class="ingredient-tags"><span class="tag">Double Espresso</span><span class="tag">Ceremonial Kagoshima</span><span class="tag">Layered Energy</span></div>
+                            <div class="ingredient-tags"><span class="tag">Double Espresso</span><span class="tag">Ceremonial Kagushima</span><span class="tag">Layered Energy</span></div>
                         </div>
-                        <div class="menu-item-price" data-base="395">₹395</div>
-                        <div class="menu-item-actions"><a href="https://wa.me/919999999999?text=Hi%20Matcha%20House%20Delhi%21%20I%20would%20like%20to%20order%3A%20Matcha%20Espresso%20Fusion%20%28Dairy%20Milk%20/%20Standard%29%20for%20%E2%82%B9395.%20Please%20confirm%20order%21" target="_blank" rel="noopener noreferrer" class="btn-wa-order"><span class="wa-icon">💬</span> Order on WhatsApp</a></div>
+                        <div class="menu-item-price item-price" data-base="395">₹395</div>
+                        <div class="menu-item-actions"><a href="https://www.zomato.com/ncr/matcha-house-delhi/order" target="_blank" rel="noopener noreferrer" class="btn-zomato-order"><span class="zomato-icon">🍽️</span> Order on Zomato ↗</a></div>
                     </div>
-                    <div class="menu-item" data-category="cloud" data-base-price="350" data-name="Yakult Matcha Latte">
+                    <div class="menu-item" data-category="cloud" data-base-price="350" data-oat-price="430" data-lactose-free-price="410" data-name="Yakult Matcha Latte">
+                        <div class="menu-item-image"><img src="assets/menu/yakult-matcha-latte.png" alt="Yakult Matcha Latte" loading="lazy"></div>
                         <div class="menu-item-details">
                             <div class="menu-item-title-row"><h4>Yakult Matcha Latte</h4></div>
                             <p>Earthy matcha mixed with tangy Yakult and milk.</p>
                             <div class="ingredient-tags"><span class="tag">Probiotic Yakult</span><span class="tag">Tangy Citrus</span><span class="tag">Refreshing</span></div>
                         </div>
-                        <div class="menu-item-price" data-base="350">₹350</div>
-                        <div class="menu-item-actions"><a href="https://wa.me/919999999999?text=Hi%20Matcha%20House%20Delhi%21%20I%20would%20like%20to%20order%3A%20Yakult%20Matcha%20Latte%20%28Dairy%20Milk%20/%20Standard%29%20for%20%E2%82%B9350.%20Please%20confirm%20order%21" target="_blank" rel="noopener noreferrer" class="btn-wa-order"><span class="wa-icon">💬</span> Order on WhatsApp</a></div>
+                        <div class="menu-item-price item-price" data-base="350">₹350</div>
+                        <div class="menu-item-actions"><a href="https://www.zomato.com/ncr/matcha-house-delhi/order" target="_blank" rel="noopener noreferrer" class="btn-zomato-order"><span class="zomato-icon">🍽️</span> Order on Zomato ↗</a></div>
                     </div>
-                    <div class="menu-item" data-category="cloud" data-base-price="350" data-name="Honey Cinnamon Matcha Latte">
+                    <div class="menu-item" data-category="cloud" data-base-price="350" data-oat-price="430" data-lactose-free-price="410" data-name="Honey Cinnamon Matcha Latte">
+                        <div class="menu-item-image"><img src="assets/menu/honey-cinnamon-matcha-latte.png" alt="Honey Cinnamon Matcha Latte" loading="lazy"></div>
                         <div class="menu-item-details">
                             <div class="menu-item-title-row"><h4>Honey Cinnamon Matcha Latte</h4></div>
                             <p>Matcha with honey, milk, and a hint of cinnamon. (Hot / Cold)</p>
                             <div class="ingredient-tags"><span class="tag">Raw Forest Honey</span><span class="tag">Ceylon Cinnamon</span><span class="tag">Hot / Cold</span></div>
                         </div>
-                        <div class="menu-item-price" data-base="350">₹350</div>
-                        <div class="menu-item-actions"><a href="https://wa.me/919999999999?text=Hi%20Matcha%20House%20Delhi%21%20I%20would%20like%20to%20order%3A%20Honey%20Cinnamon%20Matcha%20Latte%20%28Dairy%20Milk%20/%20Standard%29%20for%20%E2%82%B9350.%20Please%20confirm%20order%21" target="_blank" rel="noopener noreferrer" class="btn-wa-order"><span class="wa-icon">💬</span> Order on WhatsApp</a></div>
+                        <div class="menu-item-price item-price" data-base="350">₹350</div>
+                        <div class="menu-item-actions"><a href="https://www.zomato.com/ncr/matcha-house-delhi/order" target="_blank" rel="noopener noreferrer" class="btn-zomato-order"><span class="zomato-icon">🍽️</span> Order on Zomato ↗</a></div>
                     </div>
-                    <div class="menu-item" data-category="cloud" data-base-price="350" data-name="Oreo Matcha Latte">
+                    <div class="menu-item" data-category="cloud" data-base-price="350" data-oat-price="430" data-lactose-free-price="410" data-name="Oreo Matcha Latte">
+                        <div class="menu-item-image"><img src="assets/menu/oreo-matcha-latte.png" alt="Oreo Matcha Latte" loading="lazy"></div>
                         <div class="menu-item-details">
                             <div class="menu-item-title-row"><h4>Oreo Matcha Latte</h4></div>
                             <p>Rich matcha blended with crunchy Oreo for a creamy, chocolatey treat.</p>
                             <div class="ingredient-tags"><span class="tag">Crushed Oreo Crumbs</span><span class="tag">Madagascar Vanilla</span><span class="tag">Chocolate</span></div>
                         </div>
-                        <div class="menu-item-price" data-base="350">₹350</div>
-                        <div class="menu-item-actions"><a href="https://wa.me/919999999999?text=Hi%20Matcha%20House%20Delhi%21%20I%20would%20like%20to%20order%3A%20Oreo%20Matcha%20Latte%20%28Dairy%20Milk%20/%20Standard%29%20for%20%E2%82%B9350.%20Please%20confirm%20order%21" target="_blank" rel="noopener noreferrer" class="btn-wa-order"><span class="wa-icon">💬</span> Order on WhatsApp</a></div>
+                        <div class="menu-item-price item-price" data-base="350">₹350</div>
+                        <div class="menu-item-actions"><a href="https://www.zomato.com/ncr/matcha-house-delhi/order" target="_blank" rel="noopener noreferrer" class="btn-zomato-order"><span class="zomato-icon">🍽️</span> Order on Zomato ↗</a></div>
                     </div>
-                    <div class="menu-item" data-category="cloud" data-base-price="380" data-name="Matcha Affogato">
+                    <div class="menu-item" data-category="cloud" data-base-price="380" data-oat-price="460" data-lactose-free-price="440" data-name="Matcha Affogato">
+                        <div class="menu-item-image"><img src="assets/menu/matcha-affogato.png" alt="Matcha Affogato" loading="lazy"></div>
                         <div class="menu-item-details">
                             <div class="menu-item-title-row"><h4>Matcha Affogato</h4><span class="badge badge-popular">🔥 Popular</span></div>
                             <p>Bittersweet, intense matcha contrast over in-house cold ice cream.</p>
                             <div class="ingredient-tags"><span class="tag">Artisanal Vanilla Gelato</span><span class="tag">Concentrated Matcha Shot</span><span class="tag">Contrast</span></div>
                         </div>
-                        <div class="menu-item-price" data-base="380">₹380</div>
-                        <div class="menu-item-actions"><a href="https://wa.me/919999999999?text=Hi%20Matcha%20House%20Delhi%21%20I%20would%20like%20to%20order%3A%20Matcha%20Affogato%20%28Dairy%20Milk%20/%20Standard%29%20for%20%E2%82%B9380.%20Please%20confirm%20order%21" target="_blank" rel="noopener noreferrer" class="btn-wa-order"><span class="wa-icon">💬</span> Order on WhatsApp</a></div>
+                        <div class="menu-item-price item-price" data-base="380">₹380</div>
+                        <div class="menu-item-actions"><a href="https://www.zomato.com/ncr/matcha-house-delhi/order" target="_blank" rel="noopener noreferrer" class="btn-zomato-order"><span class="zomato-icon">🍽️</span> Order on Zomato ↗</a></div>
                     </div>
-                    <div class="menu-item" data-category="cloud" data-base-price="390" data-name="Vanilla Float Matcha">
+                    <div class="menu-item" data-category="cloud" data-base-price="390" data-oat-price="470" data-lactose-free-price="450" data-name="Vanilla Float Matcha">
+                        <div class="menu-item-image"><img src="assets/menu/vanilla-float-matcha.png" alt="Vanilla Float Matcha" loading="lazy"></div>
                         <div class="menu-item-details">
                             <div class="menu-item-title-row"><h4>Vanilla Float Matcha</h4></div>
                             <p>Bold matcha poured over in-house Vanilla ice cream.</p>
                             <div class="ingredient-tags"><span class="tag">In-House Vanilla Bean</span><span class="tag">Chilled Latte</span><span class="tag">Creamy Float</span></div>
                         </div>
-                        <div class="menu-item-price" data-base="390">₹390</div>
-                        <div class="menu-item-actions"><a href="https://wa.me/919999999999?text=Hi%20Matcha%20House%20Delhi%21%20I%20would%20like%20to%20order%3A%20Vanilla%20Float%20Matcha%20%28Dairy%20Milk%20/%20Standard%29%20for%20%E2%82%B9390.%20Please%20confirm%20order%21" target="_blank" rel="noopener noreferrer" class="btn-wa-order"><span class="wa-icon">💬</span> Order on WhatsApp</a></div>
+                        <div class="menu-item-price item-price" data-base="390">₹390</div>
+                        <div class="menu-item-actions"><a href="https://www.zomato.com/ncr/matcha-house-delhi/order" target="_blank" rel="noopener noreferrer" class="btn-zomato-order"><span class="zomato-icon">🍽️</span> Order on Zomato ↗</a></div>
                     </div>
-                    <div class="menu-item" data-category="cloud" data-base-price="200" data-name="Mango Matcha Pudding">
+                    <div class="menu-item" data-category="cloud" data-base-price="200" data-oat-price="280" data-lactose-free-price="260" data-name="Mango Matcha Pudding">
+                        <div class="menu-item-image"><img src="assets/menu/mango-matcha-pudding.png" alt="Mango Matcha Pudding" loading="lazy"></div>
                         <div class="menu-item-details">
                             <div class="menu-item-title-row"><h4>Mango Matcha Pudding</h4><span class="badge badge-new">✨ New</span></div>
                             <p>Sweet mango, creamy chia, and smooth matcha in a refreshing layered treat.</p>
                             <div class="ingredient-tags"><span class="tag">Chia Seed Pudding</span><span class="tag">Mango Puree</span><span class="tag">Matcha Jelly</span></div>
                         </div>
-                        <div class="menu-item-price" data-base="200">₹200</div>
-                        <div class="menu-item-actions"><a href="https://wa.me/919999999999?text=Hi%20Matcha%20House%20Delhi%21%20I%20would%20like%20to%20order%3A%20Mango%20Matcha%20Pudding%20%28Dairy%20Milk%20/%20Standard%29%20for%20%E2%82%B9200.%20Please%20confirm%20order%21" target="_blank" rel="noopener noreferrer" class="btn-wa-order"><span class="wa-icon">💬</span> Order on WhatsApp</a></div>
+                        <div class="menu-item-price item-price" data-base="200">₹200</div>
+                        <div class="menu-item-actions"><a href="https://www.zomato.com/ncr/matcha-house-delhi/order" target="_blank" rel="noopener noreferrer" class="btn-zomato-order"><span class="zomato-icon">🍽️</span> Order on Zomato ↗</a></div>
                     </div>
                 </div>
             </div>
             
             <div class="menu-footer">
                 <p><strong>Sweeteners:</strong> Sugar syrup, honey, and stevia</p>
-                <p><strong>Milk options:</strong> Dairy and oat milk (₹80 extra for oat milk)</p>
+                <p><strong>Milk options:</strong> Dairy Milk (+₹0, Included), Oat Milk (+₹80), and Lactose-Free Milk (+₹60)</p>
             </div>
         </div>
     </section>
@@ -458,7 +501,48 @@
     <!-- Events & Workshops Section (R3) -->
     <section id="events" class="events-section">
         <div class="events-container">
-            <div class="events-section" id="historicalEventsBlock">
+            <div class="events-header">
+                <span class="sub-heading">Artisanal Experience</span>
+                <h2>Matcha Masterclass: The Art of Chado in Delhi</h2>
+                <p>Immerse yourself in a meditative, hands-on workshop guiding you through the centuries-old ritual of authentic Japanese tea preparation.</p>
+                <div class="events-meta-bar">
+                    <div class="date-badge">📅 Upcoming Sessions: Every Saturday &amp; Sunday | 4:00 PM – 5:30 PM</div>
+                    <div class="seats-counter">⚡ Only 3 seats remaining for this weekend's session</div>
+                </div>
+            </div>
+
+            <div class="events-tiers-grid">
+                <!-- Basic Tier -->
+                <div class="workshop-card">
+                    <div class="tier-badge">Foundations</div>
+                    <h3>Basic Masterclass</h3>
+                    <div class="tier-price">₹1,500 <span class="per-person">/ person</span></div>
+                    <ul class="tier-perks">
+                        <li>✓ 90-minute hands-on workshop led by senior tea master</li>
+                        <li>✓ Kagushima ceremonial grading &amp; flavor cupping session</li>
+                        <li>✓ Bamboo whisk (Chasen) frothing technique training</li>
+                        <li>✓ 20g ceremonial matcha tin to take home</li>
+                    </ul>
+                    <a href="https://wa.me/919999999999?text=Hi%20Matcha%20House%20Delhi%2C%20I%20would%20like%20to%20reserve%20a%20seat%20for%20the%20Matcha%20Masterclass%20(Basic%20Tier%20-%20%E2%82%B91%2C500)." target="_blank" rel="noopener noreferrer" class="btn-whatsapp btn-tier">Book Basic Tier on WhatsApp</a>
+                </div>
+
+                <!-- Premium Tier -->
+                <div class="workshop-card featured">
+                    <div class="tier-badge gold">Ceremonial Connoisseur</div>
+                    <h3>Premium Masterclass</h3>
+                    <div class="tier-price">₹2,500 <span class="per-person">/ person</span></div>
+                    <ul class="tier-perks">
+                        <li>✓ Everything included in Basic Masterclass</li>
+                        <li>✓ Complete ceremony kit: Handcrafted Mino-yaki ceramic Chawan bowl</li>
+                        <li>✓ 100-prong bamboo Chasen whisk &amp; bamboo Chashaku scoop</li>
+                        <li>✓ Private pairing menu: 2 custom artisanal matcha dessert creations</li>
+                        <li>✓ Priority front-row seating &amp; Certificate of Mastery</li>
+                    </ul>
+                    <a href="https://wa.me/919999999999?text=Hi%20Matcha%20House%20Delhi%2C%20I%20would%20like%20to%20reserve%20a%20seat%20for%20the%20Matcha%20Masterclass%20(Premium%20Tier%20-%20%E2%82%B92%2C500)." target="_blank" rel="noopener noreferrer" class="btn-whatsapp btn-tier">Book Premium Tier on WhatsApp</a>
+                </div>
+            </div>
+
+            <div class="events-archive-block" id="historicalEventsBlock" style="margin-top: 5rem;">
                 <div class="historical-header">
                     <div class="sleek-badge">[COMMUNITY ARCHIVE]</div>
                     <h3 class="historical-title">PAST COLLABORATIONS &amp; GATHERINGS</h3>
@@ -537,7 +621,7 @@
                         <h4 class="event-card-name">BE Wellness Collab</h4>
                         <div class="event-meta-info">📍 Flagship Sanctuary · Functional Pop-up Series</div>
                         <p class="event-card-summary">
-                            Holistic wellness experience combining breathwork, mindfulness meditation, and the antioxidant power of ceremonial Kagoshima matcha paired with VegCollagen peptide infusions (Vanilla Glow, Ocean Glow, Pistachio Glow).
+                            Holistic wellness experience combining breathwork, mindfulness meditation, and the antioxidant power of ceremonial Kagushima matcha paired with VegCollagen peptide infusions (Vanilla Glow, Ocean Glow, Pistachio Glow).
                         </p>
                         <div class="event-card-action">
                             <span class="event-stat">Sound &amp; Breathwork</span>
@@ -630,7 +714,7 @@
                     </div>
                     <div class="review-card">
                         <div class="review-stars">★★★★★</div>
-                        <p class="review-text">"Finally, authentic single-origin Kagoshima matcha in Delhi! The Matcha Affogato with their in-house Madagascar vanilla bean ice cream is an absolute revelation."</p>
+                        <p class="review-text">"Finally, authentic single-origin Kagushima matcha in Delhi! The Matcha Affogato with their in-house Madagascar vanilla bean ice cream is an absolute revelation."</p>
                         <div class="review-author"><strong>Meera K.</strong> <span>Defence Colony</span></div>
                     </div>
                     <div class="review-card">
@@ -658,7 +742,7 @@
                     <p>Share your mindful moments with #MatchaHouseDelhi</p>
                 </div>
                 <div class="instagram-grid">
-                    <div class="insta-tile"><div class="insta-overlay"><span>🍵 Whisking Ceremony</span></div><img src="assets/fields.png" alt="Kagoshima Fields" loading="lazy"></div>
+                    <div class="insta-tile"><div class="insta-overlay"><span>🍵 Whisking Ceremony</span></div><img src="assets/fields.png" alt="Kagushima Fields" loading="lazy"></div>
                     <div class="insta-tile"><div class="insta-overlay"><span>🍓 Strawberry Cloud</span></div><img src="assets/sig_strawberry.png" alt="Strawberry Latte" loading="lazy"></div>
                     <div class="insta-tile"><div class="insta-overlay"><span>✨ Hauz Khas Sanctuary</span></div><img src="assets/whisk.png" alt="Bamboo Whisk" loading="lazy"></div>
                     <div class="insta-tile"><div class="insta-overlay"><span>🧊 Iced Classic Brew</span></div><img src="assets/sig_classic.png" alt="Classic Latte" loading="lazy"></div>
@@ -714,7 +798,7 @@
                         </div>
                         <div class="punch-slot" style="background: rgba(255,255,255,0.05); padding: 1rem 0.5rem; border-radius: 12px; text-align: center; border: 1px solid rgba(255,255,255,0.1); cursor: pointer; transition: all 0.3s ease;">
                             <span style="font-size: 1.5rem; display: block; margin-bottom: 0.5rem;">🍃</span>
-                            <span style="font-size: 0.65rem; font-family: var(--font-heading); text-transform: uppercase; color: rgba(255,255,255,0.6);">Kagoshima Latte</span>
+                            <span style="font-size: 0.65rem; font-family: var(--font-heading); text-transform: uppercase; color: rgba(255,255,255,0.6);">Kagushima Latte</span>
                         </div>
                         <div class="punch-slot" style="background: rgba(255,255,255,0.05); padding: 1rem 0.5rem; border-radius: 12px; text-align: center; border: 1px solid rgba(255,255,255,0.1); cursor: pointer; transition: all 0.3s ease;">
                             <span style="font-size: 1.5rem; display: block; margin-bottom: 0.5rem;">✨</span>
@@ -726,12 +810,6 @@
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-                    <div id="loyaltySuccess" class="loyalty-success" style="display: none;">
-                        ✨ Welcome to the circle! Redirecting to WhatsApp to claim your reward voucher...!
-                    </div>
-                </form>
             </div>
         </div>
     </section>
@@ -826,7 +904,7 @@
         <div class="footer-content">
             <div class="footer-brand">
                 <h2>Matcha House Delhi</h2>
-                <p>Elevating your daily mindful ritual with ceremonial Kagoshima tea.</p>
+                <p>Elevating your daily mindful ritual with ceremonial Kagushima tea.</p>
                 <div class="footer-socials">
                     <a href="https://instagram.com/matchahouseldelhi" target="_blank" rel="noopener noreferrer" aria-label="Instagram">Instagram</a>
                     <a href="https://wa.me/919999999999" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">WhatsApp</a>

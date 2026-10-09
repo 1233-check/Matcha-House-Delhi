@@ -180,35 +180,69 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // --- 8. Dynamic Oat Milk Pricing Engine & WhatsApp URLs (R1, R2) ---
+    // --- 8. Dynamic Milk Preference Engine (Dairy, Oat +₹80, Lactose-Free +₹60) ---
+    const milkOptionBtns = document.querySelectorAll('.milk-option-btn');
     const oatMilkToggle = document.getElementById('oatMilkToggle');
-    let isOatMilkActive = false;
+    let selectedMilk = 'dairy';
+
+    const MILK_SURCHARGES = {
+        'dairy': 0,
+        'oat': 80,
+        'lactose-free': 60
+    };
 
     function updateMenuPrices() {
+        // Price math: basePrice + 80 for oat milk, + 60 for lactose-free milk, + 0 for dairy
+        const surcharge = MILK_SURCHARGES[selectedMilk] !== undefined ? MILK_SURCHARGES[selectedMilk] : 0;
+
         menuItems.forEach(item => {
             const basePrice = parseInt(item.dataset.basePrice, 10);
-            const itemName = item.dataset.name;
-            const currentPrice = isOatMilkActive ? (basePrice + 80) : basePrice;
+            const currentPrice = basePrice + surcharge;
 
-            // Update displayed price in DOM
-            const priceEl = item.querySelector('.menu-item-price');
+            // Update displayed price in DOM smoothly without mutating direct Zomato store links
+            const priceEl = item.querySelector('.menu-item-price, .item-price');
             if (priceEl) {
                 priceEl.textContent = `₹${currentPrice}`;
             }
 
-            // Update WhatsApp order link
+            // If an item has a WhatsApp order button, update it; direct Zomato order buttons are untouched
             const waBtn = item.querySelector('.btn-wa-order');
             if (waBtn) {
-                const milkChoice = isOatMilkActive ? 'Oat Milk (+₹80)' : 'Dairy Milk / Standard';
-                const messageText = `Hi Matcha House Delhi! I would like to order: ${itemName} (${milkChoice}) for ₹${currentPrice}. Please confirm order!`;
+                const milkChoice = selectedMilk === 'oat' ? 'Oat Milk (+₹80)' : (selectedMilk === 'lactose-free' ? 'Lactose-Free Milk (+₹60)' : 'Dairy Milk / Standard');
+                const messageText = `Hi Matcha House Delhi! I would like to order: ${item.dataset.name} (${milkChoice}) for ₹${currentPrice}. Please confirm order!`;
                 waBtn.href = `https://wa.me/919999999999?text=${encodeURIComponent(messageText)}`;
             }
+        });
+
+        // Sync legacy oat toggle checkbox if present for backwards compatibility
+        if (oatMilkToggle) {
+            oatMilkToggle.checked = (selectedMilk === 'oat');
+        }
+    }
+
+    if (milkOptionBtns.length > 0) {
+        milkOptionBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                milkOptionBtns.forEach(b => {
+                    b.classList.remove('active');
+                    b.setAttribute('aria-checked', 'false');
+                });
+                btn.classList.add('active');
+                btn.setAttribute('aria-checked', 'true');
+                selectedMilk = btn.dataset.milk || 'dairy';
+                updateMenuPrices();
+            });
         });
     }
 
     if (oatMilkToggle) {
         oatMilkToggle.addEventListener('change', (e) => {
-            isOatMilkActive = e.target.checked;
+            selectedMilk = e.target.checked ? 'oat' : 'dairy';
+            milkOptionBtns.forEach(b => {
+                const isActive = (b.dataset.milk === selectedMilk);
+                b.classList.toggle('active', isActive);
+                b.setAttribute('aria-checked', isActive ? 'true' : 'false');
+            });
             updateMenuPrices();
         });
     }
