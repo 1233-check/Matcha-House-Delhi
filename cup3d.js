@@ -79,12 +79,12 @@ if (canvas && section) {
             color.rgb = mix(color.rgb, duotone, 0.45);
             
             // 3. Contrast bump for that architectural/stark feel
-            color.rgb = smoothstep(0.05, 0.95, color.rgb);
+            color.rgb = smoothstep(vec3(0.05), vec3(0.95), color.rgb);
             // -----------------------------------------
 
             // Subtle 3D lighting shift
             float lightGlow = (depthValue * 0.3) * max(0.0, -u_mouse.y + u_mouse.x);
-            color.rgb += lightGlow * 0.15; 
+            color.rgb += vec3(lightGlow * 0.15); 
 
             gl_FragColor = color;
         }
