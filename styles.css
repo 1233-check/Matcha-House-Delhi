@@ -2826,3 +2826,39 @@ p {
     color: #000;
     border-color: #000;
 }
+
+@media (max-width: 768px) {
+    .founder-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    .founder-section {
+        padding: 4rem 5%;
+    }
+    .founder-quote {
+        font-size: 1.4rem;
+    }
+    .historical-grid {
+        grid-template-columns: 1fr !important;
+    }
+    .events-tiers-grid {
+        grid-template-columns: 1fr !important;
+    }
+    .editorial-images {
+        height: 400px;
+    }
+    .editorial-img-main {
+        width: 100%;
+        height: 100%;
+        position: relative;
+    }
+    .editorial-img-sub {
+        display: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .menu-categories {
+        flex-wrap: wrap;
+    }
+}
