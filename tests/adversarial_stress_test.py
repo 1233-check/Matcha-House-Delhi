@@ -55,15 +55,16 @@ class HTMLDataExtractor(HTMLParser):
         if self.in_item:
             if "menu-item-price" in attr_dict.get("class", "").split():
                 self.current_item["data_base"] = attr_dict.get("data-base")
-            if "btn-wa-order" in attr_dict.get("class", "").split():
+            if "btn-wa-order" in attr_dict.get("class", "").split() or "btn-zomato-order" in attr_dict.get("class", "").split():
                 self.current_item["wa_href"] = attr_dict.get("href")
+                self.current_item["order_href"] = attr_dict.get("href")
 
     def handle_data(self, data):
         if self.in_item and "₹" in data:
             self.current_item["price_text"] = data.strip()
 
     def handle_endtag(self, tag):
-        if tag == "div" and self.in_item and self.current_item.get("wa_href"):
+        if tag == "div" and self.in_item and (self.current_item.get("wa_href") or self.current_item.get("order_href")):
             self.menu_items.append(dict(self.current_item))
             self.in_item = False
             self.current_item = {}
@@ -183,9 +184,12 @@ class AdversarialStressTestSuite(unittest.TestCase):
     # 2. WHATSAPP URL GENERATOR & ENCODING
     # =========================================================================
     def test_04_static_whatsapp_urls_in_html(self):
-        """Verify all static WhatsApp links in index.html are valid wa.me format with valid params."""
+        """Verify all static WhatsApp links in index.html are valid wa.me format with valid params, and 32 Zomato order links."""
         wa_links = [href for href, _ in self.extractor.all_links if "wa.me" in href]
-        self.assertGreaterEqual(len(wa_links), 35, f"Expected at least 35 wa.me links, found {len(wa_links)}")
+        self.assertGreaterEqual(len(wa_links), 10, f"Expected at least 10 static wa.me links for booking and events, found {len(wa_links)}")
+
+        zomato_links = [href for href, _ in self.extractor.all_links if "zomato.com" in href and "order" in href]
+        self.assertEqual(len(zomato_links), 32, f"Expected 32 Zomato menu order links, found {len(zomato_links)}")
 
         for link in wa_links:
             parsed = urllib.parse.urlparse(link)

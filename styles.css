@@ -19,6 +19,11 @@
     box-sizing: border-box;
 }
 
+img {
+    max-width: 100%;
+    height: auto;
+}
+
 html {
 }
 
@@ -98,6 +103,11 @@ h1, h2, h3, .logo {
     gap: 5px;
     cursor: pointer;
     z-index: 1001;
+    min-width: 44px;
+    min-height: 44px;
+    padding: 10px;
+    align-items: center;
+    justify-content: center;
 }
 
 .mobile-toggle span {

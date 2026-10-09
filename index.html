@@ -4,15 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Matcha House Delhi | The Ultimate Matcha Experience</title>
-    <meta name="description" content="Visit Matcha House Delhi in Hauz Khas for ceremonial-grade Kagushima matcha, artisan signature lattes, and masterclasses.">
+    <meta name="description" content="Visit Matcha House Delhi in Hauz Khas for ceremonial-grade Kagoshima matcha, artisan signature lattes, and interactive matcha experiences.">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Matcha House Delhi">
     <meta property="og:title" content="Matcha House Delhi | Premium Ceremonial Matcha Experience">
-    <meta property="og:description" content="Ceremonial Kagushima matcha, signature lattes, and masterclasses in Hauz Khas, New Delhi.">
+    <meta property="og:description" content="Ceremonial Kagoshima matcha, signature lattes, and interactive matcha experiences in Hauz Khas, New Delhi.">
     <meta property="og:image" content="https://matchahousedelhi.com/assets/sig_classic.png">
     <meta property="og:url" content="https://matchahousedelhi.com">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Matcha House Delhi | Premium Ceremonial Matcha"><meta name="twitter:description" content="Ceremonial Kagushima matcha, signature lattes, and masterclasses in Hauz Khas, New Delhi."><meta name="twitter:image" content="https://matchahousedelhi.com/assets/sig_classic.png">
+    <meta name="twitter:title" content="Matcha House Delhi | Premium Ceremonial Matcha"><meta name="twitter:description" content="Ceremonial Kagoshima matcha, signature lattes, and interactive matcha experiences in Hauz Khas, New Delhi."><meta name="twitter:image" content="https://matchahousedelhi.com/assets/sig_classic.png">
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-PLACEHOLDER"></script>
     <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-PLACEHOLDER');</script>
     <script type="application/ld+json">{"@context":"https://schema.org","@type":"CafeOrCoffeeShop","name":"Matcha House Delhi","image":"https://matchahousedelhi.com/assets/sig_classic.png","@id":"https://matchahousedelhi.com","url":"https://matchahousedelhi.com","telephone":"+919999999999","priceRange":"₹200 - ₹395","menu":"https://matchahousedelhi.com/#menu","servesCuisine":["Japanese Tea","Matcha","Coffee","Desserts"],"address":{"@type":"PostalAddress","streetAddress":"123 Matcha Lane, Hauz Khas","addressLocality":"New Delhi","addressRegion":"Delhi","postalCode":"110016","addressCountry":"IN"},"geo":{"@type":"GeoCoordinates","latitude":28.5494,"longitude":77.2001},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],"opens":"08:00","closes":"21:00"}],"hasMap":"https://maps.app.goo.gl/P87DF1ftjVhMzjde6"}</script>
@@ -29,7 +29,7 @@
         <span class="weather-text" id="weatherText">Fetching local breeze...</span>
     </div>
     <nav class="navbar">
-        <div class="mobile-toggle" id="mobileToggle">
+        <div class="mobile-toggle" id="mobileToggle" role="button" aria-label="Toggle navigation" aria-expanded="false" tabindex="0">
             <span></span>
             <span></span>
             <span></span>
@@ -39,7 +39,7 @@
             <div class="nav-left">
                 <a href="#about">Our Story</a>
                 <a href="#menu">Menu</a>
-                <a href="#events">Masterclass</a>
+                <a href="#events">Make Your Own Matcha</a>
             </div>
             <div class="nav-right">
                 <a href="#reviews">Reviews</a>
@@ -51,12 +51,24 @@
     </nav>
 
     <header class="hero" id="home">
+        <canvas id="cupCanvas"></canvas>
         <div class="hero-content">
             <h1>Awaken Your<br>Senses.</h1>
             <p>Experience the purest, ceremonial-grade matcha<br>right in the heart of Delhi.</p>
             <a href="#secret-ritual" class="btn-secondary">Unlock the Secret</a>
         </div>
     </header>
+
+    <!-- Hero Philosophy Ticker (R5) -->
+    <div class="hero-philosophy-ticker" aria-label="Brand Philosophy">
+        <div class="philosophy-content">
+            <span class="ticker-highlight">🍵 EXCLUSIVELY FRESHLY WHISKED</span>
+            <span class="ticker-dot">•</span>
+            <span>STRICTLY AGAINST PRE-WHISKED MATCHA</span>
+            <span class="ticker-dot">•</span>
+            <span>SINGLE-ORIGIN KAGOSHIMA FIRST FLUSH &amp; CEREMONIAL GRADE</span>
+        </div>
+    </div>
 
     <!-- Live Ceremonial Video Feed with Parallax Scroll (Anchor target: #secret-ritual) -->
     <div class="live-feed-wrapper">
@@ -74,13 +86,14 @@
     <section id="about" class="editorial-section">
         <div class="editorial-container">
             <div class="editorial-images perspective-container">
-                <img src="assets/kagoshima_map.jpg" alt="Kagushima Tea Fields" class="editorial-img-main tilt-element" loading="lazy">
+                <img src="assets/kagoshima_map.jpg" alt="Kagoshima Tea Fields" class="editorial-img-main tilt-element" loading="lazy">
                 <img src="assets/whisk.png" alt="Matcha Whisking" class="editorial-img-sub tilt-element" loading="lazy">
             </div>
             <div class="editorial-content">
-                <h2 class="editorial-title">From Kagushima to<br>New Delhi.</h2>
+                <h2 class="editorial-title">From Kagoshima to<br>New Delhi.</h2>
                 <div class="editorial-text-columns">
-                    <p><span class="drop-cap">W</span>e source our tea leaves directly from the historic, mist-covered tea fields of Kagushima, Japan, a region renowned for producing the world's most vibrant and complex matcha for over 800 years. Our founders traveled to Kyushu to build direct relationships with multi-generational tea farmers, ensuring only the highest ceremonial grade leaves make it to our New Delhi flagship.</p>
+                    <p><span class="drop-cap">W</span>e source our tea leaves directly from the historic, mist-covered tea fields of Kagoshima, Japan, a region renowned for producing the world's most vibrant and complex matcha for over 800 years. Our founders traveled to Kyushu to build direct relationships with multi-generational tea farmers, ensuring only the highest ceremonial grade leaves make it to our New Delhi flagship.</p>
+                    <p><strong>Our Philosophy:</strong> We stand strictly against pre-whisked shortcuts. Commercial cafes let pre-whisked matcha sit in refrigerated pitchers, allowing oxidation to destroy delicate L-theanine and vital antioxidants within minutes. At Matcha House, every single bowl is exclusively freshly whisked to order using an authentic bamboo Chasen, unlocking peak sweetness and an intoxicating emerald foam.</p>
                     <p>Every bowl we serve is prepared with a deep, uncompromising respect for the traditional Japanese tea ceremony. From the precise temperature of the water to the rhythmic motion of the bamboo chasen, we believe that true luxury lies in the mastery of these subtle details.</p>
                 </div>
                 <blockquote class="editorial-quote">
@@ -91,12 +104,81 @@
         </div>
     </section>
 
+    <!-- Founder's Story Section (R2) -->
+    <section id="founder-story" class="founder-section" aria-label="Founder's Story">
+        <div class="founder-container">
+            <div class="founder-grid">
+                <div class="founder-visual">
+                    <div class="founder-badge-tag">[FOUNDER'S NARRATIVE]</div>
+                    <div class="founder-quote-card">
+                        <blockquote class="founder-quote">
+                            "We didn't build Matcha House to sell green drinks. We built it to bring a moment of absolute stillness to Delhi — freshly whisked, one bowl at a time."
+                        </blockquote>
+                        <div class="founder-author">
+                            <span class="founder-name">Selina</span>
+                            <span class="founder-title">Founder &amp; Tea Curator, Matcha House Delhi</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="founder-content">
+                    <span class="sub-heading">The Origin Story</span>
+                    <h2 class="founder-heading">From Kyushu's Misty Hills to New Delhi's Heart</h2>
+                    <div class="founder-bio">
+                        <p>
+                            Matcha House Delhi was born from a transformative journey through the secluded volcanic tea hills of Kagoshima, Japan. Traveling across Kyushu, our founder Selina witnessed multi-generational tea farmers dedicating their lives to cultivating shade-grown tencha with reverence, silence, and patience.
+                        </p>
+                        <p>
+                            Returning to Delhi, she was struck by a glaring gap: the city's cafes were serving pre-whisked, oxidized matcha mixtures laden with artificial syrups. Matcha House was created as an uncompromising antidote — a serene brutalist sanctuary dedicated strictly to pure, single-origin Kagoshima tea whisked fresh to order for every guest.
+                        </p>
+                        <p>
+                            Our mission is simple yet radical: to honor centuries of Japanese Chado ritual in the capital, proving that mindfulness is not a luxury, but an essential daily anchor.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Revenue Menu Section -->
     <section id="menu" class="menu-section">
         <div class="menu-container">
             <div class="menu-header">
+                <span class="sub-heading">Exclusively Freshly Whisked</span>
                 <h2>Our Offerings</h2>
-                <p>Curated ceremonial-grade selections from the finest tea estates.</p>
+                <p>Handcrafted to order with single-origin Kagoshima leaves. Strictly zero pre-whisked matcha.</p>
+            </div>
+
+            <!-- Matcha Types Showcase (R5) -->
+            <div class="matcha-types-grid">
+                <div class="matcha-type-card">
+                    <div class="type-header">
+                        <span class="type-pill">Spring First Harvest</span>
+                        <h3>First Flush Matcha</h3>
+                    </div>
+                    <p class="type-desc">
+                        Harvested during the prized first spring plucking (Ichibancha) from young tender shoots. Packed with natural L-theanine, yielding a smooth, naturally sweet, umami-rich cup with vibrant emerald luminescence and zero astringency.
+                    </p>
+                    <div class="type-notes">
+                        <span>✓ Tender Spring Shoots</span>
+                        <span>✓ Naturally Sweet</span>
+                        <span>✓ Highest L-Theanine</span>
+                    </div>
+                </div>
+
+                <div class="matcha-type-card featured-grade">
+                    <div class="type-header">
+                        <span class="type-pill gold">Chado Reserve</span>
+                        <h3>Ceremonial Matcha</h3>
+                    </div>
+                    <p class="type-desc">
+                        The pinnacle of traditional Japanese stone-milled green tea. Shaded under reed canopies for 30+ days, destemmed to pure tencha, and slowly granite ground into micro-fine powder. Produces a luxurious, velvety microfoam with deep, complex oceanic umami.
+                    </p>
+                    <div class="type-notes">
+                        <span>✓ 30-Day Shade Grown</span>
+                        <span>✓ Granite Stone Milled</span>
+                        <span>✓ Dense Velvety Foam</span>
+                    </div>
+                </div>
             </div>
             
             <!-- Signature Gallery -->
@@ -123,11 +205,11 @@
                 <div class="merch-minimal-content">
                     <h4>Limited Edition Collaboration</h4>
                     <h3>Buy 1 Matcha, Get 1 Mini Teddy Bear Free</h3>
-                    <p>Experience our signature lattes in the exclusive <em>Matcha House Purple Cow</em> and receive a complimentary, handcrafted mini teddy bear.</p>
+                    <p>Experience our signature handcrafted lattes and receive a complimentary, limited-edition mini teddy bear with your order.</p>
                     <a href="https://wa.me/919999999999?text=Hi%20Matcha%20House%2C%20I%20want%20the%20Teddy%20Bear%20promo" target="_blank" class="btn-primary" style="margin-top: 1rem; display: inline-block;">Reserve on WhatsApp</a>
                 </div>
                 <div class="merch-minimal-visual">
-                    <span style="font-size: 4rem;">🧸 🟣</span>
+                    <span style="font-size: 4rem;">🧸 🍵</span>
                 </div>
             </div>
 
@@ -166,7 +248,7 @@
                         <div class="menu-item-details">
                             <div class="menu-item-title-row"><h4>Matcha Iced Tea</h4></div>
                             <p>Pure ice matcha brewed clean and refreshing.</p>
-                            <div class="ingredient-tags"><span class="tag">Ceremonial Kagushima</span><span class="tag">Cold Brew</span><span class="tag">Unsweetened</span></div>
+                            <div class="ingredient-tags"><span class="tag">Ceremonial Kagoshima</span><span class="tag">Cold Brew</span><span class="tag">Unsweetened</span></div>
                         </div>
                         <div class="menu-item-price item-price" data-base="380">₹380</div>
                         <div class="menu-item-actions"><a href="https://www.zomato.com/ncr/matcha-house-green-park-new-delhi/order" target="_blank" rel="noopener noreferrer" class="btn-zomato-order"><span class="zomato-icon">🍽️</span> Order on Zomato ↗</a></div>
@@ -236,7 +318,7 @@
                         <div class="menu-item-details">
                             <div class="menu-item-title-row"><h4>Passionfruit Matcha</h4></div>
                             <p>Tangy passion fruit blended with earthy matcha.</p>
-                            <div class="ingredient-tags"><span class="tag">Fresh Passionfruit</span><span class="tag">Tropical Tart</span><span class="tag">Earthy Kagushima</span></div>
+                            <div class="ingredient-tags"><span class="tag">Fresh Passionfruit</span><span class="tag">Tropical Tart</span><span class="tag">Earthy Kagoshima</span></div>
                         </div>
                         <div class="menu-item-price item-price" data-base="330">₹330</div>
                         <div class="menu-item-actions"><a href="https://www.zomato.com/ncr/matcha-house-green-park-new-delhi/order" target="_blank" rel="noopener noreferrer" class="btn-zomato-order"><span class="zomato-icon">🍽️</span> Order on Zomato ↗</a></div>
@@ -279,7 +361,7 @@
                         <div class="menu-item-details">
                             <div class="menu-item-title-row"><h4>Classic Matcha Latte</h4><span class="badge badge-popular">🔥 Popular</span></div>
                             <p>Ceremonial matcha blended with creamy milk. (Hot / Cold)</p>
-                            <div class="ingredient-tags"><span class="tag">First Harvest Kagushima</span><span class="tag">Creamy Milk</span><span class="tag">Hot / Cold</span></div>
+                            <div class="ingredient-tags"><span class="tag">First Harvest Kagoshima</span><span class="tag">Creamy Milk</span><span class="tag">Hot / Cold</span></div>
                         </div>
                         <div class="menu-item-price item-price" data-base="310">₹310</div>
                         <div class="menu-item-actions"><a href="https://www.zomato.com/ncr/matcha-house-green-park-new-delhi/order" target="_blank" rel="noopener noreferrer" class="btn-zomato-order"><span class="zomato-icon">🍽️</span> Order on Zomato ↗</a></div>
@@ -422,7 +504,7 @@
                         <div class="menu-item-details">
                             <div class="menu-item-title-row"><h4>Matcha Espresso Fusion</h4><span class="badge badge-popular">🔥 Popular</span></div>
                             <p>Bold espresso meets smooth matcha in a rich energising fusion.</p>
-                            <div class="ingredient-tags"><span class="tag">Double Espresso</span><span class="tag">Ceremonial Kagushima</span><span class="tag">Layered Energy</span></div>
+                            <div class="ingredient-tags"><span class="tag">Double Espresso</span><span class="tag">Ceremonial Kagoshima</span><span class="tag">Layered Energy</span></div>
                         </div>
                         <div class="menu-item-price item-price" data-base="395">₹395</div>
                         <div class="menu-item-actions"><a href="https://www.zomato.com/ncr/matcha-house-green-park-new-delhi/order" target="_blank" rel="noopener noreferrer" class="btn-zomato-order"><span class="zomato-icon">🍽️</span> Order on Zomato ↗</a></div>
@@ -501,11 +583,11 @@
     <section id="events" class="events-section">
         <div class="events-container">
             <div class="events-header">
-                <span class="sub-heading">Artisanal Experience</span>
-                <h2>Matcha Masterclass: The Art of Chado in Delhi</h2>
-                <p>Immerse yourself in a meditative, hands-on workshop guiding you through the centuries-old ritual of authentic Japanese tea preparation.</p>
+                <span class="sub-heading">Hands-On Interactive Experience</span>
+                <h2>Make Your Own Matcha: Interactive DIY Workshop</h2>
+                <p>Step behind our ceremonial tea bar and experience the meditative art of whisking your own fresh bowl of single-origin Kagoshima matcha under expert guidance.</p>
                 <div class="events-meta-bar">
-                    <div class="date-badge">📅 Upcoming Sessions: Every Saturday &amp; Sunday | 4:00 PM – 5:30 PM</div>
+                    <div class="date-badge">📅 Daily Interactive Sessions: Walk-ins &amp; Weekend Bookings | 4:00 PM – 5:30 PM</div>
                     <div class="seats-counter">⚡ Only 3 seats remaining for this weekend's session</div>
                 </div>
             </div>
@@ -514,30 +596,30 @@
                 <!-- Basic Tier -->
                 <div class="workshop-card">
                     <div class="tier-badge">Foundations</div>
-                    <h3>Basic Masterclass</h3>
+                    <h3>Basic DIY Experience</h3>
                     <div class="tier-price">₹1,500 <span class="per-person">/ person</span></div>
                     <ul class="tier-perks">
-                        <li>✓ 90-minute hands-on workshop led by senior tea master</li>
-                        <li>✓ Kagushima ceremonial grading &amp; flavor cupping session</li>
-                        <li>✓ Bamboo whisk (Chasen) frothing technique training</li>
-                        <li>✓ 20g ceremonial matcha tin to take home</li>
+                        <li>✓ 60-minute guided session whisking your own ceremonial bowl</li>
+                        <li>✓ Kagoshima ceremonial grading &amp; flavor cupping session</li>
+                        <li>✓ Authentic bamboo Chasen technique, frothing &amp; aeration guidance</li>
+                        <li>✓ Enjoy your custom crafted drink + 20g ceremonial matcha tin to take home</li>
                     </ul>
-                    <a href="https://wa.me/919999999999?text=Hi%20Matcha%20House%20Delhi%2C%20I%20would%20like%20to%20reserve%20a%20seat%20for%20the%20Matcha%20Masterclass%20(Basic%20Tier%20-%20%E2%82%B91%2C500)." target="_blank" rel="noopener noreferrer" class="btn-whatsapp btn-tier">Book Basic Tier on WhatsApp</a>
+                    <a href="https://wa.me/919999999999?text=Hi%20Matcha%20House%20Delhi%2C%20I%20would%20like%20to%20reserve%20a%20seat%20for%20the%20Make%20Your%20Own%20Matcha%20Experience%20(Basic%20Tier%20-%20%E2%82%B91%2C500)." target="_blank" rel="noopener noreferrer" class="btn-whatsapp btn-tier">Book Basic Experience on WhatsApp</a>
                 </div>
 
                 <!-- Premium Tier -->
                 <div class="workshop-card featured">
                     <div class="tier-badge gold">Ceremonial Connoisseur</div>
-                    <h3>Premium Masterclass</h3>
+                    <h3>Premium DIY Experience</h3>
                     <div class="tier-price">₹2,500 <span class="per-person">/ person</span></div>
                     <ul class="tier-perks">
-                        <li>✓ Everything included in Basic Masterclass</li>
-                        <li>✓ Complete ceremony kit: Handcrafted Mino-yaki ceramic Chawan bowl</li>
-                        <li>✓ 100-prong bamboo Chasen whisk &amp; bamboo Chashaku scoop</li>
-                        <li>✓ Private pairing menu: 2 custom artisanal matcha dessert creations</li>
-                        <li>✓ Priority front-row seating &amp; Certificate of Mastery</li>
+                        <li>✓ Everything included in Basic DIY Experience</li>
+                        <li>✓ Complete ceremony kit to keep: Handcrafted Mino-yaki ceramic Chawan bowl</li>
+                        <li>✓ 100-prong bamboo Chasen whisk &amp; bamboo Chashaku scoop to take home</li>
+                        <li>✓ Whisk 2 custom drinks (Traditional Usucha + Cold Cloud Foam Latte)</li>
+                        <li>✓ Private pairing menu with 2 artisanal matcha desserts &amp; Certificate of Craft</li>
                     </ul>
-                    <a href="https://wa.me/919999999999?text=Hi%20Matcha%20House%20Delhi%2C%20I%20would%20like%20to%20reserve%20a%20seat%20for%20the%20Matcha%20Masterclass%20(Premium%20Tier%20-%20%E2%82%B92%2C500)." target="_blank" rel="noopener noreferrer" class="btn-whatsapp btn-tier">Book Premium Tier on WhatsApp</a>
+                    <a href="https://wa.me/919999999999?text=Hi%20Matcha%20House%20Delhi%2C%20I%20would%20like%20to%20reserve%20a%20seat%20for%20the%20Make%20Your%20Own%20Matcha%20Experience%20(Premium%20Tier%20-%20%E2%82%B92%2C500)." target="_blank" rel="noopener noreferrer" class="btn-whatsapp btn-tier">Book Premium Experience on WhatsApp</a>
                 </div>
             </div>
 
@@ -546,7 +628,7 @@
                     <div class="sleek-badge">[COMMUNITY ARCHIVE]</div>
                     <h3 class="historical-title">PAST COLLABORATIONS &amp; GATHERINGS</h3>
                     <p class="historical-desc">
-                        Explore our track record of vibrant community takeovers, wellness masterclasses, student cultural summits, and corporate brand launches hosted at our Hauz Khas flagship.
+                        Explore our track record of vibrant community takeovers, wellness workshops, student cultural summits, and corporate brand launches hosted at our Hauz Khas flagship.
                     </p>
                 </div>
 
@@ -620,7 +702,7 @@
                         <h4 class="event-card-name">BE Wellness Collab</h4>
                         <div class="event-meta-info">📍 Flagship Sanctuary · Functional Pop-up Series</div>
                         <p class="event-card-summary">
-                            Holistic wellness experience combining breathwork, mindfulness meditation, and the antioxidant power of ceremonial Kagushima matcha paired with VegCollagen peptide infusions (Vanilla Glow, Ocean Glow, Pistachio Glow).
+                            Holistic wellness experience combining breathwork, mindfulness meditation, and the antioxidant power of ceremonial Kagoshima matcha paired with VegCollagen peptide infusions (Vanilla Glow, Ocean Glow, Pistachio Glow).
                         </p>
                         <div class="event-card-action">
                             <span class="event-stat">Sound &amp; Breathwork</span>
@@ -671,10 +753,10 @@
                         <h4 class="event-card-name">Savana by Urbanic</h4>
                         <div class="event-meta-info">📍 Gen-Z Fashion Launch · Experiential Drop</div>
                         <p class="event-card-summary">
-                            Trendsetting Gen-Z fashion &amp; lifestyle launch party with custom aesthetic purple cup matcha creations, creator meetups, and experiential photo zones celebrating street style.
+                            Trendsetting Gen-Z fashion &amp; lifestyle launch party with custom aesthetic artisanal matcha creations, creator meetups, and experiential photo zones celebrating street style.
                         </p>
                         <div class="event-card-action">
-                            <span class="event-stat">Purple Cup Cocktails</span>
+                            <span class="event-stat">Artisanal Cocktails</span>
                             <a href="https://wa.me/919999999999?text=Hi%20Matcha%20House%20Delhi%2C%20I%20would%20like%20to%20know%20more%20about%20the%20Savana%20by%20Urbanic%20event." target="_blank" rel="noopener noreferrer" class="btn-event-link">Inquire ↗</a>
                         </div>
                     </div>
@@ -703,7 +785,7 @@
                     </div>
                     <div class="review-card">
                         <div class="review-stars">★★★★★</div>
-                        <p class="review-text">"Attended the Saturday Masterclass with my partner. Learning to whisk my own chawan bowl changed how I start every single morning. An aesthetic sanctuary in HKV."</p>
+                        <p class="review-text">"Attended the Saturday 'Make Your Own Matcha' session with my partner. Learning to whisk my own chawan bowl changed how I start every single morning. An aesthetic sanctuary in HKV."</p>
                         <div class="review-author"><strong>Priya S.</strong> <span>Greater Kailash</span></div>
                     </div>
                     <div class="review-card">
@@ -713,7 +795,7 @@
                     </div>
                     <div class="review-card">
                         <div class="review-stars">★★★★★</div>
-                        <p class="review-text">"Finally, authentic single-origin Kagushima matcha in Delhi! The Matcha Affogato with their in-house Madagascar vanilla bean ice cream is an absolute revelation."</p>
+                        <p class="review-text">"Finally, authentic single-origin Kagoshima matcha in Delhi! The Matcha Affogato with their in-house Madagascar vanilla bean ice cream is an absolute revelation."</p>
                         <div class="review-author"><strong>Meera K.</strong> <span>Defence Colony</span></div>
                     </div>
                     <div class="review-card">
@@ -741,7 +823,7 @@
                     <p>Share your mindful moments with #MatchaHouseDelhi</p>
                 </div>
                 <div class="instagram-grid">
-                    <div class="insta-tile"><div class="insta-overlay"><span>🍵 Whisking Ceremony</span></div><img src="assets/kagoshima_map.jpg" alt="Kagushima Fields" loading="lazy"></div>
+                    <div class="insta-tile"><div class="insta-overlay"><span>🍵 Whisking Ceremony</span></div><img src="assets/kagoshima_map.jpg" alt="Kagoshima Fields" loading="lazy"></div>
                     <div class="insta-tile"><div class="insta-overlay"><span>🍓 Strawberry Cloud</span></div><img src="assets/sig_strawberry.png" alt="Strawberry Latte" loading="lazy"></div>
                     <div class="insta-tile"><div class="insta-overlay"><span>✨ Hauz Khas Sanctuary</span></div><img src="assets/whisk.png" alt="Bamboo Whisk" loading="lazy"></div>
                     <div class="insta-tile"><div class="insta-overlay"><span>🧊 Iced Classic Brew</span></div><img src="assets/sig_classic.png" alt="Classic Latte" loading="lazy"></div>
@@ -797,7 +879,7 @@
                         </div>
                         <div class="punch-slot" style="background: rgba(255,255,255,0.05); padding: 1rem 0.5rem; border-radius: 12px; text-align: center; border: 1px solid rgba(255,255,255,0.1); cursor: pointer; transition: all 0.3s ease;">
                             <span style="font-size: 1.5rem; display: block; margin-bottom: 0.5rem;">🍃</span>
-                            <span style="font-size: 0.65rem; font-family: var(--font-heading); text-transform: uppercase; color: rgba(255,255,255,0.6);">Kagushima Latte</span>
+                            <span style="font-size: 0.65rem; font-family: var(--font-heading); text-transform: uppercase; color: rgba(255,255,255,0.6);">Kagoshima Latte</span>
                         </div>
                         <div class="punch-slot" style="background: rgba(255,255,255,0.05); padding: 1rem 0.5rem; border-radius: 12px; text-align: center; border: 1px solid rgba(255,255,255,0.1); cursor: pointer; transition: all 0.3s ease;">
                             <span style="font-size: 1.5rem; display: block; margin-bottom: 0.5rem;">✨</span>
@@ -903,7 +985,7 @@
         <div class="footer-content">
             <div class="footer-brand">
                 <h2>Matcha House Delhi</h2>
-                <p>Elevating your daily mindful ritual with ceremonial Kagushima tea.</p>
+                <p>Elevating your daily mindful ritual with ceremonial Kagoshima tea.</p>
                 <div class="footer-socials">
                     <a href="https://instagram.com/matchahouseldelhi" target="_blank" rel="noopener noreferrer" aria-label="Instagram">Instagram</a>
                     <a href="https://wa.me/919999999999" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">WhatsApp</a>
