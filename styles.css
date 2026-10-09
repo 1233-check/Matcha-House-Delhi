@@ -2862,3 +2862,12 @@ p {
         flex-wrap: wrap;
     }
 }
+
+@media (max-width: 480px) {
+    .historical-title {
+        font-size: 1.8rem;
+        letter-spacing: 0;
+        word-wrap: break-word;
+        hyphens: auto;
+    }
+}
