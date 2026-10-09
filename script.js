@@ -136,12 +136,19 @@ document.addEventListener('DOMContentLoaded', () => {
     // --- 6. Scroll Progress Bar ---
     const scrollProgress = document.getElementById('scrollProgress');
     if (scrollProgress) {
+        let isScrolling = false;
         window.addEventListener('scroll', () => {
-            const scrollTop = window.scrollY;
-            const docHeight = document.documentElement.scrollHeight - window.innerHeight;
-            if (docHeight > 0) {
-                const scrollPercent = (scrollTop / docHeight) * 100;
-                scrollProgress.style.width = `${Math.min(100, Math.max(0, scrollPercent))}%`;
+            if (!isScrolling) {
+                window.requestAnimationFrame(() => {
+                    const scrollTop = window.scrollY;
+                    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+                    if (docHeight > 0) {
+                        const scrollPercent = (scrollTop / docHeight) * 100;
+                        scrollProgress.style.width = `${Math.min(100, Math.max(0, scrollPercent))}%`;
+                    }
+                    isScrolling = false;
+                });
+                isScrolling = true;
             }
         }, { passive: true });
     }
