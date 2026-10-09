@@ -1674,11 +1674,13 @@ section, footer {
     max-width: 100%;
     object-fit: contain;
     mix-blend-mode: multiply;
+    filter: brightness(1.08) contrast(1.2);
     transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), filter 0.3s ease;
 }
 
 .menu-item:hover .menu-item-image img {
     transform: scale(1.06) translateY(-4px);
+    filter: brightness(1.08) contrast(1.2) drop-shadow(0 10px 20px rgba(49, 69, 40, 0.2));
 }
 
 /* Menu Actions & Zomato / WhatsApp Order Button */
