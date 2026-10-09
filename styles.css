@@ -147,7 +147,7 @@ h1, h2, h3, .logo {
 
 /* --- Hero Section --- */
 .hero {
-    background: url('assets/kagoshima_map.jpg') no-repeat center center;
+    background: url('assets/hero_bg.jpg') no-repeat center center;
     background-size: cover;
     z-index: 10;
 
