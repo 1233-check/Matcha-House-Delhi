@@ -44,6 +44,7 @@
             <div class="nav-right">
                 <a href="#reviews">Reviews</a>
                 <a href="#insider">Insider</a>
+                <a href="https://www.zomato.com/ncr/matcha-house-delhi" target="_blank" class="btn-zomato-minimal">Order on Zomato</a>
                 <a href="#visit" class="btn-primary">Visit Us</a>
             </div>
         </div>
@@ -118,6 +119,19 @@
             </div>
 
             <!-- Menu Controls: Category Tabs & Oat Milk Toggle -->
+            <!-- Elegant Merch Offer -->
+            <div class="merch-minimal-card">
+                <div class="merch-minimal-content">
+                    <h4>Limited Edition Collaboration</h4>
+                    <h3>Buy 1 Matcha, Get 1 Mini Teddy Bear Free</h3>
+                    <p>Experience our signature lattes in the exclusive <em>Matcha House Purple Cup</em> and receive a complimentary, handcrafted mini teddy bear.</p>
+                    <a href="https://wa.me/919999999999?text=Hi%20Matcha%20House%2C%20I%20want%20the%20Teddy%20Bear%20promo" target="_blank" class="btn-primary" style="margin-top: 1rem; display: inline-block;">Reserve on WhatsApp</a>
+                </div>
+                <div class="merch-minimal-visual">
+                    <span style="font-size: 4rem;">🧸 🟣</span>
+                </div>
+            </div>
+
             <div class="menu-controls">
                 <div class="menu-tabs">
                     <button class="menu-tab-btn active" data-category="all">All Offerings</button>
@@ -444,48 +458,148 @@
     <!-- Events & Workshops Section (R3) -->
     <section id="events" class="events-section">
         <div class="events-container">
-            <div class="events-header">
-                <span class="sub-heading">Artisanal Experience</span>
-                <h2>Matcha Masterclass: The Art of Chado in Delhi</h2>
-                <p>Immerse yourself in a meditative, hands-on workshop guiding you through the centuries-old ritual of authentic Japanese tea preparation.</p>
-                <div class="events-meta-bar">
-                    <div class="date-badge">📅 Upcoming Sessions: Every Saturday &amp; Sunday | 4:00 PM – 5:30 PM</div>
-                    <div class="seats-counter">⚡ Only 3 seats remaining for this weekend's session</div>
-                </div>
-            </div>
-
-            <div class="events-tiers-grid">
-                <!-- Basic Tier -->
-                <div class="workshop-card">
-                    <div class="tier-badge">Foundations</div>
-                    <h3>Basic Masterclass</h3>
-                    <div class="tier-price">₹1,500 <span class="per-person">/ person</span></div>
-                    <ul class="tier-perks">
-                        <li>✓ 90-minute hands-on workshop led by senior tea master</li>
-                        <li>✓ Uji ceremonial grading &amp; flavor cupping session</li>
-                        <li>✓ Bamboo whisk (Chasen) frothing technique training</li>
-                        <li>✓ 20g ceremonial matcha tin to take home</li>
-                    </ul>
-                    <a href="https://wa.me/919999999999?text=Hi%20Matcha%20House%20Delhi%2C%20I%20would%20like%20to%20reserve%20a%20seat%20for%20the%20Matcha%20Masterclass%20(Basic%20Tier%20-%20%E2%82%B91%2C500)." target="_blank" rel="noopener noreferrer" class="btn-whatsapp btn-tier">Book Basic Tier on WhatsApp</a>
+            <div class="events-section" id="historicalEventsBlock">
+                <div class="historical-header">
+                    <div class="sleek-badge">[COMMUNITY ARCHIVE]</div>
+                    <h3 class="historical-title">PAST COLLABORATIONS &amp; GATHERINGS</h3>
+                    <p class="historical-desc">
+                        Explore our track record of vibrant community takeovers, wellness masterclasses, student cultural summits, and corporate brand launches hosted at our Hauz Khas flagship.
+                    </p>
                 </div>
 
-                <!-- Premium Tier -->
-                <div class="workshop-card featured">
-                    <div class="tier-badge gold">Ceremonial Connoisseur</div>
-                    <h3>Premium Masterclass</h3>
-                    <div class="tier-price">₹2,500 <span class="per-person">/ person</span></div>
-                    <ul class="tier-perks">
-                        <li>✓ Everything included in Basic Masterclass</li>
-                        <li>✓ Complete ceremony kit: Handcrafted Mino-yaki ceramic Chawan bowl</li>
-                        <li>✓ 100-prong bamboo Chasen whisk &amp; bamboo Chashaku scoop</li>
-                        <li>✓ Private pairing menu: 2 custom artisanal matcha dessert creations</li>
-                        <li>✓ Priority front-row seating &amp; Certificate of Mastery</li>
-                    </ul>
-                    <a href="https://wa.me/919999999999?text=Hi%20Matcha%20House%20Delhi%2C%20I%20would%20like%20to%20reserve%20a%20seat%20for%20the%20Matcha%20Masterclass%20(Premium%20Tier%20-%20%E2%82%B92%2C500)." target="_blank" rel="noopener noreferrer" class="btn-whatsapp btn-tier">Book Premium Tier on WhatsApp</a>
+                <!-- Filter Tabs -->
+                <div class="historical-filters">
+                    <button class="event-filter-btn active" data-filter="all">ALL (7 EVENTS)</button>
+                    <button class="event-filter-btn" data-filter="community">COMMUNITY &amp; CULTURE</button>
+                    <button class="event-filter-btn" data-filter="wellness">WELLNESS &amp; PILATES</button>
+                    <button class="event-filter-btn" data-filter="collab">BRAND COLLABS</button>
+                </div>
+
+                <!-- 7 Event Cards Grid -->
+                <div class="historical-grid" id="historicalGrid">
+                    <!-- Event 1: Monthly In-House GYALS Events -->
+                    <div class="event-card glass-panel" data-category="community">
+                        <div class="event-card-top">
+                            <span class="event-num">[EV-01]</span>
+                            <span class="event-category-tag tag-comm">COMMUNITY</span>
+                        </div>
+                        <h4 class="event-card-name">Monthly In-House GYALS Events</h4>
+                        <div class="event-meta-info">📍 Hauz Khas Flagship · Monthly In-House Series</div>
+                        <p class="event-card-summary">
+                            Delhi's premier creative women's collective meetups at Matcha House — mindful networking, craft matcha pairing, vinyl listening sessions, and community building in our Hauz Khas sanctuary.
+                        </p>
+                        <div class="event-card-action">
+                            <span class="event-stat">Recurring Series</span>
+                            <a href="https://wa.me/919999999999?text=Hi%20Matcha%20House%20Delhi%2C%20I%20would%20like%20to%20know%20more%20about%20the%20Monthly%20In-House%20GYALS%20Events." target="_blank" rel="noopener noreferrer" class="btn-event-link">Inquire ↗</a>
+                        </div>
+                    </div>
+
+                    <!-- Event 2: Pilates For You -->
+                    <div class="event-card glass-panel" data-category="wellness">
+                        <div class="event-card-top">
+                            <span class="event-num">[EV-02]</span>
+                            <span class="event-category-tag tag-well">WELLNESS</span>
+                        </div>
+                        <h4 class="event-card-name">Pilates For You</h4>
+                        <div class="event-meta-info">📍 Studio Collab · Mindful Movement Series</div>
+                        <p class="event-card-summary">
+                            High-energy mindful morning Pilates session followed by restorative ceremonial iced matcha recovery drinks, L-theanine cupping, and nutritional consultations.
+                        </p>
+                        <div class="event-card-action">
+                            <span class="event-stat">Recovery Bar</span>
+                            <a href="https://wa.me/919999999999?text=Hi%20Matcha%20House%20Delhi%2C%20I%20would%20like%20to%20know%20more%20about%20the%20Pilates%20For%20You%20event." target="_blank" rel="noopener noreferrer" class="btn-event-link">Inquire ↗</a>
+                        </div>
+                    </div>
+
+                    <!-- Event 3: Naga Students' Union Delhi Meet -->
+                    <div class="event-card glass-panel" data-category="community">
+                        <div class="event-card-top">
+                            <span class="event-num">[EV-03]</span>
+                            <span class="event-category-tag tag-cult">CULTURE</span>
+                        </div>
+                        <h4 class="event-card-name">Naga Students' Union Delhi Meet</h4>
+                        <div class="event-meta-info">📍 Flagship Tea Bar · Delhi NCR Chapter</div>
+                        <p class="event-card-summary">
+                            Cultural gathering and dialogue session celebrating indigenous heritage, community solidarity, mentorship roundtables, and artisanal tea culture among Northeast youth in Delhi.
+                        </p>
+                        <div class="event-card-action">
+                            <span class="event-stat">Heritage Dialogue</span>
+                            <a href="https://wa.me/919999999999?text=Hi%20Matcha%20House%20Delhi%2C%20I%20would%20like%20to%20know%20more%20about%20the%20Naga%20Students%20Union%20Delhi%20Meet." target="_blank" rel="noopener noreferrer" class="btn-event-link">Inquire ↗</a>
+                        </div>
+                    </div>
+
+                    <!-- Event 4: BE Wellness Collab -->
+                    <div class="event-card glass-panel" data-category="wellness">
+                        <div class="event-card-top">
+                            <span class="event-num">[EV-04]</span>
+                            <span class="event-category-tag tag-well">HOLISTIC</span>
+                        </div>
+                        <h4 class="event-card-name">BE Wellness Collab</h4>
+                        <div class="event-meta-info">📍 Flagship Sanctuary · Functional Pop-up Series</div>
+                        <p class="event-card-summary">
+                            Holistic wellness experience combining breathwork, mindfulness meditation, and the antioxidant power of ceremonial Uji matcha paired with VegCollagen peptide infusions (Vanilla Glow, Ocean Glow, Pistachio Glow).
+                        </p>
+                        <div class="event-card-action">
+                            <span class="event-stat">Sound &amp; Breathwork</span>
+                            <a href="https://wa.me/919999999999?text=Hi%20Matcha%20House%20Delhi%2C%20I%20would%20like%20to%20know%20more%20about%20the%20BE%20Wellness%20Collab." target="_blank" rel="noopener noreferrer" class="btn-event-link">Inquire ↗</a>
+                        </div>
+                    </div>
+
+                    <!-- Event 5: Flipkart Glam Up Event 2026 -->
+                    <div class="event-card glass-panel" data-category="collab">
+                        <div class="event-card-top">
+                            <span class="event-num">[EV-05]</span>
+                            <span class="event-category-tag tag-corp">BRAND COLLAB</span>
+                        </div>
+                        <h4 class="event-card-name">Flipkart Glam Up Event 2026</h4>
+                        <div class="event-meta-info">📍 Pragati Maidan · Corporate Influencer Summit</div>
+                        <p class="event-card-summary">
+                            Exclusive high-profile corporate &amp; influencer beauty pop-up featuring bespoke Matcha House live matcha bar catering, ceremonial ASMR theater, and antioxidant cloud drinks for 6,000+ creators.
+                        </p>
+                        <div class="event-card-action">
+                            <span class="event-stat">VIP Hospitality Bar</span>
+                            <a href="https://wa.me/919999999999?text=Hi%20Matcha%20House%20Delhi%2C%20I%20would%20like%20to%20know%20more%20about%20the%20Flipkart%20Glam%20Up%20Event%202026." target="_blank" rel="noopener noreferrer" class="btn-event-link">Inquire ↗</a>
+                        </div>
+                    </div>
+
+                    <!-- Event 6: Slay Pilates -->
+                    <div class="event-card glass-panel" data-category="wellness">
+                        <div class="event-card-top">
+                            <span class="event-num">[EV-06]</span>
+                            <span class="event-category-tag tag-well">FITNESS</span>
+                        </div>
+                        <h4 class="event-card-name">Slay Pilates</h4>
+                        <div class="event-meta-info">📍 Green Park Studio · Mat &amp; Reformer Flow</div>
+                        <p class="event-card-summary">
+                            Dynamic mat &amp; reformer pilates pop-up session paired with immunity-boosting strawberry matcha lattes, coconut cloud recovery drinks, and low-glycemic treats.
+                        </p>
+                        <div class="event-card-action">
+                            <span class="event-stat">Reformer Pop-up</span>
+                            <a href="https://wa.me/919999999999?text=Hi%20Matcha%20House%20Delhi%2C%20I%20would%20like%20to%20know%20more%20about%20the%20Slay%20Pilates%20session." target="_blank" rel="noopener noreferrer" class="btn-event-link">Inquire ↗</a>
+                        </div>
+                    </div>
+
+                    <!-- Event 7: Savana by Urbanic -->
+                    <div class="event-card glass-panel" data-category="collab">
+                        <div class="event-card-top">
+                            <span class="event-num">[EV-07]</span>
+                            <span class="event-category-tag tag-corp">FASHION COLLAB</span>
+                        </div>
+                        <h4 class="event-card-name">Savana by Urbanic</h4>
+                        <div class="event-meta-info">📍 Gen-Z Fashion Launch · Experiential Drop</div>
+                        <p class="event-card-summary">
+                            Trendsetting Gen-Z fashion &amp; lifestyle launch party with custom aesthetic purple cup matcha creations, creator meetups, and experiential photo zones celebrating street style.
+                        </p>
+                        <div class="event-card-action">
+                            <span class="event-stat">Purple Cup Cocktails</span>
+                            <a href="https://wa.me/919999999999?text=Hi%20Matcha%20House%20Delhi%2C%20I%20would%20like%20to%20know%20more%20about%20the%20Savana%20by%20Urbanic%20event." target="_blank" rel="noopener noreferrer" class="btn-event-link">Inquire ↗</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
+
 
     <!-- Social Proof Section (R4) -->
     <section id="reviews" class="reviews-section">
@@ -555,17 +669,65 @@
 
     <!-- Loyalty Program Section (R5) -->
     <section id="insider" class="loyalty-section">
-        <div class="loyalty-container">
-            <div class="loyalty-card">
+        <div class="loyalty-container" style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center; max-width: 1100px; margin: 0 auto; text-align: left;">
+            <div class="loyalty-text-pane">
                 <div class="loyalty-badge">VIP Circle</div>
                 <h2>Join the Matcha Insider Club</h2>
-                <p class="loyalty-hook">Join for a free matcha cookie on your next visit.</p>
-                <p class="loyalty-desc">Gain first access to rare micro-lot harvests, private invitations to tea tastings, and an instant complimentary artisanal matcha cookie on your next visit to our Hauz Khas café.</p>
-                <form id="loyaltyForm" class="loyalty-form">
-                    <div class="input-group">
-                        <input type="text" id="insiderName" name="name" placeholder="Enter your full name" required class="insider-input">
-                        <button type="submit" class="btn-whatsapp btn-claim">Claim Free Cookie on WhatsApp 🍪</button>
+                <p class="loyalty-hook" style="font-weight: 500; font-size: 1.1rem; color: var(--color-matcha-dark);">Join for a free matcha cookie on your next visit.</p>
+                <p class="loyalty-desc" style="margin-bottom: 2rem;">Gain first access to rare micro-lot harvests, private invitations to tea tastings, and an instant complimentary artisanal matcha cookie on your next visit to our Hauz Khas café.</p>
+                <form id="loyaltyForm" class="loyalty-form" style="max-width: 100%;">
+                    <div class="input-group" style="display: flex; flex-direction: column; gap: 1rem;">
+                        <input type="text" id="insiderName" name="name" placeholder="Enter your full name" required class="insider-input" style="width: 100%; border-radius: 8px;">
+                        <button type="submit" class="btn-whatsapp btn-claim" style="width: 100%; border-radius: 8px; justify-content: center;">Claim Free Cookie on WhatsApp 🍪</button>
                     </div>
+                    <div id="loyaltySuccess" class="loyalty-success" style="display: none;">
+                        ✨ Welcome to the circle! Redirecting to WhatsApp...
+                    </div>
+                </form>
+            </div>
+            
+            <div class="loyalty-pass-pane">
+                <div class="loyalty-pass-card" style="background: var(--color-text); color: var(--color-cream); padding: 2rem; border-radius: 20px; box-shadow: 0 20px 40px rgba(0,0,0,0.15); position: relative; overflow: hidden;">
+                    <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 1rem; margin-bottom: 1.5rem;">
+                        <h4 style="font-family: var(--font-heading); font-weight: 600; letter-spacing: 2px; font-size: 0.9rem;">MATCHA HOUSE</h4>
+                        <span style="font-family: var(--font-heading); font-size: 0.7rem; background: var(--color-matcha-dark); padding: 0.3rem 0.6rem; border-radius: 12px; color: #fff;">VIP PASS</span>
+                    </div>
+                    
+                    <div style="margin-bottom: 2rem;">
+                        <p style="font-size: 0.7rem; text-transform: uppercase; letter-spacing: 1px; color: rgba(255,255,255,0.6); margin-bottom: 0.3rem;">Card Holder</p>
+                        <h3 id="passCardHolderName" style="font-family: var(--font-serif); font-size: 1.5rem; margin: 0;">YOUR NAME HERE</h3>
+                    </div>
+
+                    <div id="loyaltySlotsGrid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem;">
+                        <!-- Slots generated by JS or static -->
+                        <div class="punch-slot punched" style="background: rgba(255,255,255,0.05); padding: 1rem 0.5rem; border-radius: 12px; text-align: center; border: 1px solid rgba(255,255,255,0.1); cursor: pointer; transition: all 0.3s ease;">
+                            <span style="font-size: 1.5rem; display: block; margin-bottom: 0.5rem;">🍪</span>
+                            <span style="font-size: 0.65rem; font-family: var(--font-heading); text-transform: uppercase; color: rgba(255,255,255,0.6);">Free Cookie</span>
+                        </div>
+                        <div class="punch-slot" style="background: rgba(255,255,255,0.05); padding: 1rem 0.5rem; border-radius: 12px; text-align: center; border: 1px solid rgba(255,255,255,0.1); cursor: pointer; transition: all 0.3s ease;">
+                            <span style="font-size: 1.5rem; display: block; margin-bottom: 0.5rem;">🍵</span>
+                            <span style="font-size: 0.65rem; font-family: var(--font-heading); text-transform: uppercase; color: rgba(255,255,255,0.6);">Pure Matcha</span>
+                        </div>
+                        <div class="punch-slot" style="background: rgba(255,255,255,0.05); padding: 1rem 0.5rem; border-radius: 12px; text-align: center; border: 1px solid rgba(255,255,255,0.1); cursor: pointer; transition: all 0.3s ease;">
+                            <span style="font-size: 1.5rem; display: block; margin-bottom: 0.5rem;">🥛</span>
+                            <span style="font-size: 0.65rem; font-family: var(--font-heading); text-transform: uppercase; color: rgba(255,255,255,0.6);">Free Oat Milk</span>
+                        </div>
+                        <div class="punch-slot" style="background: rgba(255,255,255,0.05); padding: 1rem 0.5rem; border-radius: 12px; text-align: center; border: 1px solid rgba(255,255,255,0.1); cursor: pointer; transition: all 0.3s ease;">
+                            <span style="font-size: 1.5rem; display: block; margin-bottom: 0.5rem;">🍃</span>
+                            <span style="font-size: 0.65rem; font-family: var(--font-heading); text-transform: uppercase; color: rgba(255,255,255,0.6);">Uji Latte</span>
+                        </div>
+                        <div class="punch-slot" style="background: rgba(255,255,255,0.05); padding: 1rem 0.5rem; border-radius: 12px; text-align: center; border: 1px solid rgba(255,255,255,0.1); cursor: pointer; transition: all 0.3s ease;">
+                            <span style="font-size: 1.5rem; display: block; margin-bottom: 0.5rem;">✨</span>
+                            <span style="font-size: 0.65rem; font-family: var(--font-heading); text-transform: uppercase; color: rgba(255,255,255,0.6);">15% OFF</span>
+                        </div>
+                        <div class="punch-slot" style="background: rgba(255,255,255,0.05); padding: 1rem 0.5rem; border-radius: 12px; text-align: center; border: 1px solid rgba(255,255,255,0.1); cursor: pointer; transition: all 0.3s ease;">
+                            <span style="font-size: 1.5rem; display: block; margin-bottom: 0.5rem;">🧸</span>
+                            <span style="font-size: 0.65rem; font-family: var(--font-heading); text-transform: uppercase; color: rgba(255,255,255,0.6);">Free Teddy</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
                     <div id="loyaltySuccess" class="loyalty-success" style="display: none;">
                         ✨ Welcome to the circle! Redirecting to WhatsApp to claim your reward voucher...!
                     </div>

@@ -338,6 +338,23 @@ document.addEventListener('DOMContentLoaded', () => {
     const loyaltyForm = document.getElementById('loyaltyForm');
     const insiderNameInput = document.getElementById('insiderName');
     const loyaltySuccess = document.getElementById('loyaltySuccess');
+    const passCardHolderName = document.getElementById('passCardHolderName');
+    const loyaltySlotsGrid = document.getElementById('loyaltySlotsGrid');
+
+    if (insiderNameInput && passCardHolderName) {
+        insiderNameInput.addEventListener('input', (e) => {
+            const val = e.target.value.trim();
+            passCardHolderName.textContent = val ? val.toUpperCase() : 'YOUR NAME HERE';
+        });
+    }
+
+    if (loyaltySlotsGrid) {
+        loyaltySlotsGrid.addEventListener('click', (e) => {
+            const slot = e.target.closest('.punch-slot');
+            if (!slot) return;
+            slot.classList.toggle('punched');
+        });
+    }
 
     if (loyaltyForm && insiderNameInput) {
         loyaltyForm.addEventListener('submit', (e) => {

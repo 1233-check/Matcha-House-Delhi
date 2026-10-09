@@ -1,12 +1,13 @@
 :root {
-    --color-cream: #F9F9F4;
-    --color-matcha-dark: #3A4A1C;
-    --color-matcha: #4A5D23;
-    --color-matcha-light: #799351;
-    --color-gold: #D4AF37;
-    --color-text: #1A1A1A;
+    --color-cream: #D1D0CB;
+    --color-matcha-dark: #314528;
+    --color-matcha: #A2A092;
+    --color-matcha-light: #6E6353;
+    --color-gold: #000000;
+    --color-text: #000000;
     --font-heading: 'Montserrat', sans-serif;
     --font-body: 'Inter', sans-serif;
+    --font-serif: 'Playfair Display', serif;
     
     --glass-bg: rgba(249, 249, 244, 0.7);
     --glass-border: rgba(255, 255, 255, 0.3);
@@ -2287,3 +2288,128 @@ section, footer {
         
     }
 }
+.btn-zomato-minimal {
+    font-family: var(--font-heading);
+    font-size: 0.85rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 0.4rem 1rem;
+    border: 1px solid var(--color-text);
+    color: var(--color-text) !important;
+    text-decoration: none;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+}
+.btn-zomato-minimal:hover {
+    background: var(--color-text);
+    color: var(--color-cream) !important;
+}
+.merch-minimal-card {
+    background: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 20px;
+    padding: 2.5rem;
+    margin: 3rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+.merch-minimal-content {
+    flex: 1;
+}
+.merch-minimal-content h4 {
+    font-family: var(--font-heading);
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--color-matcha-dark);
+    margin-bottom: 0.5rem;
+}
+.merch-minimal-content h3 {
+    font-family: var(--font-serif);
+    font-size: 2rem;
+    color: var(--color-text);
+    margin-bottom: 1rem;
+}
+.merch-minimal-visual {
+    background: var(--color-cream);
+    padding: 2rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: inset 0 5px 15px rgba(0,0,0,0.05);
+}
+@media (max-width: 768px) {
+    .merch-minimal-card { flex-direction: column; text-align: center; }
+}
+.punch-slot.punched {
+    background: rgba(255, 255, 255, 0.2) !important;
+    border-color: rgba(255, 255, 255, 0.5) !important;
+    transform: scale(0.95);
+}
+@media (max-width: 768px) {
+    .loyalty-container { grid-template-columns: 1fr !important; }
+}
+.events-section { padding: 4rem 0; text-align: center; max-width: 1200px; margin: 0 auto; }
+.sleek-badge {
+    font-family: var(--font-heading);
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    background: var(--color-text);
+    color: var(--color-cream);
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    display: inline-block;
+    margin-bottom: 1rem;
+}
+.historical-title { font-family: var(--font-serif); font-size: 2.5rem; color: var(--color-text); margin-bottom: 1rem; }
+.historical-desc { font-size: 1rem; color: #444; max-width: 600px; margin: 0 auto 3rem; }
+.historical-filters { display: flex; justify-content: center; gap: 1rem; margin-bottom: 3rem; flex-wrap: wrap; }
+.event-filter-btn {
+    font-family: var(--font-heading);
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 0.5rem 1.2rem;
+    background: transparent;
+    border: 1px solid var(--color-text);
+    color: var(--color-text);
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.event-filter-btn.active, .event-filter-btn:hover {
+    background: var(--color-text);
+    color: var(--color-cream);
+}
+.historical-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+    text-align: left;
+}
+.event-card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+.event-card-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; }
+.event-num { font-family: var(--font-mono); font-size: 0.7rem; color: #666; }
+.event-category-tag { font-family: var(--font-heading); font-size: 0.65rem; text-transform: uppercase; letter-spacing: 1px; padding: 0.2rem 0.5rem; border-radius: 4px; }
+.tag-comm { background: rgba(0,0,0,0.05); color: #333; }
+.tag-well { background: rgba(49, 69, 40, 0.1); color: var(--color-matcha-dark); }
+.tag-cult { background: rgba(110, 99, 83, 0.1); color: var(--color-matcha-light); }
+.tag-corp { background: rgba(0,0,0,0.05); color: #333; }
+.event-card-name { font-family: var(--font-serif); font-size: 1.3rem; margin-bottom: 0.5rem; color: var(--color-text); }
+.event-meta-info { font-size: 0.75rem; color: #666; margin-bottom: 1rem; font-family: var(--font-mono); }
+.event-card-summary { font-size: 0.9rem; color: #444; line-height: 1.5; flex-grow: 1; margin-bottom: 1.5rem; }
+.event-card-action { display: flex; justify-content: space-between; align-items: center; border-top: 1px solid rgba(0,0,0,0.1); padding-top: 1rem; margin-top: auto; }
+.event-stat { font-size: 0.75rem; color: #666; font-style: italic; }
+.btn-event-link { font-family: var(--font-heading); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px; color: var(--color-matcha-dark); text-decoration: none; font-weight: 600; }
