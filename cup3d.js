@@ -46,27 +46,10 @@ if (canvas && section) {
     const vertexShader = `
         varying vec2 vUv;
         void main() {
-            vUv = uv;
-            gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0);
-        }
-    `;
-
-    // Fragment Shader (The Magic happens here)
-    const fragmentShader = `
-        uniform sampler2D u_image;
-        uniform sampler2D u_depth;
-        uniform vec2 u_mouse;
-        uniform float u_intensity;
-        uniform float u_time;
-        varying vec2 vUv;
-
-        void main() {
             // Read the depth value (0.0 to 1.0)
             vec4 depthMap = texture2D(u_depth, vUv);
             
             // Calculate how much to push the pixels based on depth and mouse position.
-            // White areas (depth=1.0) move more than black areas (depth=0.0).
-            // We use (depth - 0.5) to push foreground elements one way and background elements the other.
             float depthValue = depthMap.r;
             vec2 displacement = (vec2(depthValue) - 0.5) * u_mouse * u_intensity;
             
@@ -77,15 +60,31 @@ if (canvas && section) {
 
             // Fetch the color from the original image at the displaced coordinate
             vec2 newUV = vUv + displacement;
-            
-            // Clamp to avoid edge tearing
             newUV = clamp(newUV, 0.001, 0.999);
-            
             vec4 color = texture2D(u_image, newUV);
             
-            // We can also use the depth map to slightly enhance lighting/shadows based on rotation
+            // --- MATCHA HOUSE BRANDING COLOR GRADE ---
+            float luma = dot(color.rgb, vec3(0.299, 0.587, 0.114));
+            
+            // 1. Desaturate the harsh neon green
+            color.rgb = mix(color.rgb, vec3(luma), 0.65);
+            
+            // 2. Apply branding duotone tint
+            // Deep Forest (#314528) for shadows, Pearl Grey (#D1D0CB) for highlights
+            vec3 darkTint = vec3(0.192, 0.270, 0.156);
+            vec3 lightTint = vec3(0.819, 0.815, 0.796);
+            vec3 duotone = mix(darkTint, lightTint, luma * 1.1); // push highlights a bit
+            
+            // Blend original desaturated color with elegant duotone
+            color.rgb = mix(color.rgb, duotone, 0.45);
+            
+            // 3. Contrast bump for that architectural/stark feel
+            color.rgb = smoothstep(0.05, 0.95, color.rgb);
+            // -----------------------------------------
+
+            // Subtle 3D lighting shift
             float lightGlow = (depthValue * 0.3) * max(0.0, -u_mouse.y + u_mouse.x);
-            color.rgb += lightGlow * 0.2; // Subtle 3D lighting shift
+            color.rgb += lightGlow * 0.15; 
 
             gl_FragColor = color;
         }
