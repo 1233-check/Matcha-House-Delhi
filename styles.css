@@ -307,9 +307,6 @@ section, footer {
     pointer-events: none;
 }
 
-    z-index: 1;
-}
-
 /* Header & Typography */
 .live-feed-header {
     text-align: center;
@@ -349,8 +346,6 @@ section, footer {
     font-weight: 700;
     letter-spacing: 1.8px;
     color: var(--color-gold);
-}
-    100% { opacity: 1; transform: skew(0deg); }
 }
 
 .live-pill-sep {
@@ -2390,6 +2385,25 @@ section, footer {
         flex-direction: column;
         align-items: flex-start;
         gap: 1.2rem;
+    }
+    .milk-preference-wrapper {
+        width: 100%;
+        flex-direction: column;
+        align-items: flex-start;
+        border-radius: 20px;
+        padding: 0.8rem 1rem;
+        gap: 0.5rem;
+    }
+    .milk-segmented-control {
+        width: 100%;
+        flex-wrap: wrap;
+        gap: 0.35rem;
+    }
+    .milk-option-btn {
+        flex: 1 1 auto;
+        justify-content: center;
+        padding: 0.45rem 0.65rem;
+        font-size: 0.76rem;
     }
     .loyalty-form .input-group {
         flex-direction: column;
