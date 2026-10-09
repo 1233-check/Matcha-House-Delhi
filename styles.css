@@ -166,7 +166,7 @@ h1, h2, h3, .logo {
     content: "";
     position: absolute;
     top: 0; left: 0; right: 0; bottom: 0;
-    background: rgba(0, 0, 0, 0.4);
+    background: rgba(0, 0, 0, 0.15);
     z-index: 5;
 }
 
@@ -201,6 +201,7 @@ section, footer {
     line-height: 1.1;
     margin-bottom: 1.5rem;
     letter-spacing: -2px;
+    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.8), 0 0 40px rgba(0, 0, 0, 0.5);
     opacity: 0;
     animation: fadeUp 1.2s ease forwards 0.2s;
     text-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
@@ -212,6 +213,7 @@ section, footer {
     margin-bottom: 3rem;
     opacity: 0;
     letter-spacing: 0.5px;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.8);
     animation: fadeUp 1.2s ease forwards 0.5s;
     text-shadow: 0 2px 10px rgba(0, 0, 0, 0.6);
 }
@@ -289,6 +291,38 @@ section, footer {
     mix-blend-mode: overlay;
 }
 
+
+
+/* --- Hero Philosophy Ticker --- */
+.hero-philosophy-ticker {
+    background-color: var(--color-matcha-dark);
+    color: var(--color-cream);
+    padding: 1rem 0;
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+    z-index: 10;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+.philosophy-content {
+    display: inline-block;
+    font-family: var(--font-heading);
+    font-size: 0.85rem;
+    letter-spacing: 2px;
+    animation: ticker 25s linear infinite;
+}
+.ticker-highlight {
+    font-weight: 700;
+    color: #fff;
+}
+.ticker-dot {
+    margin: 0 1.5rem;
+    opacity: 0.5;
+}
+@keyframes ticker {
+    0% { transform: translateX(100%); }
+    100% { transform: translateX(-100%); }
+}
 
 /* --- Live Ceremonial Video Feed Section --- */
 .live-feed-wrapper {
@@ -1053,6 +1087,7 @@ section, footer {
     font-family: 'Courier New', Courier, monospace;
     font-size: 2rem;
     letter-spacing: -2px;
+    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.8), 0 0 40px rgba(0, 0, 0, 0.5);
     font-weight: 900;
     color: var(--color-matcha-dark);
     margin: 2rem 0 0.5rem;
@@ -1245,12 +1280,12 @@ section, footer {
     }
     .hero-content h1 {
         font-size: 3rem;
-        text-shadow: 0 4px 20px rgba(255, 255, 255, 0.9);
+        text-shadow: 0 4px 20px rgba(0, 0, 0, 0.9);
     }
     .hero-content p {
         font-size: 1.1rem;
         padding: 0 1rem;
-        text-shadow: 0 2px 10px rgba(255, 255, 255, 0.9);
+        text-shadow: 0 2px 10px rgba(0, 0, 0, 0.9);
         font-family: var(--font-heading);
     font-weight: 500;
     }
@@ -1413,6 +1448,7 @@ section, footer {
     font-family: var(--font-heading);
     font-size: 0.88rem;
     letter-spacing: 0.5px;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.8);
     cursor: pointer;
     transition: all 0.25s ease;
 }
@@ -1447,6 +1483,7 @@ section, footer {
     color: var(--color-matcha-dark);
     text-transform: uppercase;
     letter-spacing: 0.5px;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.8);
 }
 
 .milk-segmented-control {
@@ -1820,6 +1857,7 @@ section, footer {
     font-size: 0.78rem;
     font-weight: 700;
     letter-spacing: 0.5px;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.8);
     margin-bottom: 1.2rem;
 }
 
