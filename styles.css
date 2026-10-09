@@ -137,7 +137,8 @@ h1, h2, h3, .logo {
 
 /* --- Hero Section --- */
 .hero {
-    background-color: var(--color-cream);
+    background: url('assets/kagoshima_map.jpg') no-repeat center center;
+    background-size: cover;
     z-index: 10;
 
     min-height: 100vh;
@@ -149,6 +150,14 @@ h1, h2, h3, .logo {
     overflow: hidden;
     text-align: center;
     padding-top: 80px; /* offset for nav */
+}
+
+.hero::after {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 5;
 }
 
 
@@ -177,23 +186,23 @@ section, footer {
 
 .hero-content h1 {
     font-size: 5.5rem;
-    color: var(--color-matcha-dark);
+    color: #ffffff;
     line-height: 1.1;
     margin-bottom: 1.5rem;
     letter-spacing: -2px;
     opacity: 0;
     animation: fadeUp 1.2s ease forwards 0.2s;
-    text-shadow: 0 10px 30px rgba(249, 249, 244, 0.8), 0 0 40px rgba(255, 255, 255, 0.9); /* ensures readability against splash */
+    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
 }
 
 .hero-content p {
     font-size: 1.3rem;
-    color: #333;
+    color: #f0f0f0;
     margin-bottom: 3rem;
     opacity: 0;
     letter-spacing: 0.5px;
     animation: fadeUp 1.2s ease forwards 0.5s;
-    text-shadow: 0 5px 15px rgba(249, 249, 244, 0.9);
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.6);
 }
 
 .btn-secondary {
