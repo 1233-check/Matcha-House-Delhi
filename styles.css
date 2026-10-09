@@ -147,11 +147,11 @@ h1, h2, h3, .logo {
 
 /* --- Hero Section --- */
 .hero {
-    background: url('assets/hero_bg.jpg') no-repeat center center;
+    background: url('assets/hero_bg.jpg') no-repeat center bottom;
     background-size: cover;
     z-index: 10;
 
-    min-height: 100vh;
+    min-height: 85vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -2485,7 +2485,8 @@ section, footer {
 @media (max-width: 768px) {
     .loyalty-container { grid-template-columns: 1fr !important; }
 }
-.events-section { padding: 4rem 0; text-align: center; max-width: 1200px; margin: 0 auto; }
+.events-section { padding: 4rem 5%; width: 100%; position: relative; z-index: 10; background-color: var(--color-cream); }
+.events-container { max-width: 1200px; margin: 0 auto; }
 .sleek-badge {
     font-family: var(--font-heading);
     font-size: 0.7rem;
