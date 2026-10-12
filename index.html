@@ -183,9 +183,12 @@
 <body>
     <div class="cursor-dot" id="cursorDot"></div><div class="cursor-outline" id="cursorOutline"></div>
     <div class="scroll-progress" id="scrollProgress"></div>
-    <div class="weather-widget" id="weatherWidget" onclick="document.getElementById('menu').scrollIntoView({behavior: 'smooth'})">
-        <span class="weather-icon" id="weatherIcon">🍃</span>
-        <span class="weather-text" id="weatherText">Fetching local breeze...</span>
+    <div class="weather-widget" id="weatherWidget">
+        <div class="weather-content" onclick="document.getElementById('menu').scrollIntoView({behavior: 'smooth'})">
+            <span class="weather-icon" id="weatherIcon">🍃</span>
+            <span class="weather-text" id="weatherText">Fetching local breeze...</span>
+        </div>
+        <button class="weather-close-btn" id="weatherCloseBtn" aria-label="Dismiss weather notification" title="Dismiss">×</button>
     </div>
     <nav class="navbar">
         <div class="mobile-toggle" id="mobileToggle" role="button" aria-label="Toggle navigation" aria-expanded="false" tabindex="0">
@@ -246,8 +249,17 @@
     <section id="about" class="editorial-section">
         <div class="editorial-container">
             <div class="editorial-images perspective-container">
-                <img src="assets/sakurajima_kagoshima.jpg" alt="Kagoshima, Japan with Sakurajima Volcano" class="editorial-img-main tilt-element" loading="lazy">
-                <img src="assets/whisk.png" alt="Matcha Whisking" class="editorial-img-sub tilt-element" loading="lazy">
+                <div class="editorial-img-main-box tilt-element">
+                    <img src="assets/sakurajima_kagoshima.jpg" alt="Kagoshima Province, Japan with Mount Sakurajima Volcano" class="editorial-img-main" loading="lazy">
+                    <div class="origin-caption-badge" aria-label="Geographical Origin Reference">
+                        <span class="origin-badge-dot"></span>
+                        <div class="origin-badge-text-group">
+                            <span class="origin-badge-title">Kagoshima Province</span>
+                            <span class="origin-badge-sub">Japan · Mount Sakurajima</span>
+                        </div>
+                    </div>
+                </div>
+                <img src="assets/whisk.png" alt="Handcrafted Matcha Whisking Ceremony" class="editorial-img-sub tilt-element" loading="lazy">
             </div>
             <div class="editorial-content">
                 <span class="sub-heading">The Origin Story</span>
@@ -1060,62 +1072,55 @@
                     </div>
 
                     <div class="punch-slots-container" id="loyaltySlotsGrid">
-                        <!-- Top Row: 5 Stamps -->
-                        <div class="punch-row punch-row-top">
-                            <div class="punch-slot punched" data-slot="1" title="Click to stamp">
-                                <span class="slot-num">01</span>
-                                <span class="slot-text">THANKS FOR<br>VISITING</span>
-                                <span class="stamp-seal">🍵 VISITED</span>
-                            </div>
-                            <div class="punch-slot reward-slot" data-slot="2" title="Click to stamp">
-                                <span class="slot-num">02</span>
-                                <span class="slot-reward">5%</span>
-                                <span class="slot-sub">OFF ON YOUR<br>TOTAL BILL</span>
-                                <span class="stamp-seal">✨ 5% OFF</span>
-                            </div>
-                            <div class="punch-slot reward-slot" data-slot="3" title="Click to stamp">
-                                <span class="slot-num">03</span>
-                                <span class="slot-reward cookie-reward">FREE<br>COOKIE</span>
-                                <span class="slot-sub">COMPLIMENTARY</span>
-                                <span class="stamp-seal">🍪 COOKIE</span>
-                            </div>
-                            <div class="punch-slot" data-slot="4" title="Click to stamp">
-                                <span class="slot-num">04</span>
-                                <span class="slot-text">THANKS FOR<br>VISITING</span>
-                                <span class="stamp-seal">🍵 VISITED</span>
-                            </div>
-                            <div class="punch-slot reward-slot" data-slot="5" title="Click to stamp">
-                                <span class="slot-num">05</span>
-                                <span class="slot-reward">10%</span>
-                                <span class="slot-sub">OFF ON YOUR<br>TOTAL BILL</span>
-                                <span class="stamp-seal">✨ 10% OFF</span>
-                            </div>
+                        <div class="punch-slot punched" data-slot="1" title="Click to stamp">
+                            <span class="slot-num">01</span>
+                            <span class="slot-text">THANKS FOR<br>VISITING</span>
+                            <span class="stamp-seal">🍵 VISITED</span>
                         </div>
-
-                        <!-- Bottom Row: 4 Stamps -->
-                        <div class="punch-row punch-row-bottom">
-                            <div class="punch-slot" data-slot="6" title="Click to stamp">
-                                <span class="slot-num">06</span>
-                                <span class="slot-text">THANKS FOR<br>VISITING</span>
-                                <span class="stamp-seal">🍵 VISITED</span>
-                            </div>
-                            <div class="punch-slot reward-slot" data-slot="7" title="Click to stamp">
-                                <span class="slot-num">07</span>
-                                <span class="slot-reward">15%</span>
-                                <span class="slot-sub">OFF ON YOUR<br>TOTAL BILL</span>
-                                <span class="stamp-seal">✨ 15% OFF</span>
-                            </div>
-                            <div class="punch-slot" data-slot="8" title="Click to stamp">
-                                <span class="slot-num">08</span>
-                                <span class="slot-text">THANKS FOR<br>VISITING</span>
-                                <span class="stamp-seal">🍵 VISITED</span>
-                            </div>
-                            <div class="punch-slot reward-slot grand-reward" data-slot="9" title="Click to stamp">
-                                <span class="slot-num">09</span>
-                                <span class="slot-reward matcha-reward">FREE<br>MATCHA</span>
-                                <span class="slot-sub">COMPLIMENTARY</span>
-                                <span class="stamp-seal">🏆 MATCHA</span>
-                            </div>
+                        <div class="punch-slot reward-slot" data-slot="2" title="Click to stamp">
+                            <span class="slot-num">02</span>
+                            <span class="slot-reward">5%</span>
+                            <span class="slot-sub">OFF ON YOUR<br>TOTAL BILL</span>
+                            <span class="stamp-seal">✨ 5% OFF</span>
+                        </div>
+                        <div class="punch-slot reward-slot" data-slot="3" title="Click to stamp">
+                            <span class="slot-num">03</span>
+                            <span class="slot-reward cookie-reward">FREE<br>COOKIE</span>
+                            <span class="slot-sub">COMPLIMENTARY</span>
+                            <span class="stamp-seal">🍪 COOKIE</span>
+                        </div>
+                        <div class="punch-slot" data-slot="4" title="Click to stamp">
+                            <span class="slot-num">04</span>
+                            <span class="slot-text">THANKS FOR<br>VISITING</span>
+                            <span class="stamp-seal">🍵 VISITED</span>
+                        </div>
+                        <div class="punch-slot reward-slot" data-slot="5" title="Click to stamp">
+                            <span class="slot-num">05</span>
+                            <span class="slot-reward">10%</span>
+                            <span class="slot-sub">OFF ON YOUR<br>TOTAL BILL</span>
+                            <span class="stamp-seal">✨ 10% OFF</span>
+                        </div>
+                        <div class="punch-slot" data-slot="6" title="Click to stamp">
+                            <span class="slot-num">06</span>
+                            <span class="slot-text">THANKS FOR<br>VISITING</span>
+                            <span class="stamp-seal">🍵 VISITED</span>
+                        </div>
+                        <div class="punch-slot reward-slot" data-slot="7" title="Click to stamp">
+                            <span class="slot-num">07</span>
+                            <span class="slot-reward">15%</span>
+                            <span class="slot-sub">OFF ON YOUR<br>TOTAL BILL</span>
+                            <span class="stamp-seal">✨ 15% OFF</span>
+                        </div>
+                        <div class="punch-slot" data-slot="8" title="Click to stamp">
+                            <span class="slot-num">08</span>
+                            <span class="slot-text">THANKS FOR<br>VISITING</span>
+                            <span class="stamp-seal">🍵 VISITED</span>
+                        </div>
+                        <div class="punch-slot reward-slot grand-reward" data-slot="9" title="Click to stamp">
+                            <span class="slot-num">09</span>
+                            <span class="slot-reward matcha-reward">FREE<br>MATCHA</span>
+                            <span class="slot-sub">COMPLIMENTARY</span>
+                            <span class="stamp-seal">🏆 MATCHA</span>
                         </div>
                     </div>
 

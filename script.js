@@ -57,6 +57,14 @@ document.addEventListener('DOMContentLoaded', () => {
     const weatherWidget = document.getElementById('weatherWidget');
     const weatherText = document.getElementById('weatherText');
     const weatherIcon = document.getElementById('weatherIcon');
+    const weatherCloseBtn = document.getElementById('weatherCloseBtn');
+
+    if (weatherCloseBtn && weatherWidget) {
+        weatherCloseBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            weatherWidget.style.display = 'none';
+        });
+    }
 
     if (weatherWidget && weatherText && weatherIcon) {
         fetch('https://api.open-meteo.com/v1/forecast?latitude=28.6139&longitude=77.2090&current_weather=true')

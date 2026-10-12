@@ -175,6 +175,7 @@ h1, h2, h3, .logo {
 section, footer {
     position: relative;
     z-index: 5;
+    scroll-margin-top: 80px;
 }
 
 .hero-content {
@@ -637,16 +638,78 @@ section, footer {
     height: 700px;
 }
 
-.editorial-img-main {
+.editorial-img-main-box {
     width: 80%;
-    max-width: 100%;
     height: 80%;
-    object-fit: cover;
     position: absolute;
     top: 0;
     left: 0;
-    border-radius: 2px;
+    border-radius: 4px;
+    overflow: hidden;
     z-index: 1;
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.16);
+}
+
+.editorial-img-main-box .editorial-img-main {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.origin-caption-badge {
+    position: absolute;
+    bottom: 1.25rem;
+    left: 1.25rem;
+    background: rgba(14, 20, 10, 0.88);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(212, 175, 55, 0.55);
+    border-radius: 8px;
+    padding: 0.55rem 0.95rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    z-index: 5;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.45);
+    pointer-events: none;
+}
+
+.origin-badge-dot {
+    width: 9px;
+    height: 9px;
+    background: #82C945;
+    border-radius: 50%;
+    box-shadow: 0 0 10px #82C945;
+    flex-shrink: 0;
+    animation: livePulseDot 2s infinite ease-in-out;
+}
+
+.origin-badge-text-group {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.origin-badge-title {
+    font-family: var(--font-heading);
+    font-size: 0.82rem;
+    font-weight: 700;
+    letter-spacing: 1.4px;
+    text-transform: uppercase;
+    color: #FAF8F2;
+    line-height: 1.2;
+}
+
+.origin-badge-sub {
+    font-family: var(--font-heading);
+    font-size: 0.68rem;
+    font-weight: 500;
+    color: #D4AF37;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+    line-height: 1.2;
+    margin-top: 0.2rem;
 }
 
 .editorial-img-sub {
@@ -656,9 +719,10 @@ section, footer {
     position: absolute;
     bottom: 5%;
     right: 0;
-    border-radius: 2px;
+    border-radius: 4px;
     z-index: 10;
     border: 10px solid #fff;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
 }
 
 .editorial-title {
@@ -835,13 +899,13 @@ section, footer {
     left: 2rem;
     background: var(--glass-bg);
     border: 1px solid var(--glass-border);
-    padding: 0.8rem 1.5rem;
+    padding: 0.65rem 1rem 0.65rem 1.3rem;
     border-radius: 50px;
     display: flex;
     align-items: center;
     gap: 0.8rem;
-    z-index: 1001;
-    cursor: pointer;
+    z-index: 99;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
     transition: all 0.3s ease;
     transform: translateY(100px);
     opacity: 0;
@@ -850,19 +914,49 @@ section, footer {
 }
 
 .weather-widget:hover {
-    transform: translateY(-5px);
-    background: rgba(255,255,255,0.9);
+    transform: translateY(-3px);
+    background: rgba(255, 255, 255, 0.95);
+}
+
+.weather-content {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    cursor: pointer;
 }
 
 .weather-icon {
-    font-size: 1.5rem;
+    font-size: 1.35rem;
+    flex-shrink: 0;
 }
 
 .weather-text {
-    font-size: 0.9rem;
+    font-size: 0.88rem;
     font-family: var(--font-heading);
     font-weight: 500;
     color: var(--color-matcha-dark);
+    letter-spacing: 0.2px;
+}
+
+.weather-close-btn {
+    background: transparent;
+    border: none;
+    color: var(--color-matcha-dark);
+    font-size: 1.2rem;
+    line-height: 1;
+    cursor: pointer;
+    padding: 0.2rem 0.4rem;
+    opacity: 0.45;
+    border-radius: 50%;
+    transition: opacity 0.2s ease, background 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.weather-close-btn:hover {
+    opacity: 1;
+    background: rgba(0, 0, 0, 0.08);
 }
 
 /* --- Full Menu Section --- */
@@ -1431,16 +1525,27 @@ section, footer {
     }
     
     .weather-widget {
-        left: 1rem;
+        left: auto;
+        right: 1rem;
         bottom: 1rem;
-        padding: 0.5rem 1rem;
+        padding: 0.4rem 0.65rem 0.4rem 0.9rem;
         max-width: calc(100% - 2rem);
+        border-radius: 30px;
+        z-index: 99;
     }
     .weather-text {
-        font-size: 0.8rem;
+        font-size: 0.76rem;
+        max-width: 200px;
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
+    }
+    .weather-icon {
+        font-size: 1.1rem;
+    }
+    .weather-close-btn {
+        font-size: 1.1rem;
+        padding: 0.1rem 0.3rem;
     }
 
     .editorial-container {
@@ -2746,24 +2851,44 @@ section, footer {
 }
 
 .punch-slots-container {
-    display: flex;
-    flex-direction: column;
-    gap: 0.85rem;
-    margin-bottom: 1.5rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.65rem;
+    width: 100%;
+    max-width: 380px;
+    margin: 0 auto 1.5rem auto;
 }
 
-.punch-row-top {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 0.65rem;
-}
+@media (min-width: 769px) {
+    .punch-slots-container {
+        grid-template-columns: repeat(10, 1fr);
+        gap: 0.65rem;
+        max-width: 100%;
+        margin-bottom: 1.5rem;
+    }
 
-.punch-row-bottom {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 0.65rem;
-    max-width: 85%;
-    margin: 0 auto;
+    /* Row 1: 5 stamps across (each spans 2 columns: 5 * 2 = 10 cols) */
+    .punch-slot:nth-child(1),
+    .punch-slot:nth-child(2),
+    .punch-slot:nth-child(3),
+    .punch-slot:nth-child(4),
+    .punch-slot:nth-child(5) {
+        grid-column: span 2;
+        max-width: 90px;
+    }
+
+    /* Row 2: 4 stamps centered (offset 1 column on left) */
+    .punch-slot:nth-child(6) {
+        grid-column: 2 / span 2;
+        max-width: 90px;
+    }
+
+    .punch-slot:nth-child(7),
+    .punch-slot:nth-child(8),
+    .punch-slot:nth-child(9) {
+        grid-column: span 2;
+        max-width: 90px;
+    }
 }
 
 .punch-slot {
@@ -2906,44 +3031,40 @@ section, footer {
         grid-template-columns: 1fr;
         gap: 2.5rem;
     }
-    .punch-row-top {
-        grid-template-columns: repeat(5, 1fr);
-        gap: 0.4rem;
-    }
-    .punch-row-bottom {
-        grid-template-columns: repeat(4, 1fr);
-        gap: 0.4rem;
-        max-width: 90%;
-    }
-    .punch-slot {
-        padding: 0.2rem;
-    }
-    .slot-text {
-        font-size: 0.5rem;
-    }
-    .slot-reward {
-        font-size: 0.72rem;
-    }
-    .slot-sub {
-        font-size: 0.4rem;
-    }
 }
 
 @media (max-width: 480px) {
     .loyalty-physical-card {
         padding: 1.4rem 1rem;
+        max-width: 360px;
     }
-    .punch-row-top {
-        grid-template-columns: repeat(3, 1fr);
+    .punch-slots-container {
+        gap: 0.5rem;
+        max-width: 320px;
     }
-    .punch-row-bottom {
-        grid-template-columns: repeat(2, 1fr);
-        max-width: 100%;
+    .punch-slot {
+        max-width: 88px;
     }
-    .punch-row-bottom .punch-slot.grand-reward {
-        grid-column: span 2;
-        max-width: 90px;
-        margin: 0 auto;
+    .slot-num {
+        font-size: 0.48rem;
+    }
+    .slot-text {
+        font-size: 0.5rem;
+    }
+    .slot-reward {
+        font-size: 0.76rem;
+    }
+    .slot-reward.cookie-reward {
+        font-size: 0.58rem;
+    }
+    .slot-reward.matcha-reward {
+        font-size: 0.6rem;
+    }
+    .slot-sub {
+        font-size: 0.4rem;
+    }
+    .stamp-seal {
+        font-size: 0.52rem;
     }
 }
 .events-section { padding: 4rem 5%; width: 100%; position: relative; z-index: 10; background-color: var(--color-cream); }
@@ -3287,15 +3408,42 @@ p {
         grid-template-columns: 1fr !important;
     }
     .editorial-images {
-        height: 400px;
-    }
-    .editorial-img-main {
-        width: 100%;
-        height: 100%;
+        height: 380px;
         position: relative;
+        max-width: 420px;
+        margin: 0 auto;
+    }
+    .editorial-img-main-box {
+        width: 82%;
+        height: 82%;
+        position: absolute;
+        top: 0;
+        left: 0;
     }
     .editorial-img-sub {
-        display: none;
+        width: 58%;
+        height: 52%;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        border: 6px solid #fff;
+        border-radius: 4px;
+        z-index: 10;
+        display: block !important;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    }
+    .origin-caption-badge {
+        bottom: 0.75rem;
+        left: 0.75rem;
+        padding: 0.4rem 0.75rem;
+        gap: 0.55rem;
+    }
+    .origin-badge-title {
+        font-size: 0.72rem;
+        letter-spacing: 1px;
+    }
+    .origin-badge-sub {
+        font-size: 0.6rem;
     }
 }
 
