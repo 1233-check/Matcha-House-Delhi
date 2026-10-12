@@ -403,7 +403,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const customerName = insiderNameInput.value.trim();
             if (!customerName) return;
 
-            const prefillText = `Hi Matcha House Delhi, my name is ${customerName}. I would like to join the Matcha Insider Club and claim my free matcha cookie! 🍪🍵`;
+            const prefillText = `Hi Matcha House Delhi, my name is ${customerName}. I would like to get my official Matcha House Loyalty Card and start earning visit perks! 🍵✨`;
             const waUrl = `https://wa.me/917899010913?text=${encodeURIComponent(prefillText)}`;
 
             if (loyaltySuccess) {

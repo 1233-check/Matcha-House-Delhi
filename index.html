@@ -202,7 +202,7 @@
             </div>
             <div class="nav-right">
                 <a href="#reviews">Reviews</a>
-                <a href="#insider">Insider</a>
+                <a href="#loyalty">Loyalty Card</a>
                 <a href="https://www.zomato.com/ncr/matcha-house-green-park-new-delhi" target="_blank" class="btn-zomato-minimal">Order on Zomato</a>
                 <a href="#visit" class="btn-primary">Visit Us</a>
             </div>
@@ -1025,63 +1025,103 @@
         </div>
     </section>
 
-    <!-- Loyalty Program Section (R5) -->
-    <section id="insider" class="loyalty-section">
-        <div class="loyalty-container" style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center; max-width: 1100px; margin: 0 auto; text-align: left;">
+    <!-- Loyalty Program Section -->
+    <section id="loyalty" class="loyalty-section">
+        <span id="insider" style="position: absolute; top: -100px;"></span>
+        <div class="loyalty-container">
             <div class="loyalty-text-pane">
-                <div class="loyalty-badge">VIP Circle</div>
-                <h2>Join the Matcha Insider Club</h2>
-                <p class="loyalty-hook" style="font-weight: 500; font-size: 1.1rem; color: var(--color-matcha-dark);">Join for a free matcha cookie on your next visit.</p>
-                <p class="loyalty-desc" style="margin-bottom: 2rem;">Gain first access to rare micro-lot harvests, private invitations to tea tastings, and an instant complimentary artisanal matcha cookie on your next visit to our Green Park café.</p>
-                <form id="loyaltyForm" class="loyalty-form" style="max-width: 100%;">
-                    <div class="input-group" style="display: flex; flex-direction: column; gap: 1rem;">
-                        <input type="text" id="insiderName" name="name" placeholder="Enter your full name" required class="insider-input" style="width: 100%; border-radius: 8px;">
-                        <button type="submit" class="btn-whatsapp btn-claim" style="width: 100%; border-radius: 8px; justify-content: center;">Claim Free Cookie on WhatsApp 🍪</button>
+                <div class="loyalty-badge">LOYALTY PROGRAM</div>
+                <h2>Matcha House Loyalty Card</h2>
+                <p class="loyalty-hook">Every visit brings you closer to exclusive perks &amp; complimentary matcha.</p>
+                <p class="loyalty-desc">Collect stamps on every visit to our Green Park flagship. Unlock tiered savings (5%, 10%, 15% off), complimentary freshly baked cookies, and our handcrafted ceremonial matcha on the house.</p>
+                <form id="loyaltyForm" class="loyalty-form">
+                    <div class="input-group">
+                        <input type="text" id="insiderName" name="name" placeholder="Enter your full name to generate card" required class="insider-input">
+                        <button type="submit" class="btn-whatsapp btn-claim">Get Your Loyalty Card on WhatsApp 🍵</button>
                     </div>
                     <div id="loyaltySuccess" class="loyalty-success" style="display: none;">
-                        ✨ Welcome to the circle! Redirecting to WhatsApp...
+                        ✨ Generating your card... Redirecting to WhatsApp!
                     </div>
                 </form>
             </div>
             
             <div class="loyalty-pass-pane">
-                <div class="loyalty-pass-card" style="background: var(--color-text); color: var(--color-cream); padding: 2rem; border-radius: 20px; box-shadow: 0 20px 40px rgba(0,0,0,0.15); position: relative; overflow: hidden;">
-                    <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 1rem; margin-bottom: 1.5rem;">
-                        <h4 style="font-family: var(--font-heading); font-weight: 600; letter-spacing: 2px; font-size: 0.9rem;">MATCHA HOUSE</h4>
-                        <span style="font-family: var(--font-heading); font-size: 0.7rem; background: var(--color-matcha-dark); padding: 0.3rem 0.6rem; border-radius: 12px; color: #fff;">VIP PASS</span>
+                <div class="loyalty-physical-card">
+                    <div class="loyalty-card-header">
+                        <div class="card-logo-lockup">
+                            <img src="assets/logo.png" alt="Matcha House" class="card-logo-img">
+                        </div>
+                        <span class="loyalty-card-tag">9-VISIT PUNCH PASS</span>
                     </div>
                     
-                    <div style="margin-bottom: 2rem;">
-                        <p style="font-size: 0.7rem; text-transform: uppercase; letter-spacing: 1px; color: rgba(255,255,255,0.6); margin-bottom: 0.3rem;">Card Holder</p>
-                        <h3 id="passCardHolderName" style="font-family: var(--font-serif); font-size: 1.5rem; margin: 0;">YOUR NAME HERE</h3>
+                    <div class="card-holder-box">
+                        <span class="card-holder-label">CARD HOLDER</span>
+                        <h3 id="passCardHolderName" class="card-holder-name">YOUR NAME HERE</h3>
                     </div>
 
-                    <div id="loyaltySlotsGrid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem;">
-                        <!-- Slots generated by JS or static -->
-                        <div class="punch-slot punched" style="background: rgba(255,255,255,0.05); padding: 1rem 0.5rem; border-radius: 12px; text-align: center; border: 1px solid rgba(255,255,255,0.1); cursor: pointer; transition: all 0.3s ease;">
-                            <span style="font-size: 1.5rem; display: block; margin-bottom: 0.5rem;">🍪</span>
-                            <span style="font-size: 0.65rem; font-family: var(--font-heading); text-transform: uppercase; color: rgba(255,255,255,0.6);">Free Cookie</span>
+                    <div class="punch-slots-container" id="loyaltySlotsGrid">
+                        <!-- Top Row: 5 Stamps -->
+                        <div class="punch-row punch-row-top">
+                            <div class="punch-slot punched" data-slot="1" title="Click to stamp">
+                                <span class="slot-num">01</span>
+                                <span class="slot-text">THANKS FOR<br>VISITING</span>
+                                <span class="stamp-seal">🍵 VISITED</span>
+                            </div>
+                            <div class="punch-slot reward-slot" data-slot="2" title="Click to stamp">
+                                <span class="slot-num">02</span>
+                                <span class="slot-reward">5%</span>
+                                <span class="slot-sub">OFF ON YOUR<br>TOTAL BILL</span>
+                                <span class="stamp-seal">✨ 5% OFF</span>
+                            </div>
+                            <div class="punch-slot reward-slot" data-slot="3" title="Click to stamp">
+                                <span class="slot-num">03</span>
+                                <span class="slot-reward cookie-reward">FREE<br>COOKIE</span>
+                                <span class="slot-sub">COMPLIMENTARY</span>
+                                <span class="stamp-seal">🍪 COOKIE</span>
+                            </div>
+                            <div class="punch-slot" data-slot="4" title="Click to stamp">
+                                <span class="slot-num">04</span>
+                                <span class="slot-text">THANKS FOR<br>VISITING</span>
+                                <span class="stamp-seal">🍵 VISITED</span>
+                            </div>
+                            <div class="punch-slot reward-slot" data-slot="5" title="Click to stamp">
+                                <span class="slot-num">05</span>
+                                <span class="slot-reward">10%</span>
+                                <span class="slot-sub">OFF ON YOUR<br>TOTAL BILL</span>
+                                <span class="stamp-seal">✨ 10% OFF</span>
+                            </div>
                         </div>
-                        <div class="punch-slot" style="background: rgba(255,255,255,0.05); padding: 1rem 0.5rem; border-radius: 12px; text-align: center; border: 1px solid rgba(255,255,255,0.1); cursor: pointer; transition: all 0.3s ease;">
-                            <span style="font-size: 1.5rem; display: block; margin-bottom: 0.5rem;">🍵</span>
-                            <span style="font-size: 0.65rem; font-family: var(--font-heading); text-transform: uppercase; color: rgba(255,255,255,0.6);">Pure Matcha</span>
+
+                        <!-- Bottom Row: 4 Stamps -->
+                        <div class="punch-row punch-row-bottom">
+                            <div class="punch-slot" data-slot="6" title="Click to stamp">
+                                <span class="slot-num">06</span>
+                                <span class="slot-text">THANKS FOR<br>VISITING</span>
+                                <span class="stamp-seal">🍵 VISITED</span>
+                            </div>
+                            <div class="punch-slot reward-slot" data-slot="7" title="Click to stamp">
+                                <span class="slot-num">07</span>
+                                <span class="slot-reward">15%</span>
+                                <span class="slot-sub">OFF ON YOUR<br>TOTAL BILL</span>
+                                <span class="stamp-seal">✨ 15% OFF</span>
+                            </div>
+                            <div class="punch-slot" data-slot="8" title="Click to stamp">
+                                <span class="slot-num">08</span>
+                                <span class="slot-text">THANKS FOR<br>VISITING</span>
+                                <span class="stamp-seal">🍵 VISITED</span>
+                            </div>
+                            <div class="punch-slot reward-slot grand-reward" data-slot="9" title="Click to stamp">
+                                <span class="slot-num">09</span>
+                                <span class="slot-reward matcha-reward">FREE<br>MATCHA</span>
+                                <span class="slot-sub">COMPLIMENTARY</span>
+                                <span class="stamp-seal">🏆 MATCHA</span>
+                            </div>
                         </div>
-                        <div class="punch-slot" style="background: rgba(255,255,255,0.05); padding: 1rem 0.5rem; border-radius: 12px; text-align: center; border: 1px solid rgba(255,255,255,0.1); cursor: pointer; transition: all 0.3s ease;">
-                            <span style="font-size: 1.5rem; display: block; margin-bottom: 0.5rem;">🥛</span>
-                            <span style="font-size: 0.65rem; font-family: var(--font-heading); text-transform: uppercase; color: rgba(255,255,255,0.6);">Free Oat Milk</span>
-                        </div>
-                        <div class="punch-slot" style="background: rgba(255,255,255,0.05); padding: 1rem 0.5rem; border-radius: 12px; text-align: center; border: 1px solid rgba(255,255,255,0.1); cursor: pointer; transition: all 0.3s ease;">
-                            <span style="font-size: 1.5rem; display: block; margin-bottom: 0.5rem;">🍃</span>
-                            <span style="font-size: 0.65rem; font-family: var(--font-heading); text-transform: uppercase; color: rgba(255,255,255,0.6);">Kagoshima Latte</span>
-                        </div>
-                        <div class="punch-slot" style="background: rgba(255,255,255,0.05); padding: 1rem 0.5rem; border-radius: 12px; text-align: center; border: 1px solid rgba(255,255,255,0.1); cursor: pointer; transition: all 0.3s ease;">
-                            <span style="font-size: 1.5rem; display: block; margin-bottom: 0.5rem;">✨</span>
-                            <span style="font-size: 0.65rem; font-family: var(--font-heading); text-transform: uppercase; color: rgba(255,255,255,0.6);">15% OFF</span>
-                        </div>
-                        <div class="punch-slot" style="background: rgba(255,255,255,0.05); padding: 1rem 0.5rem; border-radius: 12px; text-align: center; border: 1px solid rgba(255,255,255,0.1); cursor: pointer; transition: all 0.3s ease;">
-                            <span style="font-size: 1.5rem; display: block; margin-bottom: 0.5rem;">🧸</span>
-                            <span style="font-size: 0.65rem; font-family: var(--font-heading); text-transform: uppercase; color: rgba(255,255,255,0.6);">Free Teddy</span>
-                        </div>
+                    </div>
+
+                    <div class="card-fine-print">
+                        <p class="fine-print-text">SINGLE USE ONLY • MUST PRESENT AT PURCHASE • CANNOT BE COMBINED WITH OTHER OFFERS • NO CASH VALUE • EXPIRES 30 DAYS FROM DATE MENTIONED</p>
+                        <p class="card-social">📸 matchahousedelhi</p>
                     </div>
                 </div>
             </div>
