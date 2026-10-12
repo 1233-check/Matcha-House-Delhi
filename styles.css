@@ -1813,26 +1813,25 @@ section, footer {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: radial-gradient(circle at center, rgba(255, 255, 255, 0.95) 0%, rgba(209, 208, 203, 0.35) 100%);
-    border-radius: 12px;
+    background: transparent;
+    border-radius: 0;
     margin-bottom: 1.1rem;
-    overflow: hidden;
-    padding: 0.6rem;
-    border: 1px solid rgba(255, 255, 255, 0.6);
+    overflow: visible;
+    padding: 0.5rem 0;
+    border: none;
 }
 
 .menu-item-image img {
     max-height: 100%;
     max-width: 100%;
     object-fit: contain;
-    mix-blend-mode: multiply;
-    filter: brightness(1.08) contrast(1.2);
+    filter: drop-shadow(0 6px 14px rgba(0, 0, 0, 0.08));
     transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), filter 0.3s ease;
 }
 
 .menu-item:hover .menu-item-image img {
     transform: scale(1.06) translateY(-4px);
-    filter: brightness(1.08) contrast(1.2) drop-shadow(0 10px 20px rgba(49, 69, 40, 0.2));
+    filter: drop-shadow(0 12px 22px rgba(49, 69, 40, 0.22));
 }
 
 /* Menu Actions & Zomato / WhatsApp Order Button */
@@ -2710,6 +2709,25 @@ section, footer {
 .event-card-action { display: flex; justify-content: space-between; align-items: center; border-top: 1px solid rgba(0,0,0,0.1); padding-top: 1rem; margin-top: auto; }
 .event-stat { font-size: 0.75rem; color: #666; font-style: italic; }
 .btn-event-link { font-family: var(--font-heading); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px; color: var(--color-matcha-dark); text-decoration: none; font-weight: 600; }
+
+.event-card-media {
+    width: 100%;
+    height: 190px;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 1.2rem;
+    background: #000;
+}
+.event-card-media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
+}
+.event-card:hover .event-card-media img {
+    transform: scale(1.04);
+}
 
 /* ========================================================
    FOUNDER'S STORY FIX (Issue 1)
