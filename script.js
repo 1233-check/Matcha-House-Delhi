@@ -444,3 +444,42 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
+
+// Founder Portrait Modal Lightbox
+document.addEventListener('DOMContentLoaded', () => {
+    const trigger = document.getElementById('founderPortraitTrigger');
+    const modal = document.getElementById('founderModal');
+    const overlay = document.getElementById('founderModalOverlay');
+    const closeBtn = document.getElementById('founderModalClose');
+
+    if (trigger && modal) {
+        const openModal = () => {
+            modal.classList.add('active');
+            modal.setAttribute('aria-hidden', 'false');
+            document.body.style.overflow = 'hidden';
+        };
+
+        const closeModal = () => {
+            modal.classList.remove('active');
+            modal.setAttribute('aria-hidden', 'true');
+            document.body.style.overflow = '';
+        };
+
+        trigger.addEventListener('click', openModal);
+        trigger.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                openModal();
+            }
+        });
+
+        if (overlay) overlay.addEventListener('click', closeModal);
+        if (closeBtn) closeBtn.addEventListener('click', closeModal);
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && modal.classList.contains('active')) {
+                closeModal();
+            }
+        });
+    }
+});

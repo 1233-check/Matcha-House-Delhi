@@ -290,8 +290,27 @@
                             "Made with intention. Whisked fresh. Always from the heart."
                         </blockquote>
                         <div class="founder-author">
-                            <span class="founder-name">Celine</span>
-                            <span class="founder-title">Founder &amp; Tea Curator, Matcha House Delhi</span>
+                            <div class="founder-portrait-wrap">
+                                <div class="founder-portrait-frame" id="founderPortraitTrigger" role="button" tabindex="0" aria-label="View founder Celine's profile photo" title="Click to view portrait">
+                                    <img src="assets/celine_crop.jpg" alt="Celine, Founder &amp; Tea Curator holding iced matcha at Matcha House Delhi" class="founder-portrait-img" width="105" height="132" loading="eager">
+                                    <span class="founder-portrait-tag">
+                                        <span class="pulse-dot-green"></span>
+                                        FOUNDER
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="founder-author-info">
+                                <div class="founder-name-row">
+                                    <span class="founder-name">Celine</span>
+                                    <span class="founder-verified-badge" title="Founder &amp; Tea Curator">✦</span>
+                                </div>
+                                <span class="founder-title">Founder &amp; Tea Curator</span>
+                                <span class="founder-subtitle">Matcha House Delhi</span>
+                                <div class="founder-pill-tags">
+                                    <span class="founder-pill">Kagoshima Sourced</span>
+                                    <span class="founder-pill">Freshly Whisked</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -1204,6 +1223,32 @@
             <p>&copy; 2026 Matcha House Delhi. All rights reserved.</p>
         </div>
     </footer>
+
+    <!-- Founder Portrait Modal Lightbox -->
+    <div id="founderModal" class="founder-modal" aria-hidden="true" role="dialog" aria-label="Founder Celine Portrait">
+        <div class="founder-modal-overlay" id="founderModalOverlay"></div>
+        <div class="founder-modal-card">
+            <button class="founder-modal-close" id="founderModalClose" aria-label="Close modal">&times;</button>
+            <div class="founder-modal-img-wrap">
+                <img src="assets/celine_crop.jpg" alt="Celine - Founder &amp; Tea Curator, Matcha House Delhi" class="founder-modal-img">
+                <div class="founder-modal-badge">
+                    <span class="pulse-dot-green"></span>
+                    <span>CURATOR &amp; FOUNDER</span>
+                </div>
+            </div>
+            <div class="founder-modal-caption">
+                <span class="sub-heading">Matcha House Delhi</span>
+                <h3 class="founder-modal-name">Celine</h3>
+                <p class="founder-modal-role">Founder &amp; Tea Curator</p>
+                <blockquote class="founder-modal-quote">
+                    "Made with intention. Whisked fresh. Always from the heart."
+                </blockquote>
+                <p class="founder-modal-desc">
+                    Bringing single-origin Kagoshima ceremonial matcha culture to New Delhi, freshly whisked to order.
+                </p>
+            </div>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>
