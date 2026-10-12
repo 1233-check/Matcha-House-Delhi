@@ -862,17 +862,146 @@ section, footer {
 
 .menu-header {
     text-align: center;
-    margin-bottom: 5rem;
+    max-width: 680px;
+    margin: 0 auto 3.5rem auto;
+}
+
+.menu-header .sub-heading {
+    display: inline-block;
+    font-family: var(--font-heading);
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: var(--color-matcha-dark);
+    opacity: 0.8;
+    margin-bottom: 0.75rem;
 }
 
 .menu-header h2 {
-    font-size: 3rem;
+    font-size: 3.2rem;
     color: var(--color-matcha-dark);
+    font-weight: 700;
+    letter-spacing: -1px;
+    line-height: 1.15;
+    margin-bottom: 0.75rem;
 }
 
 .menu-header p {
-    color: #666;
-    margin-top: 0.5rem;
+    color: #555;
+    font-size: 1.05rem;
+    line-height: 1.6;
+    margin-top: 0;
+}
+
+/* --- Matcha Types Showcase (First Flush & Ceremonial) --- */
+.matcha-types-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto 4.5rem auto;
+}
+
+.matcha-type-card {
+    background-color: #faf9f6;
+    border: 2px solid var(--color-matcha-dark);
+    padding: 2.25rem 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: left;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.matcha-type-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 4px 4px 0 var(--color-matcha-dark);
+}
+
+.matcha-type-card.featured-grade {
+    background-color: var(--color-matcha-dark);
+    color: var(--color-cream);
+}
+
+.matcha-type-card .type-header {
+    margin-bottom: 1.25rem;
+}
+
+.matcha-type-card .type-pill {
+    display: inline-block;
+    font-family: var(--font-heading);
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--color-matcha-dark);
+    background: rgba(49, 69, 40, 0.1);
+    padding: 0.35rem 0.85rem;
+    border-radius: 999px;
+    margin-bottom: 1rem;
+}
+
+.matcha-type-card.featured-grade .type-pill {
+    background: rgba(209, 208, 203, 0.2);
+    color: var(--color-cream);
+}
+
+.matcha-type-card h3 {
+    font-family: var(--font-heading);
+    font-size: 1.65rem;
+    font-weight: 700;
+    color: var(--color-matcha-dark);
+    letter-spacing: -0.5px;
+    line-height: 1.2;
+    margin: 0;
+}
+
+.matcha-type-card.featured-grade h3 {
+    color: #ffffff;
+}
+
+.matcha-type-card .type-desc {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    color: #4a4a4a;
+    margin-bottom: 1.75rem;
+    flex-grow: 1;
+}
+
+.matcha-type-card.featured-grade .type-desc {
+    color: rgba(209, 208, 203, 0.9);
+}
+
+.matcha-type-card .type-notes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem 0.65rem;
+    padding-top: 1.25rem;
+    border-top: 1px dashed rgba(49, 69, 40, 0.2);
+}
+
+.matcha-type-card.featured-grade .type-notes {
+    border-top: 1px dashed rgba(209, 208, 203, 0.25);
+}
+
+.matcha-type-card .type-notes span {
+    font-family: var(--font-heading);
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--color-matcha-dark);
+    background: #ffffff;
+    border: 1px solid rgba(49, 69, 40, 0.2);
+    padding: 0.35rem 0.7rem;
+    border-radius: 4px;
+    display: inline-flex;
+    align-items: center;
+}
+
+.matcha-type-card.featured-grade .type-notes span {
+    background: rgba(0, 0, 0, 0.25);
+    border: 1px solid rgba(209, 208, 203, 0.2);
+    color: var(--color-cream);
 }
 
 .signature-gallery {

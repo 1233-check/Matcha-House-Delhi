@@ -85,7 +85,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 weatherText.textContent = message;
             })
             .catch(() => {
-                weatherText.textContent = "Your mindful oasis in Hauz Khas, Delhi.";
+                weatherText.textContent = "Your mindful oasis in Green Park, Delhi.";
                 weatherIcon.textContent = "✨";
             });
     }
@@ -217,7 +217,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (waBtn) {
                 const milkChoice = selectedMilk === 'oat' ? 'Oat Milk (+₹80)' : (selectedMilk === 'lactose-free' ? 'Lactose-Free Milk (+₹60)' : 'Dairy Milk / Standard');
                 const messageText = `Hi Matcha House Delhi! I would like to order: ${item.dataset.name} (${milkChoice}) for ₹${currentPrice}. Please confirm order!`;
-                waBtn.href = `https://wa.me/919999999999?text=${encodeURIComponent(messageText)}`;
+                waBtn.href = `https://wa.me/917899010913?text=${encodeURIComponent(messageText)}`;
             }
         });
 
@@ -404,7 +404,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (!customerName) return;
 
             const prefillText = `Hi Matcha House Delhi, my name is ${customerName}. I would like to join the Matcha Insider Club and claim my free matcha cookie! 🍪🍵`;
-            const waUrl = `https://wa.me/919999999999?text=${encodeURIComponent(prefillText)}`;
+            const waUrl = `https://wa.me/917899010913?text=${encodeURIComponent(prefillText)}`;
 
             if (loyaltySuccess) {
                 loyaltySuccess.style.display = 'block';
