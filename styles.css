@@ -195,16 +195,27 @@ section, footer {
     pointer-events: auto;
 }
 
+.hero-brand-tag {
+    display: block;
+    font-family: var(--font-heading);
+    font-size: 1.15rem;
+    font-weight: 700;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    color: var(--color-gold);
+    margin-bottom: 0.8rem;
+    text-shadow: 0 2px 14px rgba(0, 0, 0, 0.9);
+}
+
 .hero-content h1 {
     font-size: 5.5rem;
     color: #ffffff;
     line-height: 1.1;
     margin-bottom: 1.5rem;
     letter-spacing: -2px;
-    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.8), 0 0 40px rgba(0, 0, 0, 0.5);
     opacity: 0;
     animation: fadeUp 1.2s ease forwards 0.2s;
-    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.8), 0 0 40px rgba(0, 0, 0, 0.5);
 }
 
 .hero-content p {
@@ -1482,6 +1493,11 @@ section, footer {
 @media (max-width: 480px) {
     .hero-content h1 {
         font-size: 2.2rem;
+    }
+    .hero-brand-tag {
+        font-size: 0.85rem;
+        letter-spacing: 3px;
+        margin-bottom: 0.5rem;
     }
     .nav-left {
         gap: 1rem;

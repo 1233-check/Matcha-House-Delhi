@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /scratch/
+
+Sitemap: https://matchahouse.co.in/sitemap.xml
+Host: https://matchahouse.co.in
