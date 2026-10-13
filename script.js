@@ -276,20 +276,20 @@ document.addEventListener('DOMContentLoaded', () => {
             const minute = istDate.getMinutes();
             const currentMinutes = hour * 60 + minute;
 
-            // Operating Hours: 8:00 AM (480 min) to 9:00 PM (1260 min) IST daily
-            const isOpen = (currentMinutes >= 480 && currentMinutes < 1260);
+            // Operating Hours: 1:00 PM (780 min) to 10:30 PM (1350 min) IST daily
+            const isOpen = (currentMinutes >= 780 && currentMinutes < 1350);
 
             if (isOpen) {
                 liveStatusPill.className = 'live-status-pill open';
-                liveStatusText.textContent = '🟢 Open Now · Closes at 9:00 PM IST';
+                liveStatusText.textContent = '🟢 Open Now · Closes at 10:30 PM IST';
             } else {
                 liveStatusPill.className = 'live-status-pill closed';
-                liveStatusText.textContent = '🔴 Closed Now · Opens at 8:00 AM IST';
+                liveStatusText.textContent = '🔴 Closed Now · Opens at 1:00 PM IST';
             }
         } catch {
             // Fallback for environment without Intl support
             liveStatusPill.className = 'live-status-pill open';
-            liveStatusText.textContent = 'Open Daily: 8:00 AM – 9:00 PM IST';
+            liveStatusText.textContent = 'Open Daily: 1:00 PM – 10:30 PM IST';
         }
     }
 
