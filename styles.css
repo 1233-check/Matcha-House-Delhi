@@ -147,7 +147,7 @@ h1, h2, h3, .logo {
 
 /* --- Hero Section --- */
 .hero {
-    background: url('assets/hero_bg.jpg') no-repeat center bottom;
+    background: url('assets/hero_bg.jpg') no-repeat center 35%;
     background-size: cover;
     z-index: 10;
 
@@ -166,7 +166,7 @@ h1, h2, h3, .logo {
     content: "";
     position: absolute;
     top: 0; left: 0; right: 0; bottom: 0;
-    background: rgba(0, 0, 0, 0.15);
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0.12) 50%, rgba(0, 0, 0, 0.35) 100%);
     z-index: 5;
 }
 
@@ -1396,10 +1396,9 @@ section, footer {
     }
     
     .hero {
-    background-color: var(--color-cream);
-    z-index: 10;
-
+        background-position: center 30%;
         padding-top: 140px;
+        z-index: 10;
     }
     .hero-content h1 {
         font-size: 3rem;
