@@ -225,7 +225,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (waBtn) {
                 const milkChoice = selectedMilk === 'oat' ? 'Oat Milk (+₹80)' : (selectedMilk === 'lactose-free' ? 'Lactose-Free Milk (+₹60)' : 'Dairy Milk / Standard');
                 const messageText = `Hi Matcha House Delhi! I would like to order: ${item.dataset.name} (${milkChoice}) for ₹${currentPrice}. Please confirm order!`;
-                waBtn.href = `https://wa.me/917899010913?text=${encodeURIComponent(messageText)}`;
+                waBtn.href = `https://wa.me/919311451339?text=${encodeURIComponent(messageText)}`;
             }
         });
 
@@ -412,7 +412,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (!customerName) return;
 
             const prefillText = `Hi Matcha House Delhi, my name is ${customerName}. I would like to get my official Matcha House Loyalty Card and start earning visit perks! 🍵✨`;
-            const waUrl = `https://wa.me/917899010913?text=${encodeURIComponent(prefillText)}`;
+            const waUrl = `https://wa.me/919311451339?text=${encodeURIComponent(prefillText)}`;
 
             if (loyaltySuccess) {
                 loyaltySuccess.style.display = 'block';
