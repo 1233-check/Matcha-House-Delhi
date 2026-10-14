@@ -3718,3 +3718,1014 @@ p {
         display: none;
     }
 }
+
+/* ========================================================
+   WEDDING & EVENT MATCHA BAR SECTION (100% PDF FIDELITY)
+   ======================================================== */
+.wedding-events-block {
+    margin-top: 5rem;
+    padding-top: 5rem;
+    border-top: 2px solid var(--color-matcha-dark);
+    text-align: left;
+    width: 100%;
+}
+
+.wedding-header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.wedding-main-title {
+    font-family: var(--font-serif);
+    font-size: clamp(2.2rem, 5vw, 3.5rem);
+    color: var(--color-text);
+    margin: 0.8rem 0 0.5rem;
+    letter-spacing: -0.5px;
+    line-height: 1.15;
+    text-transform: uppercase;
+}
+
+.wedding-subtitle {
+    font-family: var(--font-heading);
+    font-size: clamp(1rem, 2vw, 1.3rem);
+    color: var(--color-matcha-dark);
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+
+.wedding-ornament {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.wedding-ornament .ornament-line {
+    width: 80px;
+    height: 1px;
+    background: var(--color-matcha-dark);
+    opacity: 0.4;
+}
+
+.wedding-ornament .ornament-symbol {
+    font-size: 1.2rem;
+}
+
+/* Module 2: Origin Card */
+.wedding-origin-card {
+    display: grid;
+    grid-template-columns: 1.25fr 0.85fr;
+    gap: 3rem;
+    border: 2px solid var(--color-matcha-dark);
+    padding: 3rem;
+    background: #FFFFFF;
+    margin-bottom: 4.5rem;
+    align-items: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+}
+
+.origin-tagline {
+    font-family: var(--font-heading);
+    font-size: 0.75rem;
+    letter-spacing: 3px;
+    color: var(--color-matcha-light);
+    font-weight: 700;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 0.25rem;
+}
+
+.origin-region {
+    font-family: var(--font-serif);
+    font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+    color: var(--color-text);
+    margin-bottom: 1.2rem;
+    line-height: 1.2;
+}
+
+.origin-narrative {
+    font-family: var(--font-body);
+    font-size: 1rem;
+    line-height: 1.75;
+    color: #2D2D2D;
+    margin-bottom: 1.8rem;
+}
+
+.origin-pills {
+    display: flex;
+    gap: 0.8rem;
+    flex-wrap: wrap;
+}
+
+.origin-pill {
+    font-family: var(--font-heading);
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    background: rgba(49, 69, 40, 0.08);
+    color: var(--color-matcha-dark);
+    padding: 0.45rem 0.9rem;
+    border-radius: 4px;
+    border: 1px solid rgba(49, 69, 40, 0.15);
+}
+
+.origin-card-visual {
+    position: relative;
+    width: 100%;
+    height: 280px;
+    overflow: hidden;
+    border: 2px solid var(--color-matcha-dark);
+    background: #000;
+}
+
+.origin-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.origin-img-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.75);
+    color: #fff;
+    font-family: var(--font-heading);
+    font-size: 0.7rem;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    padding: 0.5rem 1rem;
+    text-align: center;
+}
+
+/* Module 3: Service Options */
+.wedding-section-divider {
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+
+.wedding-subheading {
+    font-family: var(--font-serif);
+    font-size: clamp(1.8rem, 3.5vw, 2.4rem);
+    color: var(--color-text);
+    margin: 0.6rem 0 0.4rem;
+    letter-spacing: 0.5px;
+}
+
+.wedding-subheading-desc {
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    color: #555;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.service-options-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.service-option-card {
+    border: 2px solid var(--color-matcha-dark);
+    padding: 2.5rem;
+    background: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.service-option-card:hover {
+    transform: translateY(-4px);
+}
+
+.service-option-card.featured {
+    background: var(--color-matcha-dark);
+    color: #FFFFFF;
+}
+
+.service-option-card.featured .option-title {
+    color: #FFFFFF;
+}
+
+.service-option-card.featured .option-body {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.service-option-card.featured .option-feat-item {
+    color: #FFFFFF;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.option-header {
+    margin-bottom: 1.2rem;
+}
+
+.option-num {
+    font-family: var(--font-heading);
+    font-size: 0.75rem;
+    letter-spacing: 2px;
+    font-weight: 700;
+    opacity: 0.7;
+    display: block;
+    margin-bottom: 0.35rem;
+}
+
+.badge-featured {
+    display: inline-block;
+    background: #D4AF37;
+    color: #000;
+    font-family: var(--font-heading);
+    font-size: 0.65rem;
+    letter-spacing: 1px;
+    font-weight: 700;
+    padding: 0.2rem 0.6rem;
+    border-radius: 3px;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+}
+
+.option-title {
+    font-family: var(--font-serif);
+    font-size: 1.8rem;
+    color: var(--color-text);
+    margin: 0.25rem 0;
+}
+
+.option-body {
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    line-height: 1.7;
+    color: #333;
+    margin-bottom: 1.8rem;
+}
+
+.option-features {
+    display: flex;
+    flex-direction: column;
+    margin-top: auto;
+}
+
+.option-feat-item {
+    font-family: var(--font-heading);
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    padding: 0.65rem 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.08);
+    color: var(--color-matcha-dark);
+}
+
+/* Alert Banner */
+.wedding-alert-banner {
+    background: #FFF9E6;
+    border: 2px solid #D4AF37;
+    padding: 1.25rem 1.75rem;
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    margin: 1.5rem 0 4.5rem;
+}
+
+.wedding-alert-banner .alert-icon {
+    font-size: 1.3rem;
+    flex-shrink: 0;
+}
+
+.wedding-alert-banner .alert-text {
+    font-family: var(--font-heading);
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    color: #4D3800;
+    line-height: 1.5;
+}
+
+/* Module 4: Fixed Cup Packages Table */
+.wedding-packages-wrapper {
+    margin-bottom: 4.5rem;
+}
+
+.packages-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.glassware-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: var(--color-matcha-dark);
+    color: #FFFFFF;
+    font-family: var(--font-heading);
+    font-size: 0.75rem;
+    letter-spacing: 1.5px;
+    font-weight: 600;
+    padding: 0.45rem 1.2rem;
+    border-radius: 20px;
+    margin-top: 0.75rem;
+}
+
+.glassware-icon {
+    font-size: 0.9rem;
+}
+
+.table-responsive-wrapper {
+    width: 100%;
+    overflow-x: auto;
+    margin-bottom: 1.5rem;
+}
+
+.wedding-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #FFFFFF;
+    border: 2px solid var(--color-matcha-dark);
+}
+
+.wedding-table th {
+    background: var(--color-matcha-dark);
+    color: #FFFFFF;
+    padding: 1.1rem 1.25rem;
+    font-family: var(--font-heading);
+    font-size: 0.75rem;
+    letter-spacing: 1.5px;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-align: left;
+    border-bottom: 2px solid var(--color-matcha-dark);
+}
+
+.wedding-table td {
+    padding: 1.35rem 1.25rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+    font-size: 0.95rem;
+    vertical-align: middle;
+}
+
+.wedding-table tbody tr:hover {
+    background: #F9FAF7;
+}
+
+.wedding-table .package-name strong {
+    font-family: var(--font-heading);
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--color-text);
+    display: block;
+}
+
+.badge-row {
+    display: inline-block;
+    background: #D4AF37;
+    color: #000000;
+    font-family: var(--font-heading);
+    font-size: 0.6rem;
+    letter-spacing: 1px;
+    font-weight: 700;
+    padding: 0.15rem 0.5rem;
+    border-radius: 3px;
+    margin-bottom: 0.3rem;
+    text-transform: uppercase;
+}
+
+.wedding-table .package-qty {
+    font-family: var(--font-heading);
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #555;
+}
+
+.wedding-table .package-price {
+    font-family: var(--font-serif);
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--color-text);
+}
+
+.wedding-table .package-price.fruity {
+    color: var(--color-matcha-dark);
+}
+
+.wedding-table .highlight-row {
+    background: rgba(212, 175, 55, 0.07);
+}
+
+.wedding-table .custom-row {
+    background: #F7F5F0;
+}
+
+.wedding-table .custom-note {
+    font-style: italic;
+    color: #555;
+    font-size: 0.9rem;
+}
+
+.btn-table-book {
+    display: inline-block;
+    padding: 0.6rem 1.1rem;
+    background: transparent;
+    color: var(--color-matcha-dark);
+    border: 1.5px solid var(--color-matcha-dark);
+    text-decoration: none;
+    font-family: var(--font-heading);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    border-radius: 4px;
+    transition: all 0.25s ease;
+    white-space: nowrap;
+}
+
+.btn-table-book:hover {
+    background: var(--color-matcha-dark);
+    color: #FFFFFF;
+}
+
+.btn-table-book.featured {
+    background: var(--color-matcha-dark);
+    color: #FFFFFF;
+}
+
+.btn-table-book.featured:hover {
+    background: #000000;
+    border-color: #000000;
+}
+
+.btn-table-book.custom {
+    background: #FFFFFF;
+    color: var(--color-text);
+}
+
+/* Mobile cards for table (hidden on desktop) */
+.packages-mobile-cards {
+    display: none;
+}
+
+.pkg-mobile-card {
+    border: 2px solid var(--color-matcha-dark);
+    padding: 1.5rem;
+    background: #FFFFFF;
+    border-radius: 4px;
+}
+
+.pkg-mobile-card.featured {
+    border-color: #D4AF37;
+    background: #FDFCF7;
+    box-shadow: 0 4px 15px rgba(212, 175, 55, 0.15);
+}
+
+.pkg-m-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+    padding-bottom: 0.8rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.pkg-m-name {
+    font-family: var(--font-heading);
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--color-text);
+    display: block;
+}
+
+.pkg-m-qty {
+    font-family: var(--font-heading);
+    font-size: 0.85rem;
+    font-weight: 600;
+    background: rgba(0, 0, 0, 0.05);
+    padding: 0.25rem 0.6rem;
+    border-radius: 3px;
+    color: #444;
+}
+
+.pkg-m-prices {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    margin-bottom: 1.2rem;
+}
+
+.pkg-m-price-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.9rem;
+}
+
+.pkg-m-label {
+    color: #666;
+    font-family: var(--font-heading);
+    font-size: 0.8rem;
+}
+
+.pkg-m-val {
+    font-family: var(--font-serif);
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--color-text);
+}
+
+.pkg-mobile-card .btn-table-book {
+    display: block;
+    text-align: center;
+    width: 100%;
+    padding: 0.75rem 1rem;
+}
+
+.custom-card-desc {
+    font-size: 0.9rem;
+    color: #555;
+    margin-bottom: 1.2rem;
+    line-height: 1.5;
+}
+
+.packages-footnote {
+    font-family: var(--font-body);
+    font-size: 0.88rem;
+    color: #555;
+    line-height: 1.6;
+    margin-top: 1rem;
+    padding-left: 0.5rem;
+}
+
+.footnote-dot {
+    color: var(--color-matcha-dark);
+    font-weight: bold;
+}
+
+/* Module 5: Unlimited Service Card */
+.unlimited-service-card {
+    border: 2px solid var(--color-matcha-dark);
+    background: linear-gradient(135deg, #24351F 0%, #172414 100%);
+    color: #FFFFFF;
+    padding: 3.5rem 3rem;
+    margin-bottom: 4.5rem;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+}
+
+.unlimited-header {
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+
+.unlimited-header .sleek-badge.light {
+    background: #D4AF37;
+    color: #000000;
+}
+
+.unlimited-title {
+    font-family: var(--font-serif);
+    font-size: clamp(2rem, 4.5vw, 3rem);
+    color: #FFFFFF;
+    margin: 0.8rem 0;
+    letter-spacing: 0.5px;
+}
+
+.unlimited-inclusions {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+}
+
+.inc-pill {
+    font-family: var(--font-heading);
+    font-size: 0.75rem;
+    letter-spacing: 1px;
+    font-weight: 600;
+    background: rgba(255, 255, 255, 0.12);
+    padding: 0.4rem 0.9rem;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    text-transform: uppercase;
+}
+
+.unlimited-rates-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.rate-box {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    padding: 2.5rem 2rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.3s ease;
+}
+
+.rate-box:hover {
+    transform: translateY(-4px);
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.rate-box.featured {
+    border-color: #D4AF37;
+    background: rgba(212, 175, 55, 0.08);
+}
+
+.rate-duration {
+    font-family: var(--font-heading);
+    font-size: 0.85rem;
+    letter-spacing: 2px;
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.8);
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.rate-price {
+    font-family: var(--font-serif);
+    font-size: clamp(2.2rem, 4vw, 3rem);
+    font-weight: 700;
+    color: #D4AF37;
+    display: block;
+    margin: 0.5rem 0;
+}
+
+.rate-note {
+    font-family: var(--font-body);
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 1.5rem;
+    display: block;
+}
+
+.btn-unlimited-book {
+    display: inline-block;
+    padding: 0.85rem 1.5rem;
+    background: #FFFFFF;
+    color: var(--color-matcha-dark);
+    text-decoration: none;
+    font-family: var(--font-heading);
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    border-radius: 4px;
+    transition: all 0.25s ease;
+    text-transform: uppercase;
+}
+
+.btn-unlimited-book:hover {
+    background: #D4AF37;
+    color: #000000;
+}
+
+.btn-unlimited-book.featured {
+    background: #D4AF37;
+    color: #000000;
+}
+
+.btn-unlimited-book.featured:hover {
+    background: #FFFFFF;
+    color: var(--color-matcha-dark);
+}
+
+.unlimited-pricing-note {
+    font-family: var(--font-body);
+    font-size: 0.9rem;
+    line-height: 1.7;
+    color: rgba(255, 255, 255, 0.82);
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    padding-top: 1.5rem;
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* Module 6: Staffing & Timeline */
+.timeline-section-block {
+    text-align: center;
+    margin-bottom: 4.5rem;
+}
+
+.timeline-intro {
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    color: #555;
+    max-width: 600px;
+    margin: 0.3rem auto 2.5rem;
+}
+
+.wedding-timeline {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+    text-align: left;
+}
+
+.timeline-step {
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    border-top: 3px solid var(--color-matcha-dark);
+    background: #FFFFFF;
+    padding: 2rem 1.75rem;
+    position: relative;
+    transition: transform 0.25s ease;
+}
+
+.timeline-step:hover {
+    transform: translateY(-3px);
+}
+
+.step-num {
+    font-family: var(--font-heading);
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: rgba(49, 69, 40, 0.25);
+    margin-bottom: 0.5rem;
+    line-height: 1;
+}
+
+.step-title {
+    font-family: var(--font-serif);
+    font-size: 1.3rem;
+    color: var(--color-text);
+    margin-bottom: 0.8rem;
+}
+
+.step-desc {
+    font-family: var(--font-body);
+    font-size: 0.9rem;
+    line-height: 1.65;
+    color: #444;
+}
+
+/* Module 7: Event Requirements & Logistics */
+.logistics-section-block {
+    text-align: center;
+    margin-bottom: 4.5rem;
+}
+
+.logistics-intro {
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    color: #555;
+    max-width: 650px;
+    margin: 0.3rem auto 2.5rem;
+}
+
+.logistics-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.8rem;
+    text-align: left;
+}
+
+.logistics-card {
+    border: 2px solid var(--color-matcha-dark);
+    padding: 2.2rem;
+    background: #FFFFFF;
+    transition: transform 0.25s ease;
+}
+
+.logistics-card:hover {
+    transform: translateY(-3px);
+}
+
+.logistics-icon-box {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.logistics-card-title {
+    font-family: var(--font-serif);
+    font-size: 1.4rem;
+    color: var(--color-text);
+    margin-bottom: 0.8rem;
+}
+
+.logistics-card-desc {
+    font-family: var(--font-body);
+    font-size: 0.92rem;
+    line-height: 1.7;
+    color: #444;
+}
+
+/* Module 8: Payment Terms */
+.payment-terms-block {
+    text-align: center;
+    margin-bottom: 4.5rem;
+}
+
+.terms-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.8rem;
+    text-align: left;
+    margin-top: 2rem;
+}
+
+.term-card {
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-left: 3px solid var(--color-matcha-dark);
+    padding: 2rem;
+    background: #FAF8F5;
+}
+
+.term-badge {
+    font-family: var(--font-heading);
+    font-size: 0.7rem;
+    letter-spacing: 1.5px;
+    font-weight: 700;
+    color: var(--color-matcha-light);
+    margin-bottom: 0.5rem;
+}
+
+.term-title {
+    font-family: var(--font-serif);
+    font-size: 1.3rem;
+    color: var(--color-text);
+    margin-bottom: 0.8rem;
+}
+
+.term-desc {
+    font-family: var(--font-body);
+    font-size: 0.92rem;
+    line-height: 1.65;
+    color: #444;
+}
+
+/* Module 9: "Let's Create Something Special" CTA Card */
+.wedding-cta-card {
+    border: 3px solid var(--color-matcha-dark);
+    background: #FAF8F5;
+    padding: clamp(2.5rem, 5vw, 4.5rem) clamp(1.5rem, 5vw, 3.5rem);
+    text-align: center;
+    margin-top: 4.5rem;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.05);
+}
+
+.wedding-cta-card .sleek-badge.light {
+    background: var(--color-matcha-dark);
+    color: #FFFFFF;
+}
+
+.cta-title {
+    font-family: var(--font-serif);
+    font-size: clamp(2rem, 4.5vw, 3.2rem);
+    color: var(--color-text);
+    margin: 1rem 0 0.8rem;
+    letter-spacing: -0.5px;
+    text-transform: uppercase;
+}
+
+.cta-message {
+    font-family: var(--font-body);
+    font-size: clamp(1rem, 1.8vw, 1.15rem);
+    line-height: 1.7;
+    color: #333;
+    max-width: 720px;
+    margin: 0 auto 1.5rem;
+}
+
+.cta-notice {
+    font-family: var(--font-heading);
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+    font-weight: 600;
+    color: var(--color-matcha-dark);
+    text-transform: uppercase;
+    margin-bottom: 2.5rem;
+}
+
+.cta-channels-grid {
+    display: flex;
+    justify-content: center;
+    gap: 1.2rem;
+    flex-wrap: wrap;
+    margin-bottom: 3rem;
+}
+
+.channel-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.85rem 1.4rem;
+    border: 1.5px solid var(--color-matcha-dark);
+    background: #FFFFFF;
+    text-decoration: none;
+    color: var(--color-text);
+    font-family: var(--font-heading);
+    font-size: 0.85rem;
+    font-weight: 600;
+    transition: all 0.25s ease;
+    border-radius: 4px;
+}
+
+.channel-pill:hover {
+    background: var(--color-matcha-dark);
+    color: #FFFFFF;
+    transform: translateY(-2px);
+}
+
+.channel-icon {
+    font-size: 1rem;
+}
+
+.channel-label {
+    opacity: 0.7;
+    font-weight: 500;
+}
+
+.cta-action-area {
+    margin-top: 1rem;
+}
+
+.btn-wedding-whatsapp {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.9rem;
+    padding: 1.25rem 2.8rem;
+    background: #25D366;
+    color: #FFFFFF;
+    text-decoration: none;
+    font-family: var(--font-heading);
+    font-size: 1.05rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    border-radius: 6px;
+    box-shadow: 0 10px 25px rgba(37, 211, 102, 0.35);
+    transition: all 0.3s ease;
+    min-height: 52px;
+}
+
+.btn-wedding-whatsapp:hover {
+    background: #1EBE5D;
+    transform: translateY(-3px);
+    box-shadow: 0 14px 30px rgba(37, 211, 102, 0.45);
+}
+
+.btn-wedding-whatsapp .arrow {
+    font-size: 1.3rem;
+    transition: transform 0.25s ease;
+}
+
+.btn-wedding-whatsapp:hover .arrow {
+    transform: translateX(4px);
+}
+
+/* Responsive Queries for Wedding & Event Block */
+@media (max-width: 900px) {
+    .wedding-origin-card {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        padding: 2rem;
+    }
+    .origin-card-visual {
+        height: 220px;
+    }
+}
+
+@media (max-width: 768px) {
+    .table-responsive-wrapper {
+        display: none;
+    }
+    .packages-mobile-cards {
+        display: flex;
+        flex-direction: column;
+        gap: 1.25rem;
+    }
+    .unlimited-service-card {
+        padding: 2.5rem 1.5rem;
+    }
+    .wedding-alert-banner {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.6rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .wedding-events-block {
+        margin-top: 3.5rem;
+        padding-top: 3rem;
+    }
+    .wedding-origin-card, .service-option-card, .logistics-card, .term-card {
+        padding: 1.5rem;
+    }
+    .btn-wedding-whatsapp {
+        width: 100%;
+        padding: 1rem 1.5rem;
+        font-size: 0.95rem;
+    }
+    .channel-pill {
+        width: 100%;
+        justify-content: center;
+    }
+}

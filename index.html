@@ -120,8 +120,22 @@
           "currenciesAccepted": "INR",
           "sameAs": [
             "https://www.zomato.com/ncr/matcha-house-green-park-new-delhi",
-            "https://instagram.com/matchahouseldelhi"
-          ]
+            "https://instagram.com/matchahousedelhi"
+          ],
+          "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Matcha House Catering & Private Hire",
+            "itemListElement": [
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Wedding & Event Matcha Bar",
+                  "description": "Full-service artisanal matcha bar for weddings and events featuring single-origin Kagoshima matcha, trained baristas, and live ceremonial whisking."
+                }
+              }
+            ]
+          }
         },
         {
           "@type": "WebSite",
@@ -203,6 +217,7 @@
                 <a href="#about">Our Story</a>
                 <a href="#menu">Menu</a>
                 <a href="#events">Make Your Own Matcha</a>
+                <a href="#wedding-events">Weddings &amp; Events</a>
             </div>
             <div class="nav-right">
                 <a href="#reviews">Reviews</a>
@@ -803,34 +818,424 @@
                 </div>
             </div>
             
-            <div class="catering-block" style="margin-top: 5rem; padding-top: 4rem; border-top: 2px solid var(--color-matcha-dark); text-align: left;">
-                <div class="sleek-badge">[CATERING PROPOSAL]</div>
-                <h3 class="historical-title">Matcha House at Your Event</h3>
-                <p style="margin-bottom: 2rem;">Bring the premium matcha experience to your next event. We provide freshly crafted beverages, signature drinks, and professional service tailored to your occasion.</p>
-                
-                <div class="catering-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; margin-bottom: 3rem;">
-                    <div class="catering-card" style="border: 2px solid var(--color-matcha-dark); padding: 2rem;">
-                        <h4 style="font-family: var(--font-serif); font-size: 1.5rem; margin-bottom: 1rem;">Package 1: 15 Cups</h4>
-                        <ul style="list-style-type: none; margin-bottom: 2rem;">
-                            <li style="margin-bottom: 0.5rem;">✓ Minimum Order: 15 cups</li>
-                            <li style="margin-bottom: 0.5rem;">✓ Customizable drink menus</li>
-                            <li style="margin-bottom: 0.5rem;">✓ Priced per selected beverage</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="catering-card" style="border: 2px solid var(--color-matcha-dark); background-color: var(--color-matcha-dark); color: var(--color-cream); padding: 2rem;">
-                        <h4 style="font-family: var(--font-serif); font-size: 1.5rem; margin-bottom: 1rem;">Package 2: 25+ Cups</h4>
-                        <ul style="list-style-type: none; margin-bottom: 2rem;">
-                            <li style="margin-bottom: 0.5rem;">✓ Minimum Order: 25 cups</li>
-                            <li style="margin-bottom: 0.5rem;">✓ Fully professional beverage service</li>
-                            <li style="margin-bottom: 0.5rem; font-weight: bold;">✓ 15% Savings on orders of 25+ cups</li>
-                        </ul>
+            <!-- Wedding & Event Matcha Bar Section (Exact 9-Page Proposal Deck Fidelity) -->
+            <div id="wedding-events" class="wedding-events-block">
+                <!-- Module 1: Cover / Header -->
+                <div class="wedding-header">
+                    <div class="sleek-badge">[WEDDING &amp; EVENT MATCHA BAR]</div>
+                    <h2 class="wedding-main-title">WEDDING &amp; EVENT MATCHA BAR</h2>
+                    <p class="wedding-subtitle">A unique matcha experience for your special day</p>
+                    <div class="wedding-ornament">
+                        <span class="ornament-line"></span>
+                        <span class="ornament-symbol">🍵</span>
+                        <span class="ornament-line"></span>
                     </div>
                 </div>
-                
-                <p style="font-size: 0.9rem; color: #555; margin-bottom: 2rem;">* A service charge applies based on location, duration, and staffing. 50% advance payment required to confirm booking.</p>
-                
-                <a href="https://wa.me/917899010913?text=Hi%20Matcha%20House%20Delhi%2C%20I%20would%20like%20to%20inquire%20about%20event%20catering." target="_blank" rel="noopener noreferrer" class="btn-primary" style="display: inline-block;">Inquire About Catering</a>
+
+                <!-- Module 2: Origin & Quality Narrative (PDF Page 2) -->
+                <div class="wedding-origin-card">
+                    <div class="origin-card-content">
+                        <span class="origin-tagline">STRAIGHT FROM</span>
+                        <h3 class="origin-region">Kagoshima, Japan</h3>
+                        <p class="origin-narrative">
+                            Our matcha is sourced directly from family-run farms in Kagoshima, Japan a region celebrated for its fertile soil, pristine waters, and generations of tea-growing craftsmanship. Every leaf reflects a deep-rooted tradition of quality and care, bringing you a matcha that is vibrant in colour, rich in flavour, and authentic in every sip.
+                        </p>
+                        <div class="origin-pills">
+                            <span class="origin-pill">✓ Single-Origin Volcanic Soil</span>
+                            <span class="origin-pill">✓ Family-Run Heritage Farms</span>
+                            <span class="origin-pill">✓ 100% Freshly Whisked Live</span>
+                        </div>
+                    </div>
+                    <div class="origin-card-visual">
+                        <img src="assets/sakurajima_kagoshima.jpg" alt="Matcha Farms in Kagoshima, Japan" loading="lazy" class="origin-img">
+                        <div class="origin-img-caption">Direct Farm Sourcing • Kagoshima</div>
+                    </div>
+                </div>
+
+                <!-- Module 3: Service Options Comparison (PDF Page 3) -->
+                <div class="wedding-section-divider">
+                    <div class="sleek-badge">[SERVICE FORMATS]</div>
+                    <h3 class="wedding-subheading">SERVICE OPTIONS</h3>
+                    <p class="wedding-subheading-desc">Select between dedicated quantity packages or an open duration-based matcha bar.</p>
+                </div>
+
+                <div class="service-options-grid">
+                    <div class="service-option-card">
+                        <div class="option-header">
+                            <span class="option-num">OPTION 01</span>
+                            <h4 class="option-title">Fixed Cup Package</h4>
+                        </div>
+                        <p class="option-body">
+                            Our fixed-cup packages are designed around a pre-selected number of servings. For example, a 50-cup package includes up to 50 drinks within the agreed event timings. Any additional servings beyond the selected quantity will be charged separately and reflected in the final bill.
+                        </p>
+                        <div class="option-features">
+                            <div class="option-feat-item">✦ Pre-selected serving count</div>
+                            <div class="option-feat-item">✦ 50 to 300+ guests capacity</div>
+                            <div class="option-feat-item">✦ Tailored menu curation</div>
+                        </div>
+                    </div>
+
+                    <div class="service-option-card featured">
+                        <div class="option-header">
+                            <span class="option-num">OPTION 02</span>
+                            <span class="badge-featured">POPULAR FOR RECEPTIONS</span>
+                            <h4 class="option-title">Unlimited Matcha Bar</h4>
+                        </div>
+                        <p class="option-body">
+                            For a more seamless guest experience, clients can opt for an unlimited matcha bar with a fixed service duration of 3 or 4 hours. Guests can enjoy unlimited servings throughout the selected service period, based on the agreed package and menu selection. Any extension beyond the agreed service duration will incur additional charges.
+                        </p>
+                        <div class="option-features">
+                            <div class="option-feat-item">✦ Unlimited guest servings</div>
+                            <div class="option-feat-item">✦ 3 or 4 hours continuous service</div>
+                            <div class="option-feat-item">✦ 2 Baristas + 1 Helper included</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="wedding-alert-banner">
+                    <span class="alert-icon">⚠️</span>
+                    <span class="alert-text">ANY EXTENSION BEYOND THE AGREED SERVICE DURATION WILL INCUR ADDITIONAL CHARGES.</span>
+                </div>
+
+                <!-- Module 4: Wedding Packages Pricing Table (PDF Page 4) -->
+                <div class="wedding-packages-wrapper">
+                    <div class="packages-header">
+                        <div class="sleek-badge">[FIXED CUP PACKAGES]</div>
+                        <h3 class="wedding-subheading">WEDDING &amp; EVENT PACKAGES</h3>
+                        <div class="glassware-pill">
+                            <span class="glassware-icon">🥛</span> ALL DRINKS ARE SERVED IN OUR STANDARD 350 ML GLASS
+                        </div>
+                    </div>
+
+                    <!-- Desktop & Tablet Table View -->
+                    <div class="table-responsive-wrapper">
+                        <table class="wedding-table">
+                            <thead>
+                                <tr>
+                                    <th>PACKAGE</th>
+                                    <th>NUMBER OF DRINKS</th>
+                                    <th>CLASSIC MATCHA (TOTAL)</th>
+                                    <th>INFUSED FRUITY (TOTAL)</th>
+                                    <th>BOOKING</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="package-name">
+                                        <strong>Intimate Celebration</strong>
+                                    </td>
+                                    <td class="package-qty">50 cups</td>
+                                    <td class="package-price classic">₹22,500</td>
+                                    <td class="package-price fruity">₹25,000</td>
+                                    <td>
+                                        <a href="https://wa.me/917899010913?text=Hi%20Matcha%20House%20Delhi%2C%20I%20would%20like%20to%20book%20the%20Intimate%20Celebration%20(50%20cups)%20wedding%20package." target="_blank" rel="noopener noreferrer" class="btn-table-book">Book 50 Cups →</a>
+                                    </td>
+                                </tr>
+                                <tr class="highlight-row">
+                                    <td class="package-name">
+                                        <span class="badge-row">SIGNATURE</span>
+                                        <strong>Wedding Package</strong>
+                                    </td>
+                                    <td class="package-qty">100 cups</td>
+                                    <td class="package-price classic">₹45,000</td>
+                                    <td class="package-price fruity">₹50,000</td>
+                                    <td>
+                                        <a href="https://wa.me/917899010913?text=Hi%20Matcha%20House%20Delhi%2C%20I%20would%20like%20to%20book%20the%20Wedding%20Package%20(100%20cups)." target="_blank" rel="noopener noreferrer" class="btn-table-book featured">Book 100 Cups →</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="package-name">
+                                        <strong>Grand Celebration</strong>
+                                    </td>
+                                    <td class="package-qty">200 cups</td>
+                                    <td class="package-price classic">₹90,000</td>
+                                    <td class="package-price fruity">₹1,00,000</td>
+                                    <td>
+                                        <a href="https://wa.me/917899010913?text=Hi%20Matcha%20House%20Delhi%2C%20I%20would%20like%20to%20book%20the%20Grand%20Celebration%20(200%20cups)%20wedding%20package." target="_blank" rel="noopener noreferrer" class="btn-table-book">Book 200 Cups →</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="package-name">
+                                        <strong>Luxury Wedding</strong>
+                                    </td>
+                                    <td class="package-qty">300 cups</td>
+                                    <td class="package-price classic">₹1,35,000</td>
+                                    <td class="package-price fruity">₹1,50,000</td>
+                                    <td>
+                                        <a href="https://wa.me/917899010913?text=Hi%20Matcha%20House%20Delhi%2C%20I%20would%20like%20to%20book%20the%20Luxury%20Wedding%20(300%20cups)%20package." target="_blank" rel="noopener noreferrer" class="btn-table-book">Book 300 Cups →</a>
+                                    </td>
+                                </tr>
+                                <tr class="custom-row">
+                                    <td class="package-name">
+                                        <strong>300+ Custom</strong>
+                                    </td>
+                                    <td class="package-qty">Custom quantity</td>
+                                    <td colspan="2" class="custom-note">Custom quotation based on your menu, guest count and event requirements.</td>
+                                    <td>
+                                        <a href="https://wa.me/917899010913?text=Hi%20Matcha%20House%20Delhi%2C%20I%20would%20like%20a%20custom%20quotation%20for%20300%2B%20cups%20matcha%20bar." target="_blank" rel="noopener noreferrer" class="btn-table-book custom">Custom Quote →</a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <!-- Mobile Stacked Card View (Hidden on desktop, shown <= 768px) -->
+                    <div class="packages-mobile-cards">
+                        <div class="pkg-mobile-card">
+                            <div class="pkg-m-top">
+                                <span class="pkg-m-name">Intimate Celebration</span>
+                                <span class="pkg-m-qty">50 cups</span>
+                            </div>
+                            <div class="pkg-m-prices">
+                                <div class="pkg-m-price-item">
+                                    <span class="pkg-m-label">Classic Matcha:</span>
+                                    <span class="pkg-m-val">₹22,500</span>
+                                </div>
+                                <div class="pkg-m-price-item">
+                                    <span class="pkg-m-label">Infused Fruity:</span>
+                                    <span class="pkg-m-val">₹25,000</span>
+                                </div>
+                            </div>
+                            <a href="https://wa.me/917899010913?text=Hi%20Matcha%20House%20Delhi%2C%20I%20would%20like%20to%20book%20the%20Intimate%20Celebration%20(50%20cups)%20wedding%20package." target="_blank" rel="noopener noreferrer" class="btn-table-book">Book 50 Cups →</a>
+                        </div>
+
+                        <div class="pkg-mobile-card featured">
+                            <div class="pkg-m-top">
+                                <div>
+                                    <span class="badge-row">SIGNATURE</span>
+                                    <span class="pkg-m-name">Wedding Package</span>
+                                </div>
+                                <span class="pkg-m-qty">100 cups</span>
+                            </div>
+                            <div class="pkg-m-prices">
+                                <div class="pkg-m-price-item">
+                                    <span class="pkg-m-label">Classic Matcha:</span>
+                                    <span class="pkg-m-val">₹45,000</span>
+                                </div>
+                                <div class="pkg-m-price-item">
+                                    <span class="pkg-m-label">Infused Fruity:</span>
+                                    <span class="pkg-m-val">₹50,000</span>
+                                </div>
+                            </div>
+                            <a href="https://wa.me/917899010913?text=Hi%20Matcha%20House%20Delhi%2C%20I%20would%20like%20to%20book%20the%20Wedding%20Package%20(100%20cups)." target="_blank" rel="noopener noreferrer" class="btn-table-book featured">Book 100 Cups →</a>
+                        </div>
+
+                        <div class="pkg-mobile-card">
+                            <div class="pkg-m-top">
+                                <span class="pkg-m-name">Grand Celebration</span>
+                                <span class="pkg-m-qty">200 cups</span>
+                            </div>
+                            <div class="pkg-m-prices">
+                                <div class="pkg-m-price-item">
+                                    <span class="pkg-m-label">Classic Matcha:</span>
+                                    <span class="pkg-m-val">₹90,000</span>
+                                </div>
+                                <div class="pkg-m-price-item">
+                                    <span class="pkg-m-label">Infused Fruity:</span>
+                                    <span class="pkg-m-val">₹1,00,000</span>
+                                </div>
+                            </div>
+                            <a href="https://wa.me/917899010913?text=Hi%20Matcha%20House%20Delhi%2C%20I%20would%20like%20to%20book%20the%20Grand%20Celebration%20(200%20cups)%20wedding%20package." target="_blank" rel="noopener noreferrer" class="btn-table-book">Book 200 Cups →</a>
+                        </div>
+
+                        <div class="pkg-mobile-card">
+                            <div class="pkg-m-top">
+                                <span class="pkg-m-name">Luxury Wedding</span>
+                                <span class="pkg-m-qty">300 cups</span>
+                            </div>
+                            <div class="pkg-m-prices">
+                                <div class="pkg-m-price-item">
+                                    <span class="pkg-m-label">Classic Matcha:</span>
+                                    <span class="pkg-m-val">₹1,35,000</span>
+                                </div>
+                                <div class="pkg-m-price-item">
+                                    <span class="pkg-m-label">Infused Fruity:</span>
+                                    <span class="pkg-m-val">₹1,50,000</span>
+                                </div>
+                            </div>
+                            <a href="https://wa.me/917899010913?text=Hi%20Matcha%20House%20Delhi%2C%20I%20would%20like%20to%20book%20the%20Luxury%20Wedding%20(300%20cups)%20package." target="_blank" rel="noopener noreferrer" class="btn-table-book">Book 300 Cups →</a>
+                        </div>
+
+                        <div class="pkg-mobile-card custom">
+                            <div class="pkg-m-top">
+                                <span class="pkg-m-name">300+ Custom</span>
+                                <span class="pkg-m-qty">Custom quantity</span>
+                            </div>
+                            <p class="custom-card-desc">Custom quotation based on your menu, guest count and event requirements.</p>
+                            <a href="https://wa.me/917899010913?text=Hi%20Matcha%20House%20Delhi%2C%20I%20would%20like%20a%20custom%20quotation%20for%20300%2B%20cups%20matcha%20bar." target="_blank" rel="noopener noreferrer" class="btn-table-book custom">Request Custom Quote →</a>
+                        </div>
+                    </div>
+
+                    <div class="packages-footnote">
+                        <span class="footnote-dot">✦</span> Clients can choose their preferred drinks from the Matcha House menu, with the final pricing determined by the selected drinks and required quantities.
+                    </div>
+                </div>
+
+                <!-- Module 5: Unlimited Service Pricing & Inclusions (PDF Page 7) -->
+                <div class="unlimited-service-card">
+                    <div class="unlimited-header">
+                        <div class="sleek-badge light">[UNLIMITED SERVICE]</div>
+                        <h3 class="unlimited-title">UNLIMITED SERVICE : 45,000 ONWARDS</h3>
+                        <div class="unlimited-inclusions">
+                            <span class="inc-pill">⏳ 3 or 4 Hours Duration</span>
+                            <span class="inc-pill">👥 2 Baristas + 1 Helper Included</span>
+                            <span class="inc-pill">🍵 Live Whisking Station</span>
+                        </div>
+                    </div>
+
+                    <div class="unlimited-rates-grid">
+                        <div class="rate-box">
+                            <span class="rate-duration">3 HOUR SERVICE</span>
+                            <span class="rate-price">₹45,000</span>
+                            <span class="rate-note">Starting baseline • Unlimited guest drinks</span>
+                            <a href="https://wa.me/917899010913?text=Hi%20Matcha%20House%20Delhi%2C%20I%20would%20like%20to%20inquire%20about%20the%203%20Hour%20Unlimited%20Matcha%20Bar%20(₹45%2C000)." target="_blank" rel="noopener noreferrer" class="btn-unlimited-book">Book 3-Hour Unlimited →</a>
+                        </div>
+                        <div class="rate-box featured">
+                            <span class="badge-row">EXTENDED CELEBRATION</span>
+                            <span class="rate-duration">4 HOUR SERVICE</span>
+                            <span class="rate-price">₹55,000</span>
+                            <span class="rate-note">Full reception coverage • Unlimited drinks</span>
+                            <a href="https://wa.me/917899010913?text=Hi%20Matcha%20House%20Delhi%2C%20I%20would%20like%20to%20inquire%20about%20the%204%20Hour%20Unlimited%20Matcha%20Bar%20(₹55%2C000)." target="_blank" rel="noopener noreferrer" class="btn-unlimited-book featured">Book 4-Hour Unlimited →</a>
+                        </div>
+                    </div>
+
+                    <div class="unlimited-pricing-note">
+                        <strong>Pricing Note:</strong> Prices listed are indicative starting rates. Final quotations may vary depending on guest count, flavour selection, service duration, and estimated servings. A customised quote will be provided based on the event’s specific requirements.
+                    </div>
+                </div>
+
+                <!-- Module 6: Staffing, Setup & Duration Timeline (PDF Page 6) -->
+                <div class="timeline-section-block">
+                    <div class="sleek-badge">[STAFFING &amp; TIMELINE]</div>
+                    <h3 class="wedding-subheading">STAFFING &amp; SERVICE TIMELINE</h3>
+                    <p class="timeline-intro">Precision event execution handled by our dedicated team of Japanese tea artisans.</p>
+
+                    <div class="wedding-timeline">
+                        <div class="timeline-step">
+                            <div class="step-num">01</div>
+                            <div class="step-content">
+                                <h4 class="step-title">Setup time</h4>
+                                <p class="step-desc">Our team will arrive one hour before the scheduled event start time to ensure the setup is completed before service begins.</p>
+                            </div>
+                        </div>
+
+                        <div class="timeline-step">
+                            <div class="step-num">02</div>
+                            <div class="step-content">
+                                <h4 class="step-title">Staffing</h4>
+                                <p class="step-desc">Matcha House will provide two baristas and one helper for the event.</p>
+                            </div>
+                        </div>
+
+                        <div class="timeline-step">
+                            <div class="step-num">03</div>
+                            <div class="step-content">
+                                <h4 class="step-title">Service Duration</h4>
+                                <p class="step-desc">The standard service duration is three hours.</p>
+                            </div>
+                        </div>
+
+                        <div class="timeline-step">
+                            <div class="step-num">04</div>
+                            <div class="step-content">
+                                <h4 class="step-title">Extended hours</h4>
+                                <p class="step-desc">Any service time beyond the agreed service duration will incur additional charges.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Module 7: Event Logistics & Requirements Checklist (PDF Page 5) -->
+                <div class="logistics-section-block">
+                    <div class="sleek-badge">[LOGISTICS &amp; SETUP]</div>
+                    <h3 class="wedding-subheading">EVENT REQUIREMENTS &amp; LOGISTICS</h3>
+                    <p class="logistics-intro">To ensure seamless live preparation and bar flow, we require the following setup amenities:</p>
+
+                    <div class="logistics-grid">
+                        <div class="logistics-card">
+                            <div class="logistics-icon-box">🪑</div>
+                            <h4 class="logistics-card-title">Table Setup</h4>
+                            <p class="logistics-card-desc">For events held outside Delhi, the organiser must provide a suitable table for the Matcha House setup. For events within Delhi, our team will bring its own table, if required.</p>
+                        </div>
+
+                        <div class="logistics-card">
+                            <div class="logistics-icon-box">⚡</div>
+                            <h4 class="logistics-card-title">Power Supply</h4>
+                            <p class="logistics-card-desc">A functional electrical plug point must be available at the stall for equipment and other operational requirements.</p>
+                        </div>
+
+                        <div class="logistics-card">
+                            <div class="logistics-icon-box">🗑️</div>
+                            <h4 class="logistics-card-title">Waste Disposal</h4>
+                            <p class="logistics-card-desc">A waste bin must be provided at the stall to ensure proper waste disposal and maintain cleanliness.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Module 8: Payment Terms & Conditions (PDF Page 8) -->
+                <div class="payment-terms-block">
+                    <div class="sleek-badge">[BOOKING POLICY]</div>
+                    <h3 class="wedding-subheading">PAYMENT TERMS</h3>
+
+                    <div class="terms-grid">
+                        <div class="term-card">
+                            <div class="term-badge">TERM 01</div>
+                            <h4 class="term-title">Advance Payment</h4>
+                            <p class="term-desc">A 50% advance payment is required to confirm the booking.</p>
+                        </div>
+
+                        <div class="term-card">
+                            <div class="term-badge">TERM 02</div>
+                            <h4 class="term-title">Remaining Balance</h4>
+                            <p class="term-desc">The remaining balance must be paid before the event, as mutually agreed.</p>
+                        </div>
+
+                        <div class="term-card">
+                            <div class="term-badge">TERM 03</div>
+                            <h4 class="term-title">Final Pricing</h4>
+                            <p class="term-desc">The final quotation will depend on the guest count, flavour selection, event location, and specific service requirements.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Module 9: "Let's Create Something Special" Contact & Booking Block (PDF Page 9) -->
+                <div class="wedding-cta-card">
+                    <div class="cta-inner">
+                        <span class="sleek-badge light">[RESERVATIONS &amp; INQUIRIES]</span>
+                        <h3 class="cta-title">LET’S CREATE SOMETHING SPECIAL.</h3>
+                        <p class="cta-message">
+                            Thank you for considering Matcha House for your upcoming event. We look forward to the opportunity to collaborate with you and bring a unique matcha experience to your guests.
+                        </p>
+                        <p class="cta-notice">
+                            MATCHA HOUSE — For event enquiries and bookings, please contact us.
+                        </p>
+
+                        <div class="cta-channels-grid">
+                            <a href="https://instagram.com/matchahousedelhi" target="_blank" rel="noopener noreferrer" class="channel-pill">
+                                <span class="channel-icon">📸</span>
+                                <span class="channel-label">Instagram:</span>
+                                <span class="channel-val">@matchahousedelhi</span>
+                            </a>
+                            <a href="mailto:matchahousedelhi@gmail.com" class="channel-pill">
+                                <span class="channel-icon">✉️</span>
+                                <span class="channel-label">Email:</span>
+                                <span class="channel-val">matchahousedelhi@gmail.com</span>
+                            </a>
+                            <a href="tel:+917899010913" class="channel-pill">
+                                <span class="channel-icon">📞</span>
+                                <span class="channel-label">Phone:</span>
+                                <span class="channel-val">+91 78990 10913</span>
+                            </a>
+                        </div>
+
+                        <div class="cta-action-area">
+                            <a href="https://wa.me/917899010913?text=Hi%20Matcha%20House%20Delhi%2C%20I%20would%20like%20to%20inquire%20about%20booking%20a%20Matcha%20Bar%20for%20an%20upcoming%20wedding%20%2F%20event." target="_blank" rel="noopener noreferrer" class="btn-wedding-whatsapp">
+                                <span>Inquire for Wedding / Event on WhatsApp</span>
+                                <span class="arrow">→</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </div>
 
             <div class="events-archive-block" id="historicalEventsBlock" style="margin-top: 5rem;">
