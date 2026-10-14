@@ -151,7 +151,8 @@ h1, h2, h3, .logo {
     background-size: cover;
     z-index: 10;
 
-    min-height: 85vh;
+    min-height: calc(100vh - 48px);
+    min-height: calc(100dvh - 48px);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -159,7 +160,8 @@ h1, h2, h3, .logo {
     position: relative;
     overflow: hidden;
     text-align: center;
-    padding-top: 80px; /* offset for nav */
+    padding-top: 90px; /* offset for nav */
+    box-sizing: border-box;
 }
 
 .hero::after {
@@ -308,12 +310,15 @@ section, footer {
 .hero-philosophy-ticker {
     background-color: var(--color-matcha-dark);
     color: var(--color-cream);
-    padding: 1rem 0;
+    height: 48px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
     overflow: hidden;
     white-space: nowrap;
     position: relative;
     z-index: 10;
-    border-bottom: 1px solid rgba(255,255,255,0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 .philosophy-content {
     display: inline-block;
@@ -1397,8 +1402,13 @@ section, footer {
     
     .hero {
         background-position: center 30%;
-        padding-top: 140px;
+        padding-top: 130px;
+        min-height: calc(100vh - 44px);
+        min-height: calc(100dvh - 44px);
         z-index: 10;
+    }
+    .hero-philosophy-ticker {
+        height: 44px;
     }
     .hero-content h1 {
         font-size: 3rem;
